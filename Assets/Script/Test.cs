@@ -17,11 +17,10 @@ public class Test : MonoBehaviour
     void Update()
     {
         //Get the value of the Gyroscope
-        Debug.Log(Input.acceleration);
+        //Debug.Log(Input.acceleration);
         valueGyrX = Input.acceleration.x;
         valueGyrY = Input.acceleration.y;
         valueGyrZ = Input.acceleration.z;
-
 
         //Rotation of the camera
         if (valueGyrZ > 0.4)
