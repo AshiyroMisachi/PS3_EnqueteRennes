@@ -4,35 +4,23 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float valueGyrX;
-    public float valueGyrY;
-    public float valueGyrZ;
+    public bool cameraMode;
     void Start()
     {
-        
+        //Enable the gyroscope
+        Input.gyro.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Get the value of the Gyroscope
-        Debug.Log(Input.acceleration);
-        valueGyrX = Input.acceleration.x;
-        valueGyrY = Input.acceleration.y;
-        valueGyrZ = Input.acceleration.z;
-
-
-        //Rotation of the camera
-        if (valueGyrZ > 0.4)
+        //Change the rotation of the camera acording to the phone's rotation
+        //Need to freeze Z axis
+        if (cameraMode)
         {
-            transform.eulerAngles += new Vector3(0.1f, 0f, 0f);
-            Debug.Log("Descend");
-        }
-        else if (valueGyrZ < -0.4)
-        {
-            transform.eulerAngles += new Vector3(-0.1f, 0f, 0f);
-            Debug.Log("Monte");
+            transform.rotation = Input.gyro.attitude;
+            transform.Rotate(0f, 0f, 180f, Space.Self);
+            transform.Rotate(90f, 180f, 0f, Space.World);
         }
     }
 }
