@@ -25,10 +25,12 @@ public class Proof : MonoBehaviour
             Instantiate(plot, transform.position + distancePlot, transform.rotation);
 
             //Add Proof to player list
+            player.proofs.Add(this);
 
             //Pop up Text to show you pick up
             player.popUpText.text = "You found " + myName;
-            player.textAlpha(true);
+            player.popUpText.alpha = 1f;
+            player.timerText = 0f;
         }
     }
 

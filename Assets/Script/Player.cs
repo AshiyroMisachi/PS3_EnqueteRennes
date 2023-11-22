@@ -10,16 +10,20 @@ public class Player : MonoBehaviour
     public bool cameraMode;
     public List<Proof> proofs;
     public TextMeshProUGUI popUpText;
-    public float timer;
+    public float timerText;
 
     //Var Button Camera Mode 2
-    public GameObject arrow_left;
-    public GameObject arrow_right;
-    public GameObject arrow_up;
-    public GameObject arrow_down;
+    //Left, Right, Up, Down
+    public GameObject[] arrows;
+    public bool canPickup = true;
+
+    //Var Police report
+    public GameObject policeReport;
 
     //Var Raycast
     public LayerMask mask;
+    private bool raycastOneTime;
+
     void Start()
     {
         //Enable the gyroscope
@@ -30,18 +34,19 @@ public class Player : MonoBehaviour
         if (cameraMode)
         {
             //Desactive Arrow UI
-            arrow_right.gameObject.SetActive(false);
-            arrow_up.gameObject.SetActive(false);
-            arrow_down.gameObject.SetActive(false);
-            arrow_left.gameObject.SetActive(false);
+            for (int i = 0; i < arrows.Length; i++)
+            {
+                arrows[i].gameObject.SetActive(false);
+            }
         }
     }
-
     // Update is called once per frame
     void Update()
     {
+        
+
         //Update timer
-        timer = Time.deltaTime;
+        timerText += Time.deltaTime;
 
         //Change the rotation of the camera acording to the phone's rotation
         //Need to freeze Z axis
@@ -55,47 +60,55 @@ public class Player : MonoBehaviour
         //Raycast when touch screen to detect object
         if (Input.touchCount > 0)
         {
-            Camera myCamera = Camera.main;
-            Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
-            Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
-            Debug.DrawLine(myCamera.transform.position, touchPosInWorld, Color.red);
-            if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
+            if(!raycastOneTime)
             {
-                info.transform.GetComponent<Proof>().getPickUp(this);
+                Camera myCamera = Camera.main;
+                Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
+                Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
+                Debug.DrawLine(myCamera.transform.position, touchPosInWorld, Color.red);
+                if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
+                {
+                    //If a button is selected frome Camera Mode 2, you can't pick a Proof
+                    if (canPickup)
+                    {
+                        info.transform.GetComponent<Proof>().getPickUp(this);
+                    }
+                }
             }
-        }
-    }
-    //Reduce the alpha of the text PopUp
-    public void textAlpha(bool start)
-    {
-        if (start)
-        {
-            Debug.Log("Start textAlpha");
-            popUpText.alpha = 1f;
-            //Launch textAlpha(false) in two seconds
+            raycastOneTime = true;
         }
         else
         {
-            popUpText.alpha = 0f;
+            raycastOneTime = false;
         }
 
+        //Hide Text after pickup an object
+        if (timerText > 2f)
+        {
+            popUpText.alpha -= 0.005f;
+        }
     }
-
     //Camera Mode 2, Move by clicking button
     public void rotateDown()
     {
-        Debug.Log("Rotate Down");
+        transform.eulerAngles += Vector3.right;
     }
     public void rotateUp()
     {
-        Debug.Log("Rotate Up");
+        transform.eulerAngles += Vector3.left;
     }
     public void rotateLeft()
     {
-        Debug.Log("Rotate Left");
+        transform.eulerAngles += Vector3.down;
     }
     public void rotateRight()
     {
-        Debug.Log("Rotate Right");
+        transform.eulerAngles += Vector3.up;
+    }
+
+    //Destroy Police report
+    public void destroyPolicereport()
+    {
+        Destroy(policeReport);
     }
 }
