@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     //Var Button Camera Mode 2
     //Left, Right, Up, Down
     public GameObject[] arrows;
-    public bool canPickup = true;
 
     //Var Police report
     public GameObject policeReport;
@@ -68,11 +67,7 @@ public class Player : MonoBehaviour
                 Debug.DrawLine(myCamera.transform.position, touchPosInWorld, Color.red);
                 if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
                 {
-                    //If a button is selected frome Camera Mode 2, you can't pick a Proof
-                    if (canPickup)
-                    {
-                        info.transform.GetComponent<Proof>().getPickUp(this);
-                    }
+                    info.transform.GetComponent<Proof>().getPickUp(this);
                 }
             }
             raycastOneTime = true;
