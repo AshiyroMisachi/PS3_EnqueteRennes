@@ -317,6 +317,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  isSelected: 0
 --- !u!114 &288727281 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 732720856054642689, guid: 4a7a187fff81fbd46ba5e691097e458e,
@@ -990,6 +991,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  isSelected: 0
 --- !u!1 &766504883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,6 +1515,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  isSelected: 0
 --- !u!114 &963194229 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77,
@@ -1798,6 +1801,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  isSelected: 0
 --- !u!1001 &1602297407
 PrefabInstance:
   m_ObjectHideFlags: 0
