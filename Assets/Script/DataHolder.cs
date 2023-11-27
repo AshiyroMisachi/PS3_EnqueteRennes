@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class DataHolder : MonoBehaviour
 {
     //Navigation in menu
+    public string lastScene;
     public string currentScene;
 
     //Selection Level
@@ -20,12 +21,14 @@ public class DataHolder : MonoBehaviour
     public TypeProof[] proofsType;
     public GameObject[] proofsGameObject;
 
+    public GameObject[] textProofs;
+    public Vector3[] textProofsCoords;
+
     //Parameters
     public bool cameraMode;
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene("MainScreen");
     }
 
     void Update()
@@ -34,5 +37,10 @@ public class DataHolder : MonoBehaviour
         {
             currentScene = SceneManager.GetActiveScene().name;
         }
+    }
+
+    public void updateLastScene()
+    {
+        lastScene = currentScene;
     }
 }

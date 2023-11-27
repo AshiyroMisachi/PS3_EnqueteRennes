@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public bool[] proofsList;
     public TextMeshProUGUI popUpText;
     public float timerText;
+    public string newsPaperScene;
 
     //Var Button Camera Mode 2
     //Left, Right, Up, Down
@@ -22,10 +23,6 @@ public class Player : MonoBehaviour
 
     //Var Police report
     public GameObject policeReport;
-
-    //Var Warning News Paper
-    public GameObject warningNewsPaper;
-    public GameObject buttonNewsPaper;
 
     //Var Raycast
     public LayerMask mask;
@@ -64,8 +61,6 @@ public class Player : MonoBehaviour
                 arrows[i].gameObject.SetActive(false);
             }
         }
-
-        warningNewsPaper.SetActive(false);
 
     }
     // Update is called once per frame
@@ -134,24 +129,15 @@ public class Player : MonoBehaviour
     public void launchSettings()
     {
         //Launch Settings Scene
+        dataholder.updateLastScene();
         SceneManager.LoadScene("Option");
     }
 
-    //Move to News papers
-    public void openWarning()
-    {
-        warningNewsPaper.SetActive(true);
-        buttonNewsPaper.SetActive(false);
-    }
-
-    public void closeWarning()
-    {
-        warningNewsPaper.SetActive(false);
-        buttonNewsPaper.SetActive(true);
-    }
+    //Move to News Paper
     public void launchNewsPaper()
     {
-        SceneManager.LoadScene("NewsPaper");
+        dataholder.updateLastScene();
+        SceneManager.LoadScene(newsPaperScene);
     }
 
     //Destroy Police report

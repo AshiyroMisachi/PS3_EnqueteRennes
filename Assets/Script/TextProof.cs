@@ -5,9 +5,13 @@ using UnityEngine;
 
 public class TextProof : MonoBehaviour, ITouchable
 {
+    public DataHolder dataHolder;
+
     //Var Text Proof
     public bool isPick;
     public string myName;
+    public TextMeshProUGUI textName;
+    public int myNumber;
 
     public void OnTouchedDown(Vector3 touchPosition)
     {
@@ -27,7 +31,8 @@ public class TextProof : MonoBehaviour, ITouchable
     // Start is called before the first frame update
     void Start()
     {
-        
+        dataHolder = FindObjectOfType<DataHolder>();
+        textName.text = myName;
     }
 
     // Update is called once per frame
@@ -38,5 +43,8 @@ public class TextProof : MonoBehaviour, ITouchable
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 4f);
         }
+
+     //Store data
+     dataHolder.textProofsCoords[myNumber] = transform.position;
     }
 }
