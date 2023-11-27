@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
 {
     //Data Holder
     public DataHolder dataholder;
+
     //Var Player
     public bool cameraMode;
     public bool[] proofsList;
@@ -21,6 +22,10 @@ public class Player : MonoBehaviour
 
     //Var Police report
     public GameObject policeReport;
+
+    //Var Warning News Paper
+    public GameObject warningNewsPaper;
+    public GameObject buttonNewsPaper;
 
     //Var Raycast
     public LayerMask mask;
@@ -50,6 +55,7 @@ public class Player : MonoBehaviour
 
         //Hide UI
         popUpText.alpha = 0f;
+
         if (cameraMode)
         {
             //Desactive Arrow UI
@@ -58,6 +64,8 @@ public class Player : MonoBehaviour
                 arrows[i].gameObject.SetActive(false);
             }
         }
+
+        warningNewsPaper.SetActive(false);
 
     }
     // Update is called once per frame
@@ -127,6 +135,23 @@ public class Player : MonoBehaviour
     {
         //Launch Settings Scene
         SceneManager.LoadScene("Option");
+    }
+
+    //Move to News papers
+    public void openWarning()
+    {
+        warningNewsPaper.SetActive(true);
+        buttonNewsPaper.SetActive(false);
+    }
+
+    public void closeWarning()
+    {
+        warningNewsPaper.SetActive(false);
+        buttonNewsPaper.SetActive(true);
+    }
+    public void launchNewsPaper()
+    {
+        SceneManager.LoadScene("NewsPaper");
     }
 
     //Destroy Police report

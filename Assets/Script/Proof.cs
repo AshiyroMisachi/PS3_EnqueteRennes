@@ -53,6 +53,7 @@ public class Proof : MonoBehaviour
             dataHolder.proofsName[myNumber] = myName;
             dataHolder.proofsDescription[myNumber] = description;
             dataHolder.proofsType[myNumber] = type;
+            dataHolder.proofsGameObject[myNumber] = gameObject;
 
             //Pop up Text to show you pick up
             player.popUpText.text = "You found " + myName;

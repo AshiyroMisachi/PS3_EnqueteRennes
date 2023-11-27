@@ -18,6 +18,7 @@ public class DataHolder : MonoBehaviour
     public string[] proofsName;
     public string[] proofsDescription;
     public TypeProof[] proofsType;
+    public GameObject[] proofsGameObject;
 
     //Parameters
     public bool cameraMode;
