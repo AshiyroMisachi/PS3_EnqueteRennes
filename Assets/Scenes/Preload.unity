@@ -169,6 +169,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene: 
   scoreArray: 00000000
+  levelStarted: 0
+  proofsLevel: 00000000000000000000
+  proofsName:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  proofsDescription:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  proofsType: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  cameraMode: 1
 --- !u!1 &360679834
 GameObject:
   m_ObjectHideFlags: 0

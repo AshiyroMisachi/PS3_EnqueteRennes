@@ -5,6 +5,7 @@ using UnityEngine;
 public enum TypeProof
 {
     Object,
-    Person
+    Person,
+    Null
 }
 

@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    //Data Holder
+    public DataHolder dataholder;
     //Var Player
     public bool cameraMode;
-    public List<Proof> proofs;
+    public bool[] proofsList;
     public TextMeshProUGUI popUpText;
     public float timerText;
 
@@ -25,8 +28,25 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        //Find dataholder
+        dataholder = FindObjectOfType<DataHolder>();
+
         //Enable the gyroscope
         Input.gyro.enabled = true;
+
+        //Initialize parameters
+        cameraMode = dataholder.cameraMode;
+
+        //Parameters Switch Scene
+        if (dataholder.levelStarted)
+        {
+            Destroy(policeReport);
+            proofsList = dataholder.proofsLevel;
+        }
+        else
+        {
+            dataholder.proofsLevel = proofsList;
+        }
 
         //Hide UI
         popUpText.alpha = 0f;
@@ -38,6 +58,7 @@ public class Player : MonoBehaviour
                 arrows[i].gameObject.SetActive(false);
             }
         }
+
     }
     // Update is called once per frame
     void Update()
@@ -101,9 +122,17 @@ public class Player : MonoBehaviour
         transform.eulerAngles += Vector3.up;
     }
 
+    //Move to settings
+    public void launchSettings()
+    {
+        //Launch Settings Scene
+        SceneManager.LoadScene("Option");
+    }
+
     //Destroy Police report
     public void destroyPolicereport()
     {
+        dataholder.levelStarted = true;
         Destroy(policeReport);
     }
 }

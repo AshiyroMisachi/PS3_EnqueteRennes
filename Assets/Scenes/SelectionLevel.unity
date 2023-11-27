@@ -471,6 +471,7 @@ MonoBehaviour:
   levelDescription: {fileID: 1487252248}
   levelScore: {fileID: 309550197}
   levelSelected: 
+  noSelection: 0
   levels:
   - {fileID: 1953672222}
 --- !u!4 &582759926
@@ -1790,6 +1791,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
       value: 0.7924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803583401968557059, guid: e63c6ead96ef6f649b7bd998f2bca6e3,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.56078434
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803583401968557059, guid: e63c6ead96ef6f649b7bd998f2bca6e3,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803583401968557059, guid: e63c6ead96ef6f649b7bd998f2bca6e3,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.4666667
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

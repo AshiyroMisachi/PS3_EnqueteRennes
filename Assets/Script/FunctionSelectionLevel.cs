@@ -7,6 +7,9 @@ using UnityEngine.UI;
 
 public class FunctionSelectionLevel : MonoBehaviour
 {
+    //DataHolder
+    public DataHolder dataHolder;
+
     //Var LevelDisplay
     public RectTransform levelDisplay;
     public TextMeshProUGUI levelName;
@@ -25,6 +28,28 @@ public class FunctionSelectionLevel : MonoBehaviour
 
     void Update()
     {
+        //Find dataHolder
+        dataHolder = FindObjectOfType<DataHolder>();
+
+        //Reset Dataholder info
+        dataHolder.levelStarted = false;
+        for (int i = 0; i < dataHolder.proofsLevel.Length; i++)
+        {
+            dataHolder.proofsLevel[i] = false;
+        }
+        for (int i = 0; i < dataHolder.proofsName.Length; i++)
+        {
+            dataHolder.proofsName[i] = "";
+        }
+        for (int i = 0; i < dataHolder.proofsDescription.Length; i++)
+        {
+            dataHolder.proofsDescription[i] = "";
+        }
+        for (int i = 0; i < dataHolder.proofsType.Length; i++)
+        {
+            dataHolder.proofsType[i] = TypeProof.Null;
+        }
+
         //Show Display
         if (levels[0].isSelected)
         {

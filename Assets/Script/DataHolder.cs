@@ -5,8 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class DataHolder : MonoBehaviour
 {
+    //Navigation in menu
     public string currentScene;
+
+    //Selection Level
     public int[] scoreArray;
+
+    //Navigation in Level
+    public bool levelStarted;
+
+    public bool[] proofsLevel;
+    public string[] proofsName;
+    public string[] proofsDescription;
+    public TypeProof[] proofsType;
+
+    //Parameters
+    public bool cameraMode;
     void Start()
     {
         DontDestroyOnLoad(gameObject);
