@@ -20,7 +20,7 @@ public class FunctionSelectionLevel : MonoBehaviour
     //Make Launch Button Work
     public bool noSelection;
     private float timerDeselection;
-    private float timerDeselectionTime = 1f;
+    private float timerDeselectionTime = 0.5f;
 
     //Var Get Level Selected Info
     public ButtonButBetter[] levels;
@@ -49,6 +49,7 @@ public class FunctionSelectionLevel : MonoBehaviour
             dataHolder.proofsType[i] = TypeProof.Null;
         }
 
+        dataHolder.mistake = 0;
 
          Vector3 textProofsCoords = new Vector3(-12f, -5f, 4f);
         for (int i = 0; i < dataHolder.textProofsCoords.Length; i++)
@@ -68,6 +69,8 @@ public class FunctionSelectionLevel : MonoBehaviour
             levelDisplay.anchoredPosition = new Vector3(315f, 0f, 0f);
             levelSelected = levels[0].GetComponent<Level>().myScene;
             timerDeselection = timerDeselectionTime;
+
+            dataHolder.levelSelectedNumber = levels[0].GetComponent<Level>().myNumber;
         }
         else
         {

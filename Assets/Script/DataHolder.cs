@@ -10,7 +10,8 @@ public class DataHolder : MonoBehaviour
     public string currentScene;
 
     //Selection Level
-    public int[] scoreArray;
+    public float[] scoreArray;
+    public int levelSelectedNumber;
 
     //Navigation in Level
     public bool levelStarted;
@@ -21,8 +22,13 @@ public class DataHolder : MonoBehaviour
     public TypeProof[] proofsType;
     public GameObject[] proofsGameObject;
 
+    public int proofsCount;
+
     public GameObject[] textProofs;
     public Vector3[] textProofsCoords;
+
+    public int numberTry = 3;
+    public int mistake;
 
     //Parameters
     public bool cameraMode;

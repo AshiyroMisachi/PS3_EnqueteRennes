@@ -9,7 +9,7 @@ public class Level : MonoBehaviour
     public string myDescription;
     public string myScene;
     public int myNumber;
-    public int myScore;
+    public float myScore;
 
     public RectTransform myTransform;
 
