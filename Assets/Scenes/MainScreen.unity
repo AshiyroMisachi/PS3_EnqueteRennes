@@ -229,7 +229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lastScene: 
   currentScene: 
-  scoreArray: 00000000
+  scoreArray:
+  - 0
+  levelSelectedNumber: 0
   levelStarted: 0
   proofsLevel: 00000000000000000000
   proofsName:
@@ -266,6 +268,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  proofsCount: 0
   textProofs:
   - {fileID: 0}
   - {fileID: 0}
@@ -288,6 +291,8 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
+  numberTry: 3
+  mistake: 0
   cameraMode: 1
 --- !u!4 &211094133
 Transform:
