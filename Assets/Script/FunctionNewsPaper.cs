@@ -55,7 +55,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             }
         }
 
-        if (dataHolder.mistake == 0)
+        if (dataHolder.mistake == 0 || dataHolder.numberTry == 0)
         {
             //Launch Score Scene
             SceneManager.LoadScene("Scoring");
@@ -65,8 +65,6 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             //Open Warning Tab
             warningTab.SetActive(true);
             warningText_Error.text = "Vous avez " + dataHolder.mistake + " fautes, il vous reste " + dataHolder.numberTry + " tentatives";
-
-            //if try = 0 and mistake > 0, launch Score Scene
         }
     }
 
