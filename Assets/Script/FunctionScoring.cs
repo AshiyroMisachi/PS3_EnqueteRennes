@@ -21,7 +21,7 @@ public class FunctionScoring : MonoBehaviour
 
         //Setup
         proofsText.text = "Nombre de preuves trouvées: " + dataHolder.proofsCount + "/" + dataHolder.proofsLevel.Length;
-        tryText.text = "Nombre d'essais restant:" + dataHolder.numberTry + "/3";
+        tryText.text = "Nombre d'essais restant:" + dataHolder.numberTry + "/2";
         switch (dataHolder.mistake)
         {
             case 0:
@@ -43,8 +43,11 @@ public class FunctionScoring : MonoBehaviour
                 star.fillAmount = 0f;
                 break;
         }
-        dataHolder.scoreArray[dataHolder.levelSelectedNumber] = star.fillAmount;
 
+        if (dataHolder.scoreArray[dataHolder.levelSelectedNumber] < star.fillAmount)
+        {
+            dataHolder.scoreArray[dataHolder.levelSelectedNumber] = star.fillAmount;
+        }
     }
 
     public void goBackSelectionLevel()
