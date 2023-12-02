@@ -48,6 +48,10 @@ public class FunctionSelectionLevel : MonoBehaviour
         {
             dataHolder.proofsType[i] = TypeProof.Null;
         }
+        for (int i = 0; i < dataHolder.actualAnswers.Length; i++)
+        {
+            dataHolder.actualAnswers[i] = null;
+        }
 
         dataHolder.mistake = 0;
         dataHolder.numberTry = 2;

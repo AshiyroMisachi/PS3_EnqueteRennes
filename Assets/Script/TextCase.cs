@@ -10,6 +10,7 @@ public class TextCase : MonoBehaviour
     public FunctionHolderNewsPaper manager;
 
     //Var 
+    public int myNumber;
     public string currentName;
     public string[] answers;
     public string correction;
@@ -22,32 +23,53 @@ public class TextCase : MonoBehaviour
         manager = FindObjectOfType<FunctionHolderNewsPaper>();
 
         //Setup
+        if (dataHolder.actualAnswers[myNumber] != null)
+        {
+            changeWord(dataHolder.actualAnswers[myNumber]);
+        }
+        else
+        {
+            changeWord("");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void BeSelected()
     {
         manager.currentSelected = gameObject.GetComponent<TextCase>();
         manager.pannelWordPositionCount = 0;
+        for (int i = 0; i < manager.pannelListWord.Count; i++)
+        {
+            manager.pannelListWord[i].GetComponent<TextProof>().gotMove = false;
+        }
+
         for (int i = 0; i < answers.Length; i++)
         {
             for (int j = 0; j < manager.pannelListWord.Count; j++)
             {
-                if (manager.pannelListWord[i].GetComponent<TextProof>().myName == answers[i])
+                if (manager.pannelListWord[j].GetComponent<TextProof>().myName == answers[i])
                 {
-                    manager.pannelListWord[i].GetComponent<RectTransform>().localPosition = manager.pannelWordPosition[manager.pannelWordPositionCount];
+                    manager.pannelListWord[j].GetComponent<RectTransform>().localPosition = manager.pannelWordPosition[manager.pannelWordPositionCount];
+                    manager.pannelListWord[j].GetComponent<TextProof>().gotMove = true;
                     manager.pannelWordPositionCount++;
                 }
-                else
+                else if (!manager.pannelListWord[j].GetComponent<TextProof>().gotMove)
                 {
-                    manager.pannelListWord[i].GetComponent<RectTransform>().localPosition = new Vector3(-650f, -1.5f, 0f);
+                    manager.pannelListWord[j].GetComponent<RectTransform>().localPosition = new Vector3(-650f, -1.5f, 0f);
                 }
             }
         }
+    }
+
+    public void changeWord(string word)
+    {
+        dataHolder.actualAnswers[myNumber] = word;
+        myText.text = word;
+        currentName = word;
     }
 }

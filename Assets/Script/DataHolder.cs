@@ -26,6 +26,7 @@ public class DataHolder : MonoBehaviour
 
     public int proofsCount;
 
+    public string[] actualAnswers;
     public int numberTry = 3;
     public int mistake;
 

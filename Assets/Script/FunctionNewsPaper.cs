@@ -55,7 +55,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     {
         if (wordSelected != null)
         {
-            currentSelected.myText.text = wordSelected;
+            currentSelected.changeWord(wordSelected);
             wordSelected = null;
         }
     }

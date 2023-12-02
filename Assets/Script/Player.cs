@@ -13,9 +13,12 @@ public class Player : MonoBehaviour
     //Var Player
     public bool cameraMode;
     public bool[] proofsList;
+
     public TextMeshProUGUI popUpText;
     public float timerText;
+
     public string newsPaperScene;
+    public string[] policeReportWord;
 
     //Var Button Camera Mode 2
     //Left, Right, Up, Down
@@ -47,6 +50,7 @@ public class Player : MonoBehaviour
         }
         else
         {
+            dataholder.proofsWordList[0] = policeReportWord;
             dataholder.proofsLevel = proofsList;
         }
 

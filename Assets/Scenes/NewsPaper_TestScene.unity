@@ -842,6 +842,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
         type: 3}
+      propertyPath: myNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
+        type: 3}
       propertyPath: answers.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1889,6 +1894,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
         type: 3}
+      propertyPath: myNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
+        type: 3}
       propertyPath: answers.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2031,6 +2041,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 887709821}
     m_Modifications:
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
+        type: 3}
+      propertyPath: myNumber
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
         type: 3}
       propertyPath: answers.Array.size
@@ -3029,6 +3044,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
         type: 3}
+      propertyPath: myNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
+        type: 3}
       propertyPath: answers.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -3186,6 +3206,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1537942618}
     m_Modifications:
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
+        type: 3}
+      propertyPath: myNumber
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
         type: 3}
       propertyPath: answers.Array.size
@@ -3689,11 +3714,11 @@ MonoBehaviour:
   pannelListWord: []
   pannelWordPosition:
   - {x: -300, y: -1.5, z: 0}
-  - {x: -200, y: -1.5, z: 0}
-  - {x: -100, y: -1.5, z: 0}
-  - {x: 100, y: -1.5, z: 0}
+  - {x: -175, y: -1.5, z: 0}
+  - {x: -50, y: -1.5, z: 0}
+  - {x: 75, y: -1.5, z: 0}
   - {x: 200, y: -1.5, z: 0}
-  - {x: 300, y: -1.5, z: 0}
+  - {x: 325, y: -1.5, z: 0}
   pannelWordPositionCount: 0
   warningTab: {fileID: 1979483846}
   warningText_Error: {fileID: 793579901}
@@ -3738,7 +3763,7 @@ PrefabInstance:
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
         type: 3}
       propertyPath: answers.Array.data[5]
-      value: "R\xE9mi Arcon"
+      value: Remi Arcon
       objectReference: {fileID: 0}
     - target: {fileID: 7638818786513796779, guid: 97d2c6195b7e8834bad332c86558c024,
         type: 3}
