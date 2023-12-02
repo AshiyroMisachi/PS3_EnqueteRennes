@@ -41,7 +41,7 @@ public class Proof : MonoBehaviour
             canPickUp = false;
 
             //Spawn Object to show you can't pickup anymore
-            Instantiate(plot, transform.position + distancePlot, transform.rotation);
+            Instantiate(plot, transform.position + distancePlot, Quaternion.Euler(0,0,0));
 
             /*//Add Proof to player list
             player.proofs.Add(this);

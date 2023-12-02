@@ -196,6 +196,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: potChambre
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a499795923d3c6147884db5e5a705b6e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2732,6 +2737,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: horloge
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5dfbdae875c475048afb545d8234509d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
