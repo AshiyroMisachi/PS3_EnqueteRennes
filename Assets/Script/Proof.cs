@@ -10,6 +10,7 @@ public class Proof : MonoBehaviour
     public string myName;
     public string description;
     public int myNumber;
+    public string[] wordList;
 
     public GameObject plot;
     public Vector3 distancePlot;
@@ -54,6 +55,7 @@ public class Proof : MonoBehaviour
             dataHolder.proofsDescription[myNumber] = description;
             dataHolder.proofsType[myNumber] = type;
             dataHolder.proofsGameObject[myNumber] = gameObject;
+            dataHolder.proofsWordList[myNumber] = wordList;
 
             //Pop up Text to show you pick up
             player.popUpText.text = "You found " + myName;

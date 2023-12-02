@@ -233,8 +233,18 @@ MonoBehaviour:
   - 0
   levelSelectedNumber: 0
   levelStarted: 0
-  proofsLevel: 00000000000000000000
+  proofsLevel: 0000000000000000000000000000000000000000
   proofsName:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -256,7 +266,17 @@ MonoBehaviour:
   - 
   - 
   - 
-  proofsType: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  proofsType: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   proofsGameObject:
   - {fileID: 0}
   - {fileID: 0}
@@ -268,29 +288,24 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   proofsCount: 0
-  textProofs:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  textProofsCoords:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
+  actualAnswers:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   numberTry: 3
   mistake: 0
   cameraMode: 1

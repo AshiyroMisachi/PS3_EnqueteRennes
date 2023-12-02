@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,12 +22,11 @@ public class DataHolder : MonoBehaviour
     public string[] proofsDescription;
     public TypeProof[] proofsType;
     public GameObject[] proofsGameObject;
+    public Array[] proofsWordList;
 
     public int proofsCount;
 
-    public GameObject[] textProofs;
-    public Vector3[] textProofsCoords;
-
+    public string[] actualAnswers;
     public int numberTry = 3;
     public int mistake;
 
@@ -35,6 +35,7 @@ public class DataHolder : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
+        proofsWordList = new Array[10];
     }
 
     void Update()
