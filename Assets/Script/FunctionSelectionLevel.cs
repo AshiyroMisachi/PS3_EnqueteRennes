@@ -51,13 +51,6 @@ public class FunctionSelectionLevel : MonoBehaviour
 
         dataHolder.mistake = 0;
         dataHolder.numberTry = 2;
-
-         Vector3 textProofsCoords = new Vector3(-12f, -5f, 4f);
-        for (int i = 0; i < dataHolder.textProofsCoords.Length; i++)
-        {
-            dataHolder.textProofsCoords[i] = textProofsCoords;
-            textProofsCoords += new Vector3(3f, 0f, 0f);
-        }
     }
     void Update()
     {

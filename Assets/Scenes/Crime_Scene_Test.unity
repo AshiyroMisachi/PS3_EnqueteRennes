@@ -172,6 +172,7 @@ MonoBehaviour:
   myName: Horloge
   description: "C'est une horloge cass\xE9"
   myNumber: 5
+  wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
   canPickUp: 1
@@ -662,7 +663,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2003678434}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 182ad3fa9d9c0c547962dcc81c2b35d3,
         type: 3}
@@ -729,6 +730,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 182ad3fa9d9c0c547962dcc81c2b35d3, type: 3}
+--- !u!4 &352216739 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 182ad3fa9d9c0c547962dcc81c2b35d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 352216738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &461608872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1035,7 +1042,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2003678434}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 012231d46e84c8e49b4c4d43312e3b65,
         type: 3}
@@ -1102,6 +1109,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 012231d46e84c8e49b4c4d43312e3b65, type: 3}
+--- !u!4 &573044076 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 012231d46e84c8e49b4c4d43312e3b65,
+    type: 3}
+  m_PrefabInstance: {fileID: 573044075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &607137958 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 555049031895192842, guid: 611ff2f65d339d149874639ac1a91a60,
@@ -3494,22 +3507,32 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1973956734}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5c6f369bac6916740907e7e7f7e14d71,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20.411758
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c6f369bac6916740907e7e7f7e14d71,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20.411753
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5c6f369bac6916740907e7e7f7e14d71,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.73
+      value: 4.3801637
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c6f369bac6916740907e7e7f7e14d71,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.255
+      value: -0.3675691
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c6f369bac6916740907e7e7f7e14d71,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.754
+      value: 0.47347498
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c6f369bac6916740907e7e7f7e14d71,
         type: 3}
@@ -3556,6 +3579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: potChambre 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c6f369bac6916740907e7e7f7e14d71,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3588,12 +3616,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  myName: potChambre
+  myName: Pot de Chambre
   description: "C'est un pot de chambre renvers\xE9"
   myNumber: 4
+  wordList:
+  - "Noy\xE9e dans une bassine"
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
-  canPickUp: 0
+  canPickUp: 1
   dataHolder: {fileID: 0}
 --- !u!135 &1801329869
 SphereCollider:
@@ -3616,6 +3646,12 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.01426126
   m_Center: {x: -1.1445484e-28, y: -3.298936e-11, z: 0.0044277566}
+--- !u!4 &1801329870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c6f369bac6916740907e7e7f7e14d71,
+    type: 3}
+  m_PrefabInstance: {fileID: 1801329866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1844955629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3890,6 +3926,7 @@ Transform:
   - {fileID: 123254998}
   - {fileID: 1338741777}
   - {fileID: 2069133536}
+  - {fileID: 1801329870}
   - {fileID: 53046851}
   - {fileID: 1985552662}
   m_Father: {fileID: 0}
@@ -4017,6 +4054,7 @@ MonoBehaviour:
   myName: Lunette
   description: "Des lunettes cass\xE9es"
   myNumber: 6
+  wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
   canPickUp: 1
@@ -4077,6 +4115,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 573044076}
+  - {fileID: 352216739}
   - {fileID: 1931756081}
   - {fileID: 607137958}
   - {fileID: 953456775}
@@ -4587,6 +4627,3 @@ SceneRoots:
   - {fileID: 2860214716198331766}
   - {fileID: 774738088}
   - {fileID: 1844955631}
-  - {fileID: 352216738}
-  - {fileID: 1801329866}
-  - {fileID: 573044075}
