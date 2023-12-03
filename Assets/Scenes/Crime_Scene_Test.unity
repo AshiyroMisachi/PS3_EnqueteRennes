@@ -2030,115 +2030,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c0c7699781ef17468a9b62891468f2e, type: 3}
---- !u!1001 &873066161
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1973956734}
-    m_Modifications:
-    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: myName
-      value: Lettre de plainte
-      objectReference: {fileID: 0}
-    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: myNumber
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: description
-      value: Une lettre de plainte
-      objectReference: {fileID: 0}
-    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: wordList.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: wordList.Array.data[0]
-      value: "Col\xE8re d'un ancien client hargneux"
-      objectReference: {fileID: 0}
-    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: wordList.Array.data[1]
-      value: 7h
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.066393
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.435
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.353
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.244
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5384158711601777787, guid: be715d0e172e03f4483294fb8ac2446d,
-        type: 3}
-      propertyPath: m_Name
-      value: LettrePlainte
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
---- !u!4 &873066162 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
-    type: 3}
-  m_PrefabInstance: {fileID: 873066161}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &929239466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3263,7 +3154,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: efc890569464718489d4710815d13c64,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.031
+      value: -7.942
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: efc890569464718489d4710815d13c64,
         type: 3}
@@ -3454,7 +3345,7 @@ MonoBehaviour:
   type: 0
   myName: Lettre de Plainte
   description: "Lettre de Plainte \xE9crite par Jeanne"
-  myNumber: 0
+  myNumber: 9
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
@@ -3920,7 +3811,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5c6f369bac6916740907e7e7f7e14d71,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3675691
+      value: -0.359
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c6f369bac6916740907e7e7f7e14d71,
         type: 3}
@@ -4457,7 +4348,7 @@ Transform:
   - {fileID: 53046851}
   - {fileID: 1985552662}
   - {fileID: 1613678881}
-  - {fileID: 873066162}
+  - {fileID: 1571180339}
   - {fileID: 542251490}
   - {fileID: 2147156558}
   m_Father: {fileID: 0}
