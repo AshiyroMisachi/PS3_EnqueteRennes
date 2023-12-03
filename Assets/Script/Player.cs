@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     //Var Player
     public bool cameraMode;
-    public bool[] proofsList;
+    public int numberProof;
 
     public TextMeshProUGUI popUpText;
     public float timerText;
@@ -46,12 +46,11 @@ public class Player : MonoBehaviour
         if (dataholder.levelStarted)
         {
             Destroy(policeReport);
-            proofsList = dataholder.proofsLevel;
         }
         else
         {
+            dataholder.setupArray(numberProof);
             dataholder.proofsWordList[0] = policeReportWord;
-            dataholder.proofsLevel = proofsList;
         }
 
         //Hide UI

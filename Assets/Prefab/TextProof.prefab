@@ -96,7 +96,7 @@ MonoBehaviour:
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 14
+  m_fontSizeMin: 8
   m_fontSizeMax: 18
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -161,7 +161,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5867329484857752146}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -228,6 +228,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   myName: 
   textName: {fileID: 8792614867412370218}
+  gotMove: 0
 --- !u!114 &3893812403525003018
 MonoBehaviour:
   m_ObjectHideFlags: 0

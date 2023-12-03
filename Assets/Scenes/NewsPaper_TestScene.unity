@@ -1917,6 +1917,11 @@ PrefabInstance:
       propertyPath: answers.Array.data[2]
       value: "Dettes li\xE9es \xE0 des loyers impay\xE9s"
       objectReference: {fileID: 0}
+    - target: {fileID: 2655387762756052859, guid: 97d2c6195b7e8834bad332c86558c024,
+        type: 3}
+      propertyPath: m_fontSizeMin
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 7638818786513796779, guid: 97d2c6195b7e8834bad332c86558c024,
         type: 3}
       propertyPath: m_Pivot.x
@@ -3730,41 +3735,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1012067401}
     m_Modifications:
-    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
-        type: 3}
-      propertyPath: answers.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
-        type: 3}
-      propertyPath: answers.Array.data[0]
-      value: Berthe Leclair
-      objectReference: {fileID: 0}
-    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
-        type: 3}
-      propertyPath: answers.Array.data[1]
-      value: Jeanne Obitz
-      objectReference: {fileID: 0}
-    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
-        type: 3}
-      propertyPath: answers.Array.data[2]
-      value: Albert Leclair
-      objectReference: {fileID: 0}
-    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
-        type: 3}
-      propertyPath: answers.Array.data[3]
-      value: Nolwenn Bellec
-      objectReference: {fileID: 0}
-    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
-        type: 3}
-      propertyPath: answers.Array.data[4]
-      value: Daniel Lorbier
-      objectReference: {fileID: 0}
-    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024,
-        type: 3}
-      propertyPath: answers.Array.data[5]
-      value: Remi Arcon
-      objectReference: {fileID: 0}
     - target: {fileID: 7638818786513796779, guid: 97d2c6195b7e8834bad332c86558c024,
         type: 3}
       propertyPath: m_Pivot.x
