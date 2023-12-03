@@ -18,8 +18,10 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     public int pannelWordPositionCount;
 
     //Warning Tab
-    public GameObject warningTab;
-    public TextMeshProUGUI warningText_Error;
+    public GameObject warningTry;
+    public TextMeshProUGUI warningTryText;
+    public GameObject warningMistake;
+    public TextMeshProUGUI warningMistakeText;
 
     private void Start()
     {
@@ -27,7 +29,8 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         dataHolder = FindObjectOfType<DataHolder>();
 
         //Setup
-        warningTab.SetActive(false);
+        warningTry.SetActive(false);
+        warningMistake.SetActive(false);
 
         //Spawn TextProofs
         dataHolder.proofsCount = 0;
@@ -42,8 +45,8 @@ public class FunctionHolderNewsPaper : MonoBehaviour
                     GameObject newTextProof = Instantiate(textproof);
                     newTextProof.gameObject.GetComponent<TextProof>().myName = currentWordList[j];
                     newTextProof.GetComponent<RectTransform>().SetParent(pannelWord.GetComponent<RectTransform>(), false);
-                    newTextProof.GetComponent<RectTransform>().localPosition = new Vector3 (-650f, -1.5f, 0f);
-                    
+                    newTextProof.GetComponent<RectTransform>().localPosition = new Vector3(-650f, -1.5f, 0f);
+
                     pannelListWord.Add(newTextProof);
                 }
             }
@@ -65,34 +68,47 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         SceneManager.LoadScene(dataHolder.lastScene);
     }
 
-    public void verification()
+    public void OpenWarningTry()
     {
-        for (int i = 0; i < textCases.Length; i++)
+        //CHECK MISTAKE
+        dataHolder.mistake = 0;
+        for (int i = 0; i<textCases.Length; i++)
         {
-            if (textCases[i].currentName != textCases[i].correction)
+            if (textCases[i].correction != textCases[i].currentName)
             {
                 dataHolder.mistake++;
             }
         }
-
-        if (dataHolder.mistake == 0 || dataHolder.numberTry == 0)
+        if (dataHolder.mistake == 0)
         {
-            //Launch Score Scene
-            SceneManager.LoadScene("Scoring");
+            continueVerification();
         }
-        else
+
+
+        warningTry.SetActive(true);
+        warningTryText.text = "Vous avez " + dataHolder.numberTry + " tentatives restantes";
+        if (dataHolder.numberTry == 0)
         {
-            //Open Warning Tab
-            warningTab.SetActive(true);
-            warningText_Error.text = "Vous avez " + dataHolder.mistake + " fautes, il vous reste " + dataHolder.numberTry + " tentatives";
+            continueVerification();
         }
     }
 
-    public void closeVerification()
+    public void CloseWarningTry()
     {
-        dataHolder.mistake = 0;
+        warningTry.SetActive(false);
+    }
+
+    public void OpenWarningMistake()
+    {
+        warningTry.SetActive(false);
+        warningMistake.SetActive(true);
+        warningMistakeText.text = "Vous avez "+dataHolder.mistake +" fautes";
+    }
+
+    public void CloseWarningMistake()
+    {
         dataHolder.numberTry--;
-        warningTab.SetActive(false);
+        warningTry.SetActive(false);
     }
 
     public void continueVerification()

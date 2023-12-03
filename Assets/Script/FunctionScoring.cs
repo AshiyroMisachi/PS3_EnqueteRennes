@@ -20,7 +20,7 @@ public class FunctionScoring : MonoBehaviour
         dataHolder = FindObjectOfType<DataHolder>();
 
         //Setup
-        proofsText.text = "Nombre de preuves trouvées: " + dataHolder.proofsCount + "/" + dataHolder.proofsLevel.Length;
+        proofsText.text = "Nombre de preuves trouvées: " + (dataHolder.proofsCount-1) + "/" + (dataHolder.proofsLevel.Length-1);
         tryText.text = "Nombre d'essais restant:" + dataHolder.numberTry + "/2";
         switch (dataHolder.mistake)
         {
@@ -40,6 +40,9 @@ public class FunctionScoring : MonoBehaviour
                 star.fillAmount = 0.2f;
                 break;
             case 5:
+                star.fillAmount = 0f;
+                break;
+            case 6:
                 star.fillAmount = 0f;
                 break;
         }

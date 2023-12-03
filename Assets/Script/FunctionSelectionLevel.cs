@@ -14,7 +14,7 @@ public class FunctionSelectionLevel : MonoBehaviour
     public RectTransform levelDisplay;
     public TextMeshProUGUI levelName;
     public TextMeshProUGUI levelDescription;
-    public TextMeshProUGUI levelScore;
+    public Image levelScore;
     public string levelSelected;
 
     //Make Launch Button Work
@@ -38,14 +38,7 @@ public class FunctionSelectionLevel : MonoBehaviour
         //Show Display
         if (levels[0].isSelected)
         {
-            levelName.text = levels[0].GetComponent<Level>().myName;
-            levelDescription.text = levels[0].GetComponent<Level>().myDescription;
-            levelScore.text = "Score: " + levels[0].GetComponent<Level>().myScore;
-            levelDisplay.anchoredPosition = new Vector3(315f, 0f, 0f);
-            levelSelected = levels[0].GetComponent<Level>().myScene;
-            timerDeselection = timerDeselectionTime;
-
-            dataHolder.levelSelectedNumber = levels[0].GetComponent<Level>().myNumber;
+            SetupLevelDisplay(0);
         }
         else
         {
@@ -56,6 +49,18 @@ public class FunctionSelectionLevel : MonoBehaviour
         {
             levelDisplay.anchoredPosition = new Vector3(500f, 0f, 0f);
         }
+    }
+
+    public void SetupLevelDisplay(int numberLevel)
+    {
+        levelName.text = levels[numberLevel].GetComponent<Level>().myName;
+        levelDescription.text = levels[numberLevel].GetComponent<Level>().myDescription;
+        levelScore.fillAmount = levels[numberLevel].GetComponent<Level>().myScore;
+        levelDisplay.anchoredPosition = new Vector3(315f, 0f, 0f);
+        levelSelected = levels[numberLevel].GetComponent<Level>().myScene;
+        timerDeselection = timerDeselectionTime;
+
+        dataHolder.levelSelectedNumber = levels[numberLevel].GetComponent<Level>().myNumber;
     }
     public void launchSettings()
     {
