@@ -44,16 +44,10 @@ public class Proof : MonoBehaviour
             //Spawn Object to show you can't pickup anymore
             Instantiate(plot, transform.position + distancePlot, Quaternion.Euler(0,0,0));
 
-            /*//Add Proof to player list
-            player.proofs.Add(this);
-            dataHolder.proofsLevel.Add(this);*/
-            player.proofsList[myNumber] = true;
-
             //Store proof data 
             dataHolder.proofsLevel[myNumber] = true;
             dataHolder.proofsName[myNumber] = myName;
             dataHolder.proofsDescription[myNumber] = description;
-            dataHolder.proofsType[myNumber] = type;
             dataHolder.proofsGameObject[myNumber] = gameObject;
             dataHolder.proofsWordList[myNumber] = wordList;
 

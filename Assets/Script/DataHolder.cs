@@ -20,7 +20,6 @@ public class DataHolder : MonoBehaviour
     public bool[] proofsLevel;
     public string[] proofsName;
     public string[] proofsDescription;
-    public TypeProof[] proofsType;
     public GameObject[] proofsGameObject;
     public Array[] proofsWordList;
 
@@ -49,5 +48,44 @@ public class DataHolder : MonoBehaviour
     public void updateLastScene()
     {
         lastScene = currentScene;
+    }
+
+
+    public void setupArray(int numberElement)
+    {
+        proofsLevel = new bool[numberElement];
+        proofsName = new string[numberElement];
+        proofsDescription = new string[numberElement];
+        proofsWordList = new Array[numberElement];
+    }
+
+    public void resetLevelVAR()
+    {
+        //Level Crime Scene
+        levelStarted = false;
+        for (int i = 0; i < proofsLevel.Length; i++)
+        {
+            proofsLevel[i] = false;
+        }
+        for (int i = 0; i < proofsName.Length; i++)
+        {
+            proofsName[i] = "";
+        }
+        for (int i = 0; i < proofsDescription.Length; i++)
+        {
+            proofsDescription[i] = "";
+        }
+        for (int i = 0; i < proofsGameObject.Length; i++)
+        {
+            proofsGameObject[i] = null;
+        }
+
+        //Level NewsPaper
+        for (int i = 0; i < actualAnswers.Length; i++)
+        {
+            actualAnswers[i] = null;
+        }
+        mistake = 0;
+        numberTry = 2;
     }
 }
