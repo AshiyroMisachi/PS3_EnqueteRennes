@@ -57,4 +57,9 @@ public class Proof : MonoBehaviour
         }
     }
 
+    public void showFeedback()
+    {
+        Debug.Log("A proof is located at the Camera center");
+    }
+
 }
