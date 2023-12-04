@@ -105,9 +105,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b0da8832d0219428e713cf75586f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataholder: {fileID: 0}
   cameraMode: 1
-  proofs: []
+  numberProof: 0
   popUpText: {fileID: 0}
+  timerText: 0
+  newsPaperScene: 
+  policeReportWord: []
+  arrows: []
+  policeReport: {fileID: 0}
   mask:
     serializedVersion: 2
     m_Bits: 8
+  prefabLight: {fileID: 5477317613189756311, guid: 511d5595990589648801af7939c8cab3,
+    type: 3}

@@ -176,7 +176,6 @@ MonoBehaviour:
   - 8h30
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
-  canPickUp: 1
   dataHolder: {fileID: 0}
 --- !u!1 &102397611 stripped
 GameObject:
@@ -807,7 +806,6 @@ MonoBehaviour:
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
-  canPickUp: 1
   dataHolder: {fileID: 0}
 --- !u!1001 &438268345
 PrefabInstance:
@@ -926,7 +924,6 @@ MonoBehaviour:
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
-  canPickUp: 1
   dataHolder: {fileID: 0}
 --- !u!65 &438268349
 BoxCollider:
@@ -3489,7 +3486,6 @@ MonoBehaviour:
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
-  canPickUp: 1
   dataHolder: {fileID: 0}
 --- !u!1001 &1602297407
 PrefabInstance:
@@ -4463,7 +4459,6 @@ MonoBehaviour:
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
-  canPickUp: 1
   dataHolder: {fileID: 0}
 --- !u!135 &1985552661
 SphereCollider:

@@ -31,6 +31,9 @@ public class Player : MonoBehaviour
     public LayerMask mask;
     private bool raycastOneTime;
 
+    public Light prefabLight;
+    private Light clueLight;
+
     void Start()
     {
         //Find dataholder
@@ -65,6 +68,10 @@ public class Player : MonoBehaviour
             }
         }
 
+        Camera myCamera = Camera.main;
+
+        clueLight = Instantiate(prefabLight, myCamera.transform.position, Quaternion.Euler(0, 0, 0));
+
     }
 
     void Update()
@@ -81,12 +88,33 @@ public class Player : MonoBehaviour
             transform.Rotate(90f, 180f, 0f, Space.World);
         }
 
+        Camera myCamera = Camera.main;
+        clueLight.transform.position = myCamera.transform.position + myCamera.transform.forward;
+
+        Debug.Log(clueLight.transform.position);
+
+        Debug.DrawLine(myCamera.transform.position, myCamera.transform.position + Vector3.forward *500, Color.blue);
+
+        if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask))
+        {
+            Proof proofDetected = infoBis.transform.GetComponent<Proof>();
+
+            if (proofDetected != null)
+            {
+                clueLight.intensity = 1;
+            }
+        }
+        else
+        {
+            clueLight.intensity = 0;
+        }
+
         //Raycast when touch screen to detect object
         if (Input.touchCount > 0)
         {
             if(!raycastOneTime)
             {
-                Camera myCamera = Camera.main;
+                //Camera myCamera = Camera.main;
                 Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
                 Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
                 if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
@@ -107,6 +135,7 @@ public class Player : MonoBehaviour
             popUpText.alpha -= 0.005f;
         }
     }
+
     //Camera Mode 2, Move by clicking button
     public void rotateDown()
     {
