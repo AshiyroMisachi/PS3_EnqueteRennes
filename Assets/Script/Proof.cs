@@ -15,7 +15,7 @@ public class Proof : MonoBehaviour
     public GameObject plot;
     public Vector3 distancePlot;
 
-    public bool canPickUp;
+    private bool canPickUp = true;
 
     //Data Holder
     public DataHolder dataHolder;
@@ -29,7 +29,6 @@ public class Proof : MonoBehaviour
         if (dataHolder.proofsLevel[myNumber])
         {
             canPickUp = false;
-            //Spawn Object to show you can't pickup anymore
             Instantiate(plot, transform.position + distancePlot, Quaternion.Euler(0, 0, 0));
         }
     }
@@ -52,7 +51,7 @@ public class Proof : MonoBehaviour
             dataHolder.proofsWordList[myNumber] = wordList;
 
             //Pop up Text to show you pick up
-            player.popUpText.text = "You found " + myName;
+            player.popUpText.text = "Vous avez trouvé " + myName;
             player.popUpText.alpha = 1f;
             player.timerText = 0f;
         }

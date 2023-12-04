@@ -33,12 +33,6 @@ public class TextCase : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void BeSelected()
     {
         manager.currentSelected = gameObject.GetComponent<TextCase>();

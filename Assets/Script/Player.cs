@@ -66,11 +66,9 @@ public class Player : MonoBehaviour
         }
 
     }
-    // Update is called once per frame
+
     void Update()
     {
-        
-
         //Update timer
         timerText += Time.deltaTime;
 
@@ -91,7 +89,6 @@ public class Player : MonoBehaviour
                 Camera myCamera = Camera.main;
                 Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
                 Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
-                Debug.DrawLine(myCamera.transform.position, touchPosInWorld, Color.red);
                 if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
                 {
                     info.transform.GetComponent<Proof>().getPickUp(this);

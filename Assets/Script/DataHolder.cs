@@ -26,7 +26,7 @@ public class DataHolder : MonoBehaviour
     public int proofsCount;
 
     public string[] actualAnswers;
-    public int numberTry = 3;
+    public int numberTry = 2;
     public int mistake;
 
     //Parameters
@@ -34,7 +34,6 @@ public class DataHolder : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        proofsWordList = new Array[10];
     }
 
     void Update()

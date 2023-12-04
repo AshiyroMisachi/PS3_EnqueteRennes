@@ -21,12 +21,6 @@ public class TextProof : MonoBehaviour
         textName.text = myName;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public void selectWord()
     {
         manager.wordSelected = myName;
