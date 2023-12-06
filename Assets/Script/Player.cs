@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     //Data Holder
     public DataHolder dataholder;
 
+    public float lerpFactor;
+
     //Var Player
     public bool cameraMode;
     public int numberProof;
@@ -88,27 +90,32 @@ public class Player : MonoBehaviour
             //Need to freeze Z axis
             if (cameraMode)
             {
+
                 transform.rotation = Input.gyro.attitude;
+                
+                // Attempt to make a smooth rotation of the camera when using gyroscoping (not working atm)
+
+                //Vector3 newRotation = Vector3.Lerp(transform.eulerAngles, Input.gyro.attitude.eulerAngles, lerpFactor);
+                //transform.rotation = Quaternion.Euler(newRotation.x, newRotation.y, newRotation.z);
+                
                 transform.Rotate(0f, 0f, 180f, Space.Self);
                 transform.Rotate(90f, 180f, 0f, Space.World);
             }
 
             Camera myCamera = Camera.main;
-            clueLight.transform.position = myCamera.transform.position + myCamera.transform.forward;
-
-            Debug.Log(clueLight.transform.position);
-
-            Debug.DrawLine(myCamera.transform.position, myCamera.transform.position + Vector3.forward * 500, Color.blue);
 
             if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask))
             {
                 Proof proofDetected = infoBis.transform.GetComponent<Proof>();
 
-                if (proofDetected != null)
-                {
-                    clueLight.intensity = 1;
-                }
+                clueLight.intensity = 1;
+
+                // Light appears at mid distance between the origin of the player and the origin of the proof
+                Vector3 lightPosition = gameObject.transform.position - ((gameObject.transform.position - proofDetected.transform.position) / 2);
+
+                clueLight.transform.position = lightPosition;
             }
+
             else
             {
                 clueLight.intensity = 0;
