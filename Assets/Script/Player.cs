@@ -76,64 +76,68 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        //Update timer
-        timerText += Time.deltaTime;
-
-        //Change the rotation of the camera acording to the phone's rotation
-        //Need to freeze Z axis
-        if (cameraMode)
+        if (dataholder.levelStarted)
         {
-            transform.rotation = Input.gyro.attitude;
-            transform.Rotate(0f, 0f, 180f, Space.Self);
-            transform.Rotate(90f, 180f, 0f, Space.World);
-        }
+            //Update timer
+            timerText += Time.deltaTime;
 
-        Camera myCamera = Camera.main;
-        clueLight.transform.position = myCamera.transform.position + myCamera.transform.forward;
-
-        Debug.Log(clueLight.transform.position);
-
-        Debug.DrawLine(myCamera.transform.position, myCamera.transform.position + Vector3.forward *500, Color.blue);
-
-        if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask))
-        {
-            Proof proofDetected = infoBis.transform.GetComponent<Proof>();
-
-            if (proofDetected != null)
+            //Change the rotation of the camera acording to the phone's rotation
+            //Need to freeze Z axis
+            if (cameraMode)
             {
-                clueLight.intensity = 1;
+                transform.rotation = Input.gyro.attitude;
+                transform.Rotate(0f, 0f, 180f, Space.Self);
+                transform.Rotate(90f, 180f, 0f, Space.World);
             }
-        }
-        else
-        {
-            clueLight.intensity = 0;
-        }
 
-        //Raycast when touch screen to detect object
-        if (Input.touchCount > 0)
-        {
-            if(!raycastOneTime)
+            Camera myCamera = Camera.main;
+            clueLight.transform.position = myCamera.transform.position + myCamera.transform.forward;
+
+            Debug.Log(clueLight.transform.position);
+
+            Debug.DrawLine(myCamera.transform.position, myCamera.transform.position + Vector3.forward * 500, Color.blue);
+
+            if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask))
             {
-                //Camera myCamera = Camera.main;
-                Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
-                Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
-                if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
+                Proof proofDetected = infoBis.transform.GetComponent<Proof>();
+
+                if (proofDetected != null)
                 {
-                    info.transform.GetComponent<Proof>().getPickUp(this);
+                    clueLight.intensity = 1;
                 }
             }
-            raycastOneTime = true;
-        }
-        else
-        {
-            raycastOneTime = false;
+            else
+            {
+                clueLight.intensity = 0;
+            }
+
+            //Raycast when touch screen to detect object
+            if (Input.touchCount > 0)
+            {
+                if (!raycastOneTime)
+                {
+                    //Camera myCamera = Camera.main;
+                    Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
+                    Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
+                    if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
+                    {
+                        info.transform.GetComponent<Proof>().getPickUp(this);
+                    }
+                }
+                raycastOneTime = true;
+            }
+            else
+            {
+                raycastOneTime = false;
+            }
+
+            //Hide Text after pickup an object
+            if (timerText > 2f)
+            {
+                popUpText.alpha -= 0.005f;
+            }
         }
 
-        //Hide Text after pickup an object
-        if (timerText > 2f)
-        {
-            popUpText.alpha -= 0.005f;
-        }
     }
 
     //Camera Mode 2, Move by clicking button
@@ -157,16 +161,23 @@ public class Player : MonoBehaviour
     //Move to settings
     public void launchSettings()
     {
-        //Launch Settings Scene
-        dataholder.updateLastScene();
-        SceneManager.LoadScene("Option");
+        if (dataholder.levelStarted)
+        {
+            //Launch Settings Scene
+            dataholder.updateLastScene();
+            SceneManager.LoadScene("Option");
+        }
+
     }
 
     //Move to News Paper
     public void launchNewsPaper()
     {
-        dataholder.updateLastScene();
-        SceneManager.LoadScene(newsPaperScene);
+        if (dataholder.levelStarted)
+        {
+            dataholder.updateLastScene();
+            SceneManager.LoadScene(newsPaperScene);
+        }
     }
 
     //Destroy Police report
