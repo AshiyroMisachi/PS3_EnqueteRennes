@@ -1102,13 +1102,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98186d71b1edac24b9ecf7754c85b57c,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 98186d71b1edac24b9ecf7754c85b57c,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.84
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98186d71b1edac24b9ecf7754c85b57c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.743
+      value: -7.744
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98186d71b1edac24b9ecf7754c85b57c,
         type: 3}
@@ -3267,6 +3272,7 @@ MonoBehaviour:
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
+  clueLightPosition: {x: 0, y: 0, z: 0}
   dataHolder: {fileID: 0}
 --- !u!65 &1371123758
 BoxCollider:
