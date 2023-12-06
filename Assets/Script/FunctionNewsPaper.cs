@@ -18,6 +18,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     public int pannelWordPositionCount;
 
     //Warning Tab
+    private bool inWarning = false;
     public GameObject warningTry;
     public TextMeshProUGUI warningTryText;
     public GameObject warningMistake;
@@ -65,36 +66,43 @@ public class FunctionHolderNewsPaper : MonoBehaviour
 
     public void goBackScene()
     {
-        SceneManager.LoadScene(dataHolder.lastScene);
+        if (!inWarning)
+        {
+            SceneManager.LoadScene(dataHolder.lastScene);
+        }
     }
 
     public void OpenWarningTry()
     {
-        //CHECK MISTAKE
-        dataHolder.mistake = 0;
-        for (int i = 0; i<textCases.Length; i++)
+        if (!inWarning)
         {
-            if (textCases[i].correction != textCases[i].currentName)
+            inWarning = true;
+            //CHECK MISTAKE
+            dataHolder.mistake = 0;
+            for (int i = 0; i < textCases.Length; i++)
             {
-                dataHolder.mistake++;
+                if (textCases[i].correction != textCases[i].currentName)
+                {
+                    dataHolder.mistake++;
+                }
             }
-        }
-        if (dataHolder.mistake == 0)
-        {
-            continueVerification();
-        }
+            if (dataHolder.mistake == 0)
+            {
+                continueVerification();
+            }
 
-
-        warningTry.SetActive(true);
-        warningTryText.text = "Vous avez " + dataHolder.numberTry + " tentatives restantes";
-        if (dataHolder.numberTry == 0)
-        {
-            continueVerification();
+            warningTry.SetActive(true);
+            warningTryText.text = "Vous avez " + dataHolder.numberTry + " tentatives restantes";
+            if (dataHolder.numberTry == 0)
+            {
+                continueVerification();
+            }
         }
     }
 
     public void CloseWarningTry()
     {
+        inWarning = false;
         warningTry.SetActive(false);
     }
 
@@ -102,13 +110,14 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     {
         warningTry.SetActive(false);
         warningMistake.SetActive(true);
-        warningMistakeText.text = "Vous avez "+dataHolder.mistake +" fautes";
+        warningMistakeText.text = "Vous avez " + dataHolder.mistake + " fautes";
     }
 
     public void CloseWarningMistake()
     {
+        inWarning = false;
         dataHolder.numberTry--;
-        warningTry.SetActive(false);
+        warningMistake.SetActive(false);
     }
 
     public void continueVerification()
