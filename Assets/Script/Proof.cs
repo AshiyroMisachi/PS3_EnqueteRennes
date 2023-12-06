@@ -41,19 +41,24 @@ public class Proof : MonoBehaviour
             canPickUp = false;
 
             //Spawn Object to show you can't pickup anymore
-            Instantiate(plot, transform.position + distancePlot, Quaternion.Euler(0,0,0));
+            Instantiate(plot, transform.position + distancePlot, Quaternion.Euler(0, 0, 0));
 
             //Store proof data 
             dataHolder.proofsLevel[myNumber] = true;
             dataHolder.proofsName[myNumber] = myName;
             dataHolder.proofsDescription[myNumber] = description;
-            dataHolder.proofsGameObject[myNumber] = gameObject;
             dataHolder.proofsWordList[myNumber] = wordList;
+
+            GameObject proofGameObject = Instantiate(gameObject);
+            Destroy(proofGameObject.GetComponent<Proof>());
+            dataHolder.proofsGameObject[myNumber] = proofGameObject;
 
             //Pop up Text to show you pick up
             player.popUpText.text = "Vous avez trouvé " + myName;
             player.popUpText.alpha = 1f;
             player.timerText = 0f;
+
+            
         }
     }
 

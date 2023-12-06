@@ -53,6 +53,9 @@ public class Player : MonoBehaviour
         else
         {
             dataholder.setupArray(numberProof);
+            dataholder.proofsLevel[0] = true;
+            dataholder.proofsName[0] = "Rapport de Police";
+            dataholder.proofsDescription[0] = "Ceci est le rapport du meurtre délivré par la police";
             dataholder.proofsWordList[0] = policeReportWord;
         }
 
@@ -180,6 +183,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void LaunchNoteBook()
+    {
+        if (dataholder.levelStarted)
+        {
+            dataholder.updateLastScene();
+            SceneManager.LoadScene("NoteBook");
+        }
+    }
     //Destroy Police report
     public void destroyPolicereport()
     {
