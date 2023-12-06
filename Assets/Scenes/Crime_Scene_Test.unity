@@ -176,6 +176,7 @@ MonoBehaviour:
   - 8h30
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
+  clueLightPosition: {x: 5.427, y: 1.355, z: -1.0816069}
   dataHolder: {fileID: 0}
 --- !u!1 &102397611 stripped
 GameObject:
@@ -806,6 +807,7 @@ MonoBehaviour:
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
+  clueLightPosition: {x: 4.511, y: -0.269, z: 0.679}
   dataHolder: {fileID: 0}
 --- !u!1001 &438268345
 PrefabInstance:
@@ -924,6 +926,7 @@ MonoBehaviour:
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
+  clueLightPosition: {x: -1.099, y: 0.059, z: -1.763}
   dataHolder: {fileID: 0}
 --- !u!65 &438268349
 BoxCollider:
@@ -968,6 +971,21 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: "C'est une lettre du propri\xE9taire adress\xE9 \xE0 Nolwenn Bellec"
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.x
+      value: 2.94
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.y
+      value: 0.129
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.z
+      value: -2.507
       objectReference: {fileID: 0}
     - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
         type: 3}
@@ -2116,6 +2134,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 850657831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &852100294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852100295}
+  m_Layer: 3
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &852100295
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852100294}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0.201, y: 0.08, z: 2.769}
+  m_LocalScale: {x: 30.594501, y: 20, z: 30.594503}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1973956734}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &865118844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2216,6 +2265,21 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: Une lettre coquine venant de Albert Leclair
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.x
+      value: 5.21
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.y
+      value: 0.056
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.z
+      value: 2.176
       objectReference: {fileID: 0}
     - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
         type: 3}
@@ -2663,6 +2727,21 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: "C'est un peignoir ensanglant\xE9"
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.x
+      value: 0.201
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.z
+      value: 2.769
       objectReference: {fileID: 0}
     - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d,
         type: 3}
@@ -3486,6 +3565,7 @@ MonoBehaviour:
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
+  clueLightPosition: {x: -0.217, y: 0.333, z: -0.316}
   dataHolder: {fileID: 0}
 --- !u!1001 &1602297407
 PrefabInstance:
@@ -3509,6 +3589,21 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: C'est un revolver
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.x
+      value: 4.765
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.y
+      value: -0.034
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.z
+      value: 1.6749
       objectReference: {fileID: 0}
     - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
         type: 3}
@@ -3620,6 +3715,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
         type: 3}
+      propertyPath: clueLightPosition.x
+      value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.y
+      value: 0.322
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.z
+      value: 0.882
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
       propertyPath: wordList.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3693,10 +3803,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5302763675822781378, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5384158711601777787, guid: be715d0e172e03f4483294fb8ac2446d,
         type: 3}
       propertyPath: m_Name
       value: CoinTable
+      objectReference: {fileID: 0}
+    - target: {fileID: 5384158711601777787, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4324,6 +4444,7 @@ Transform:
   - {fileID: 123254998}
   - {fileID: 1338741777}
   - {fileID: 2069133536}
+  - {fileID: 852100295}
   - {fileID: 53046851}
   - {fileID: 1985552662}
   - {fileID: 1613678881}
@@ -4459,6 +4580,7 @@ MonoBehaviour:
   wordList: []
   plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
+  clueLightPosition: {x: -0.051999986, y: -0.501, z: 1.7090001}
   dataHolder: {fileID: 0}
 --- !u!135 &1985552661
 SphereCollider:
@@ -4560,6 +4682,21 @@ PrefabInstance:
         type: 3}
       propertyPath: description
       value: C'est un flyer d'un bordel
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.x
+      value: 3.144
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.y
+      value: -0.213
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
+        type: 3}
+      propertyPath: clueLightPosition.z
+      value: -0.892
       objectReference: {fileID: 0}
     - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d,
         type: 3}
@@ -4919,22 +5056,22 @@ PrefabInstance:
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9733967
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.22912647
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77,
         type: 3}
@@ -4944,7 +5081,7 @@ PrefabInstance:
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 26.491
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77,
         type: 3}
@@ -4975,6 +5112,11 @@ PrefabInstance:
         type: 3}
       propertyPath: cameraMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77,
+        type: 3}
+      propertyPath: lerpFactor
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77,
         type: 3}

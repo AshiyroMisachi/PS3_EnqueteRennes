@@ -14,6 +14,7 @@ public class Proof : MonoBehaviour
 
     public GameObject plot;
     public Vector3 distancePlot;
+    public Vector3 clueLightPosition;
 
     private bool canPickUp = true;
 
