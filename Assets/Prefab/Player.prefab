@@ -106,16 +106,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataholder: {fileID: 0}
+  lerpFactor: 0
+  zoomOutMin: 60
+  zoomOutMax: 30
   cameraMode: 1
   numberProof: 0
   popUpText: {fileID: 0}
   timerText: 0
   newsPaperScene: 
-  policeReportWord: []
   arrows: []
   policeReport: {fileID: 0}
   mask:
     serializedVersion: 2
-    m_Bits: 8
-  prefabLight: {fileID: 5477317613189756311, guid: 511d5595990589648801af7939c8cab3,
-    type: 3}
+    m_Bits: 0
+  prefabLight: {fileID: 5477317613189756311, guid: 511d5595990589648801af7939c8cab3, type: 3}

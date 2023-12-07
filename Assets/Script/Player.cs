@@ -12,6 +12,13 @@ public class Player : MonoBehaviour
 
     public float lerpFactor;
 
+    // Var Zoom
+
+    public float zoomOutMin = 60;
+    public float zoomOutMax = 10;
+
+    float targetFieldOfView = 60;
+
     //Var Player
     public bool cameraMode;
     public int numberProof;
@@ -90,12 +97,12 @@ public class Player : MonoBehaviour
             {
 
                 transform.rotation = Input.gyro.attitude;
-                
+
                 // Attempt to make a smooth rotation of the camera when using gyroscoping (not working atm)
 
                 //Vector3 newRotation = Vector3.Lerp(transform.eulerAngles, Input.gyro.attitude.eulerAngles, lerpFactor);
                 //transform.rotation = Quaternion.Euler(newRotation.x, newRotation.y, newRotation.z);
-                
+
                 transform.Rotate(0f, 0f, 180f, Space.Self);
                 transform.Rotate(90f, 180f, 0f, Space.World);
             }
@@ -120,7 +127,7 @@ public class Player : MonoBehaviour
             }
 
             //Raycast when touch screen to detect object
-            if (Input.touchCount > 0)
+            if (Input.touchCount > 0 && Input.touchCount != 2)
             {
                 if (!raycastOneTime)
                 {
@@ -133,6 +140,30 @@ public class Player : MonoBehaviour
                     }
                 }
                 raycastOneTime = true;
+            }
+            else
+            {
+                raycastOneTime = false;
+            }
+
+            //Raycast when touch screen to detect object
+            if (Input.touchCount == 2)
+            {
+                Touch touchZero = Input.GetTouch(0);
+                Touch touchOne = Input.GetTouch(1);
+
+                // Stock the previous positions of each input
+                Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+                Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+                // Stock the magnitude (distance) between the previous position and the current position 
+                float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+                float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
+
+                // Check the difference between current and previous magnitude
+                float difference = currentMagnitude - prevMagnitude;
+
+                zoomCamera(difference);
             }
             else
             {
@@ -164,6 +195,24 @@ public class Player : MonoBehaviour
     public void rotateRight()
     {
         transform.eulerAngles += Vector3.up;
+    }
+
+    // Camera zoom, Zoom by pinching with 2 fingers
+    public void zoomCamera(float differencePinching)
+    {
+        float zoomSpeed = 3f;
+
+        // Dezoom
+        if (differencePinching < 0 && Camera.main.fieldOfView < 60)
+        {
+            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, Camera.main.fieldOfView + 5f, Time.deltaTime * zoomSpeed);
+        }
+
+        // Zoom
+        if (differencePinching > 0 && Camera.main.fieldOfView > 30)
+        {
+            Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, Camera.main.fieldOfView - 5f, Time.deltaTime * zoomSpeed);
+        }
     }
 
     //Move to settings
