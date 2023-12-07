@@ -36,15 +36,15 @@ public class FunctionSelectionLevel : MonoBehaviour
     void Update()
     {
         //Show Display
-        if (levels[0].isSelected)
+        for (int i = 0; i < levels.Length; i++)
         {
-            SetupLevelDisplay(0);
-        }
-        else
-        {
-                timerDeselection -= Time.deltaTime;
+            if (levels[i].isSelected)
+            {
+                SetupLevelDisplay(i);
+            }
         }
 
+        timerDeselection -= Time.deltaTime;
         if (timerDeselection < 0f)
         {
             levelDisplay.anchoredPosition = new Vector3(500f, 0f, 0f);
