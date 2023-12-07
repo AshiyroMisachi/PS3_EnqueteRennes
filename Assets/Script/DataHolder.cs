@@ -21,6 +21,8 @@ public class DataHolder : MonoBehaviour
     public string[] proofsName;
     public string[] proofsDescription;
     public GameObject[] proofsGameObject;
+    public Vector3[] proofsScaleRender;
+    public Vector3[] proofsRotationRender;
 
     public int proofsCount;
 
@@ -54,6 +56,9 @@ public class DataHolder : MonoBehaviour
         proofsLevel = new bool[numberElement];
         proofsName = new string[numberElement];
         proofsDescription = new string[numberElement];
+        proofsGameObject = new GameObject[numberElement];
+        proofsScaleRender = new Vector3[numberElement];
+        proofsRotationRender = new Vector3[numberElement];
     }
 
     public void resetLevelVAR()
@@ -75,6 +80,14 @@ public class DataHolder : MonoBehaviour
         for (int i = 0; i < proofsGameObject.Length; i++)
         {
             proofsGameObject[i] = null;
+        }
+        for (int i = 0; i < proofsScaleRender.Length; i++)
+        {
+            proofsScaleRender[i] = new Vector3(1, 1, 1);
+        }
+        for (int i = 0; i < proofsRotationRender.Length; i++)
+        {
+            proofsRotationRender[i] = new Vector3(1, 1, 1);
         }
 
         //Level NewsPaper

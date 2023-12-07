@@ -14,6 +14,7 @@ public class ProofNote : MonoBehaviour
     public string myDescription;
     public GameObject myGameObject;
     public Vector3 myScale;
+    public Vector3 myRotation;
 
     private void Start()
     {
@@ -25,6 +26,6 @@ public class ProofNote : MonoBehaviour
     {
         manager.proofName.text = myName;
         manager.proofDescription.text = myDescription;
-        manager.switchRender(myGameObject, myScale);
+        manager.switchRender(myGameObject, myScale, myRotation);
     }
 }
