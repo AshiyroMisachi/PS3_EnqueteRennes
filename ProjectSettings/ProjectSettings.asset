@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 163d318aca2614d4982277d18f97953d
+  productGUID: d8a507a1d8cac0541b8bc08e2c13c162
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: PS3_EnqueteRennes
+  productName: Rolland in Rennes
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -42,18 +42,18 @@ PlayerSettings:
   m_SplashScreenLogos: []
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
-  defaultScreenWidth: 1024
-  defaultScreenHeight: 768
+  defaultScreenWidth: 1920
+  defaultScreenHeight: 1080
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 1
+  m_ActiveColorSpace: 0
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
   mipStripping: 0
   numberOfMipsStripped: 0
   numberOfMipsStrippedPerMipmapLimitGroup: {}
-  m_StackTraceTypes: 010000000100000001000000000000000100000001000000
+  m_StackTraceTypes: 010000000100000001000000010000000100000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosUseCustomAppBackgroundBehavior: 0
@@ -68,7 +68,7 @@ PlayerSettings:
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
   androidUseSwappy: 1
-  androidBlitType: 2
+  androidBlitType: 0
   androidResizableWindow: 0
   androidDefaultWindowWidth: 1920
   androidDefaultWindowHeight: 1080
@@ -131,11 +131,11 @@ PlayerSettings:
   stadiaTargetFramerate: 0
   vulkanNumSwapchainBuffers: 3
   vulkanEnableSetSRGBWrite: 0
-  vulkanEnablePreTransform: 0
+  vulkanEnablePreTransform: 1
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 1.0.2
+  bundleVersion: 0.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -155,8 +155,7 @@ PlayerSettings:
   resetResolutionOnWindowResize: 0
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
-  applicationIdentifier:
-    Android: com.DefaultCompany.PS3_EnqueteRennes
+  applicationIdentifier: {}
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -242,8 +241,8 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
-  clonedFromGUID: 3df0038eaa8740a438c96d5b01ba661e
-  templatePackageId: com.unity.template.mobile3d@3.0.0
+  clonedFromGUID: c0afd0d1d80e3634a9dac47e8a0426ea
+  templatePackageId: com.unity.template.3d@8.1.1
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
@@ -465,11 +464,15 @@ PlayerSettings:
     m_EncodingQuality: 1
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
-  m_BuildTargetNormalMapEncoding: []
+  m_BuildTargetNormalMapEncoding:
+  - m_BuildTarget: Android
+    m_Encoding: 1
+  - m_BuildTarget: iPhone
+    m_Encoding: 1
+  - m_BuildTarget: tvOS
+    m_Encoding: 1
   m_BuildTargetDefaultTextureCompressionFormat:
   - m_BuildTarget: Android
-    m_Format: 3
-  - m_BuildTarget: WebGL
     m_Format: 3
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
@@ -762,16 +765,16 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: PS3EnqueteRennes
+  metroPackageName: Myproject
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: PS3_EnqueteRennes
+  metroApplicationDescription: My project
   wsaImages: {}
-  metroTileShortName: PS3_EnqueteRennes
+  metroTileShortName: My project
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -781,8 +784,7 @@ PlayerSettings:
   metroDefaultTileSize: 1
   metroTileForegroundText: 2
   metroTileBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21568628, a: 0}
-  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
-    a: 1}
+  metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628, a: 1}
   metroSplashScreenUseBackgroundColor: 0
   platformCapabilities: {}
   metroTargetDeviceFamilies: {}
@@ -839,10 +841,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: d6fef1cf-5ce0-459e-be2e-e9ef0c55d5a1
+  cloudProjectId: f0963eb2-ce4d-4ea5-a7e5-90f02369c70f
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: PS3_EnqueteRennes
+  projectName: My project
   organizationId: unity_62970a3d4ff618fc2bc7
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
