@@ -10,6 +10,9 @@ public class Proof : MonoBehaviour
     public string myName;
     public string description;
     public int myNumber;
+    public GameObject myGameObjectRender;
+    public Vector3 myScaleRender;
+    public Vector3 myRotationRender;
 
     public GameObject plot;
     public Vector3 distancePlot;
@@ -49,9 +52,9 @@ public class Proof : MonoBehaviour
             dataHolder.proofsDescription[myNumber] = description;
             dataHolder.proofsCount++;
 
-            GameObject proofGameObject = Instantiate(gameObject);
-            Destroy(proofGameObject.GetComponent<Proof>());
-            dataHolder.proofsGameObject[myNumber] = proofGameObject;
+            dataHolder.proofsGameObject[myNumber] = myGameObjectRender;
+            dataHolder.proofsScaleRender[myNumber] = myScaleRender;
+            dataHolder.proofsRotationRender[myNumber] = myRotationRender;
 
             //Pop up Text to show you pick up
             player.popUpText.text = "Vous avez trouvé " + myName;

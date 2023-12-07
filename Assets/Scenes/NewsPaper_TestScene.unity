@@ -797,7 +797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.data[0]
@@ -810,6 +810,18 @@ PrefabInstance:
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.data[2]
       value: "Noy\xE9e dans un pot de chambre"
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[3]
+      value: "Poignard\xE9e au couteau"
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[4]
+      value: "Empoisonn\xE9e par un plat"
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[5]
+      value: "Pendue \xE0 une corde"
       objectReference: {fileID: 0}
     - target: {fileID: 7638818786513796779, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: m_Pivot.x
@@ -2368,7 +2380,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.data[0]
@@ -2381,6 +2393,18 @@ PrefabInstance:
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.data[2]
       value: "Dettes impay\xE9es"
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[3]
+      value: "Vengeance suite \xE0 un chantage"
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[4]
+      value: "Conflits d'h\xE9ritages"
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[5]
+      value: "Tentative d'enl\xE8vement"
       objectReference: {fileID: 0}
     - target: {fileID: 2655387762756052859, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: m_fontSizeMin
@@ -2509,7 +2533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.data[0]
@@ -2522,6 +2546,18 @@ PrefabInstance:
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.data[2]
       value: 9h
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[3]
+      value: 23h
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[4]
+      value: 18h
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[5]
+      value: 3h
       objectReference: {fileID: 0}
     - target: {fileID: 7638818786513796779, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: m_Pivot.x
@@ -4133,7 +4169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.data[0]
@@ -4146,6 +4182,18 @@ PrefabInstance:
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.data[2]
       value: Prostitution
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[3]
+      value: Service de restauration
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[4]
+      value: Domestique
+      objectReference: {fileID: 0}
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: answers.Array.data[5]
+      value: Couture
       objectReference: {fileID: 0}
     - target: {fileID: 7638818786513796779, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: m_Pivot.x
@@ -4557,6 +4605,19 @@ MonoBehaviour:
   - Immobilier
   - Vente de voiture
   - Prostitution
+  - "Poignard\xE9e au couteau"
+  - "Empoisonn\xE9e par un plat"
+  - "Pendue \xE0 une corde"
+  - "Vengeance suite \xE0 un chantage"
+  - "Conflits d'h\xE9ritages"
+  - "Tentative d'enl\xE8vement"
+  - "Tentative d'enl\xE8vement"
+  - 23h
+  - 18h
+  - 3h
+  - Service de restauration
+  - Domestique
+  - Couture
   pannelListWord: []
   pannelWordPosition:
   - {x: -300, y: -1.5, z: 0}
