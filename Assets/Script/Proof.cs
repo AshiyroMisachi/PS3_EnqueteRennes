@@ -10,7 +10,6 @@ public class Proof : MonoBehaviour
     public string myName;
     public string description;
     public int myNumber;
-    public string[] wordList;
 
     public GameObject plot;
     public Vector3 distancePlot;
@@ -48,7 +47,7 @@ public class Proof : MonoBehaviour
             dataHolder.proofsLevel[myNumber] = true;
             dataHolder.proofsName[myNumber] = myName;
             dataHolder.proofsDescription[myNumber] = description;
-            dataHolder.proofsWordList[myNumber] = wordList;
+            dataHolder.proofsCount++;
 
             GameObject proofGameObject = Instantiate(gameObject);
             Destroy(proofGameObject.GetComponent<Proof>());

@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     public float timerText;
 
     public string newsPaperScene;
-    public string[] policeReportWord;
 
     //Var Button Camera Mode 2
     //Left, Right, Up, Down
@@ -58,7 +57,6 @@ public class Player : MonoBehaviour
             dataholder.proofsLevel[0] = true;
             dataholder.proofsName[0] = "Rapport de Police";
             dataholder.proofsDescription[0] = "Ceci est le rapport du meurtre délivré par la police";
-            dataholder.proofsWordList[0] = policeReportWord;
         }
 
         //Hide UI

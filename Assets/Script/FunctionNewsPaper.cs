@@ -13,6 +13,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     public TextCase currentSelected;
     public string wordSelected;
     public GameObject pannelWord;
+    public string[] wordList;
     public List<GameObject> pannelListWord;
     public Vector3[] pannelWordPosition;
     public int pannelWordPositionCount;
@@ -34,24 +35,16 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         warningMistake.SetActive(false);
 
         //Spawn TextProofs
-        dataHolder.proofsCount = 0;
-        for (int i = 0; i < dataHolder.proofsLevel.Length; i++)
+        for (int j = 0; j < wordList.Length; j++)
         {
-            string[] currentWordList = (string[])dataHolder.proofsWordList[i];
-            if (currentWordList != null)
-            {
-                dataHolder.proofsCount++;
-                for (int j = 0; j < currentWordList.Length; j++)
-                {
-                    GameObject newTextProof = Instantiate(textproof);
-                    newTextProof.gameObject.GetComponent<TextProof>().myName = currentWordList[j];
-                    newTextProof.GetComponent<RectTransform>().SetParent(pannelWord.GetComponent<RectTransform>(), false);
-                    newTextProof.GetComponent<RectTransform>().localPosition = new Vector3(-650f, -1.5f, 0f);
+            GameObject newTextProof = Instantiate(textproof);
+            newTextProof.gameObject.GetComponent<TextProof>().myName = wordList[j];
+            newTextProof.GetComponent<RectTransform>().SetParent(pannelWord.GetComponent<RectTransform>(), false);
+            newTextProof.GetComponent<RectTransform>().localPosition = new Vector3(-650f, -1.5f, 0f);
 
-                    pannelListWord.Add(newTextProof);
-                }
-            }
+            pannelListWord.Add(newTextProof);
         }
+
     }
 
 

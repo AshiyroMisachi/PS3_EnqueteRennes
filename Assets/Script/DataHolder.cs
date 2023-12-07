@@ -21,7 +21,6 @@ public class DataHolder : MonoBehaviour
     public string[] proofsName;
     public string[] proofsDescription;
     public GameObject[] proofsGameObject;
-    public Array[] proofsWordList;
 
     public int proofsCount;
 
@@ -55,7 +54,6 @@ public class DataHolder : MonoBehaviour
         proofsLevel = new bool[numberElement];
         proofsName = new string[numberElement];
         proofsDescription = new string[numberElement];
-        proofsWordList = new Array[numberElement];
     }
 
     public void resetLevelVAR()
@@ -84,6 +82,7 @@ public class DataHolder : MonoBehaviour
         {
             actualAnswers[i] = null;
         }
+        proofsCount = 0;
         mistake = 0;
         numberTry = 2;
     }
