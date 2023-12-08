@@ -56,7 +56,7 @@ public class FunctionSelectionLevel : MonoBehaviour
         levelName.text = levels[numberLevel].GetComponent<Level>().myName;
         levelDescription.text = levels[numberLevel].GetComponent<Level>().myDescription;
         levelScore.fillAmount = levels[numberLevel].GetComponent<Level>().myScore;
-        levelDisplay.anchoredPosition = new Vector3(315f, 0f, 0f);
+        levelDisplay.anchoredPosition = new Vector3(-315f, 0f, 0f);
         levelSelected = levels[numberLevel].GetComponent<Level>().myScene;
         timerDeselection = timerDeselectionTime;
 

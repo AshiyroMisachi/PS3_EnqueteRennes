@@ -17,8 +17,6 @@ public class Player : MonoBehaviour
     public float zoomOutMin = 60;
     public float zoomOutMax = 10;
 
-    float targetFieldOfView = 60;
-
     //Var Player
     public bool cameraMode;
     public int numberProof;
@@ -200,7 +198,7 @@ public class Player : MonoBehaviour
     // Camera zoom, Zoom by pinching with 2 fingers
     public void zoomCamera(float differencePinching)
     {
-        float zoomSpeed = 3f;
+        float zoomSpeed = 5f;
 
         // Dezoom
         if (differencePinching < 0 && Camera.main.fieldOfView < 60)
