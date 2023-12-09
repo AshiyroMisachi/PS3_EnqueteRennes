@@ -13,25 +13,31 @@ public class Player : MonoBehaviour
     public float lerpFactor;
 
     // Var Zoom
-
     public float zoomOutMin = 60;
     public float zoomOutMax = 10;
 
     //Var Player
     public bool cameraMode;
     public int numberProof;
+    public string newsPaperScene;
+    public GameObject policeReport;
 
     public TextMeshProUGUI popUpText;
     public float timerText;
 
-    public string newsPaperScene;
+    //The two different canvas, if currentMode is true it's shearchMode
+    public bool currentMode;
+    public GameObject shearchMode;
+    public GameObject inspectionMode;
 
     //Var Button Camera Mode 2
     //Left, Right, Up, Down
     public GameObject[] arrows;
 
-    //Var Police report
-    public GameObject policeReport;
+    //Var InspectionMode
+    public GameObject insProof;
+    public TextMeshProUGUI insNameProof;
+    public TextMeshProUGUI insDescriptionProof;
 
     //Var Raycast
     public LayerMask mask;
@@ -52,16 +58,20 @@ public class Player : MonoBehaviour
         cameraMode = dataholder.cameraMode;
 
         //Parameters Switch Scene
-        if (dataholder.levelStarted)
+        if (!dataholder.levelStarted)
         {
-            Destroy(policeReport);
-        }
-        else
-        {
+            dataholder.levelStarted = true;
             dataholder.setupArray(numberProof);
             dataholder.proofsLevel[0] = true;
             dataholder.proofsName[0] = "Rapport de Police";
             dataholder.proofsDescription[0] = "Ceci est le rapport du meurtre délivré par la police";
+
+            //Setup mode inspection Police Report
+            currentMode = false;
+            insProof = Instantiate(policeReport, transform);
+            insProof.transform.localPosition = new Vector3(0, 0, 1);
+            insNameProof.text = "Rapport de Police";
+            insDescriptionProof.text = "Voilà le rapport qu'on a pu me délivrer avant que le corps ne soit emporté.";
         }
 
         //Hide UI
@@ -84,93 +94,101 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (dataholder.levelStarted)
-        {
-            //Update timer
-            timerText += Time.deltaTime;
-
-            //Change the rotation of the camera acording to the phone's rotation
-            //Need to freeze Z axis
-            if (cameraMode)
+            if (currentMode) //Search Mode
             {
+                //Setup
+                shearchMode.SetActive(true);
+                inspectionMode.SetActive(false);
 
-                transform.rotation = Input.gyro.attitude;
+                //Update timer
+                timerText += Time.deltaTime;
 
-                // Attempt to make a smooth rotation of the camera when using gyroscoping (not working atm)
-
-                //Vector3 newRotation = Vector3.Lerp(transform.eulerAngles, Input.gyro.attitude.eulerAngles, lerpFactor);
-                //transform.rotation = Quaternion.Euler(newRotation.x, newRotation.y, newRotation.z);
-
-                transform.Rotate(0f, 0f, 180f, Space.Self);
-                transform.Rotate(90f, 180f, 0f, Space.World);
-            }
-
-            Camera myCamera = Camera.main;
-
-            if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask))
-            {
-                Proof proofDetected = infoBis.transform.GetComponent<Proof>();
-
-                clueLight.intensity = 1;
-
-                // Light appears at mid distance between the origin of the player and the origin of the proof
-                Vector3 lightPosition = gameObject.transform.position - ((gameObject.transform.position - proofDetected.transform.position) / 2);
-
-                clueLight.transform.position = lightPosition;
-            }
-
-            else
-            {
-                clueLight.intensity = 0;
-            }
-
-            //Raycast when touch screen to detect object
-            if (Input.touchCount > 0 && Input.touchCount != 2)
-            {
-                if (!raycastOneTime)
+                //Change the rotation of the camera acording to the phone's rotation
+                //Need to freeze Z axis
+                if (cameraMode)
                 {
-                    //Camera myCamera = Camera.main;
-                    Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
-                    Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
-                    if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
-                    {
-                        info.transform.GetComponent<Proof>().getPickUp(this);
-                    }
+
+                    transform.rotation = Input.gyro.attitude;
+
+                    // Attempt to make a smooth rotation of the camera when using gyroscoping (not working atm)
+
+                    //Vector3 newRotation = Vector3.Lerp(transform.eulerAngles, Input.gyro.attitude.eulerAngles, lerpFactor);
+                    //transform.rotation = Quaternion.Euler(newRotation.x, newRotation.y, newRotation.z);
+
+                    transform.Rotate(0f, 0f, 180f, Space.Self);
+                    transform.Rotate(90f, 180f, 0f, Space.World);
                 }
-                raycastOneTime = true;
+
+                Camera myCamera = Camera.main;
+
+                if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask))
+                {
+                    Proof proofDetected = infoBis.transform.GetComponent<Proof>();
+
+                    clueLight.intensity = 1;
+
+                    // Light appears at mid distance between the origin of the player and the origin of the proof
+                    Vector3 lightPosition = gameObject.transform.position - ((gameObject.transform.position - proofDetected.transform.position) / 2);
+
+                    clueLight.transform.position = lightPosition;
+                }
+
+                else
+                {
+                    clueLight.intensity = 0;
+                }
+
+                //Raycast when touch screen to detect object
+                if (Input.touchCount > 0 && Input.touchCount != 2)
+                {
+                    if (!raycastOneTime)
+                    {
+                        //Camera myCamera = Camera.main;
+                        Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
+                        Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
+                        if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
+                        {
+                            info.transform.GetComponent<Proof>().getPickUp(this);
+                        }
+                    }
+                    raycastOneTime = true;
+                }
+                else
+                {
+                    raycastOneTime = false;
+                }
+
+                //Raycast when touch screen to detect object
+                if (Input.touchCount == 2)
+                {
+                    Touch touchZero = Input.GetTouch(0);
+                    Touch touchOne = Input.GetTouch(1);
+
+                    // Stock the previous positions of each input
+                    Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+                    Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+                    // Stock the magnitude (distance) between the previous position and the current position 
+                    float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+                    float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
+
+                    // Check the difference between current and previous magnitude
+                    float difference = currentMagnitude - prevMagnitude;
+
+                    zoomCamera(difference);
+                }
+
+                //Hide Text after pickup an object
+                if (timerText > 2f)
+                {
+                    popUpText.alpha -= 0.005f;
+                }
             }
-            else
+            else //Inspection Mode
             {
-                raycastOneTime = false;
+                shearchMode.SetActive(false);
+                inspectionMode.SetActive(true);
             }
-
-            //Raycast when touch screen to detect object
-            if (Input.touchCount == 2)
-            {
-                Touch touchZero = Input.GetTouch(0);
-                Touch touchOne = Input.GetTouch(1);
-
-                // Stock the previous positions of each input
-                Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
-                Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
-
-                // Stock the magnitude (distance) between the previous position and the current position 
-                float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
-                float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
-
-                // Check the difference between current and previous magnitude
-                float difference = currentMagnitude - prevMagnitude;
-
-                zoomCamera(difference);
-            }
-
-            //Hide Text after pickup an object
-            if (timerText > 2f)
-            {
-                popUpText.alpha -= 0.005f;
-            }
-        }
-
     }
 
     //Camera Mode 2, Move by clicking button
@@ -189,6 +207,12 @@ public class Player : MonoBehaviour
     public void rotateRight()
     {
         transform.eulerAngles += Vector3.up;
+    }
+    //Switch Inspection Mode to SearchMode
+    public void BackSearchMode()
+    {
+        currentMode = true;
+        Destroy(insProof);
     }
 
     // Camera zoom, Zoom by pinching with 2 fingers
@@ -238,11 +262,5 @@ public class Player : MonoBehaviour
             dataholder.updateLastScene();
             SceneManager.LoadScene("NoteBook");
         }
-    }
-    //Destroy Police report
-    public void destroyPolicereport()
-    {
-        dataholder.levelStarted = true;
-        Destroy(policeReport);
     }
 }

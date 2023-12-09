@@ -56,12 +56,19 @@ public class Proof : MonoBehaviour
             dataHolder.proofsScaleRender[myNumber] = myScaleRender;
             dataHolder.proofsRotationRender[myNumber] = myRotationRender;
 
+            //Inspection Mode
+            player.currentMode = false;
+            player.insNameProof.text = myName;
+            player.insDescriptionProof.text = description;
+            player.insProof = Instantiate(myGameObjectRender, player.transform);
+            player.insProof.transform.localPosition = new Vector3(0, 0, 1);
+            player.insProof.transform.localScale = myScaleRender / 5;
+            player.insProof.transform.localEulerAngles = myRotationRender;
+
             //Pop up Text to show you pick up
             player.popUpText.text = "Vous avez trouvé " + myName;
             player.popUpText.alpha = 1f;
             player.timerText = 0f;
-
-            
         }
     }
 

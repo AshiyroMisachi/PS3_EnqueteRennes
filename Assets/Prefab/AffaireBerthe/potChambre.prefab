@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7849700740352587219}
   - component: {fileID: 258145895059120098}
   - component: {fileID: 8551808318085725168}
-  - component: {fileID: 3600084172579643112}
   - component: {fileID: 1997005349208380469}
   m_Layer: 3
   m_Name: potChambre
@@ -85,28 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3600084172579643112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8283699809425178971}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  myName: Pot de chambre
-  description: Ceci est un pot de chambre
-  myNumber: 5
-  myGameObjectRender: {fileID: 0}
-  myScaleRender: {x: 0, y: 0, z: 0}
-  plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
-  distancePlot: {x: 0, y: 0, z: 0}
-  clueLightPosition: {x: 4.511, y: -0.269, z: 0.679}
-  dataHolder: {fileID: 0}
 --- !u!135 &1997005349208380469
 SphereCollider:
   m_ObjectHideFlags: 0

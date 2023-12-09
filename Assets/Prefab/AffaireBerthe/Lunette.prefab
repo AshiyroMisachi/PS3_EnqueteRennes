@@ -79,9 +79,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 96a39a49442649f458d9858c61238967, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9208998834642432948}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 96a39a49442649f458d9858c61238967, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2066316925518559248}
   m_SourcePrefab: {fileID: 100100000, guid: 96a39a49442649f458d9858c61238967, type: 3}
 --- !u!1 &6233307227597553418 stripped
 GameObject:
@@ -109,25 +106,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.06
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2066316925518559248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6233307227597553418}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  myName: Lunette
-  description: "Des lunettes cass\xE9es"
-  myNumber: 7
-  myGameObjectRender: {fileID: 0}
-  myScaleRender: {x: 0, y: 0, z: 0}
-  plot: {fileID: 8298618771856103713, guid: 42867889a9e8e8e428a6ed7b317d3cb8, type: 3}
-  distancePlot: {x: 0, y: 0, z: 0}
-  clueLightPosition: {x: -0.051999986, y: -0.501, z: 1.7090001}
-  dataHolder: {fileID: 0}
