@@ -7579,6 +7579,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5933811528918510677, guid: c6f40a6e81399a44789fbb2655c5be39, type: 3}
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: insSlideSpeed
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: inspectionMode
       value: 
       objectReference: {fileID: 381098511}

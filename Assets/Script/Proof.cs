@@ -57,6 +57,7 @@ public class Proof : MonoBehaviour
             dataHolder.proofsRotationRender[myNumber] = myRotationRender;
 
             //Inspection Mode
+            Camera.main.fieldOfView = 60;
             player.currentMode = false;
             player.insNameProof.text = myName;
             player.insDescriptionProof.text = description;
