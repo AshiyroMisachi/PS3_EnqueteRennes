@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
 
     //Var Raycast
     public LayerMask mask;
-    private bool raycastOneTime;
+    public bool raycastOneTime;
 
     public Light prefabLight;
     private Light clueLight;
@@ -162,10 +162,6 @@ public class Player : MonoBehaviour
                 float difference = currentMagnitude - prevMagnitude;
 
                 zoomCamera(difference);
-            }
-            else
-            {
-                raycastOneTime = false;
             }
 
             //Hide Text after pickup an object
