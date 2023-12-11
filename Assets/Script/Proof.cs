@@ -32,7 +32,7 @@ public class Proof : MonoBehaviour
         if (dataHolder.proofsLevel[myNumber])
         {
             canPickUp = false;
-            Instantiate(plot, transform.position + distancePlot, Quaternion.Euler(0, 0, 0));
+            Instantiate(plot, distancePlot, Quaternion.Euler(-90, 0, 0));
         }
     }
 
@@ -44,7 +44,7 @@ public class Proof : MonoBehaviour
             canPickUp = false;
 
             //Spawn Object to show you can't pickup anymore
-            Instantiate(plot, transform.position + distancePlot, Quaternion.Euler(0, 0, 0));
+            Instantiate(plot, distancePlot, Quaternion.Euler(-90, 0, 0));
 
             //Store proof data 
             dataHolder.proofsLevel[myNumber] = true;

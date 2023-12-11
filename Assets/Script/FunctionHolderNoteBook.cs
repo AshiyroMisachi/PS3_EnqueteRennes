@@ -26,6 +26,7 @@ public class FunctionHolderNoteBook : MonoBehaviour
     private bool currentMode = true; 
     public GameObject noteBookCanvas, inspectionCanvas;
     public TextMeshProUGUI insName, insDesc;
+    public float insSlideSpeed, scaleSpeed;
 
     private void Start()
     {
@@ -52,6 +53,61 @@ public class FunctionHolderNoteBook : MonoBehaviour
         }
 
         //proofNotes[0].GetComponent<ProofNote>().ShowProof();   
+    }
+
+    private void Update()
+    {
+        if (!currentMode)
+        {
+            Debug.Log(Vector3.Distance(gameObjectRender.transform.localScale, baseScaleRender));
+            //Move Object during Inspection
+            if (Input.touchCount == 1)
+            {
+                Touch touch = Input.GetTouch(0);
+                Debug.Log(touch.deltaPosition.y);
+                //Slide Right
+                if (touch.deltaPosition.x > 10)
+                {
+                    gameObjectRender.transform.localPosition += Vector3.right * insSlideSpeed;
+                }
+                //Slide Left
+                else if (touch.deltaPosition.x < -10)
+                {
+                    gameObjectRender.transform.localPosition += Vector3.left * insSlideSpeed;
+
+                }
+
+                if (touch.deltaPosition.y > 10)
+                {
+                    gameObjectRender.transform.localPosition += Vector3.up * insSlideSpeed;
+                }
+                else if (touch.deltaPosition.y < -10)
+                {
+                    gameObjectRender.transform.localPosition += Vector3.down * insSlideSpeed;
+                }
+            }
+
+
+            //Zoom
+            if (Input.touchCount == 2)
+            {
+                Touch touchZero = Input.GetTouch(0);
+                Touch touchOne = Input.GetTouch(1);
+
+                // Stock the previous positions of each input
+                Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+                Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+                // Stock the magnitude (distance) between the previous position and the current position 
+                float prevMagnitude = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+                float currentMagnitude = (touchZero.position - touchOne.position).magnitude;
+
+                // Check the difference between current and previous magnitude
+                float difference = currentMagnitude - prevMagnitude;
+
+                ZoomIns(difference);
+            }
+        }
     }
 
     public void switchRender(GameObject newRender, Vector3 scaleNewRender, Vector3 rotationNewRender)
@@ -90,6 +146,21 @@ public class FunctionHolderNoteBook : MonoBehaviour
             inspectionCanvas.SetActive(false);
             gameObjectRender.transform.localScale = baseScaleRender;
             gameObjectRender.transform.position = new Vector3 (0, 0, 0);
+        }
+    }
+
+    public void ZoomIns(float differencePinching)
+    {
+        // Dezoom
+        if (differencePinching < 0 && Vector3.Distance(gameObjectRender.transform.localScale, baseScaleRender) >= 50)
+        {
+            gameObjectRender.transform.localScale -= baseScaleRender * scaleSpeed;
+        }
+
+        // Zoom
+        if (differencePinching > 0 && Vector3.Distance(gameObjectRender.transform.localScale, baseScaleRender) <= 1500)
+        {
+            gameObjectRender.transform.localScale += baseScaleRender * scaleSpeed;
         }
     }
 
