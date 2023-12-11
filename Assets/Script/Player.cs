@@ -65,7 +65,10 @@ public class Player : MonoBehaviour
             dataholder.setupArray(numberProof);
             dataholder.proofsLevel[0] = true;
             dataholder.proofsName[0] = "Rapport de Police";
-            dataholder.proofsDescription[0] = "Ceci est le rapport du meurtre délivré par la police";
+            dataholder.proofsDescription[0] = "Voilà le rapport qu'on a pu me délivrer avant que le corps ne soit emporté.";
+            dataholder.proofsGameObject[0] = policeReport;
+            dataholder.proofsScaleRender[0] = new Vector3(108.099998f, 152.884247f, 1029.52356f);
+            dataholder.proofsRotationRender[0] = new Vector3(0, 180, 0);
 
             //Setup mode inspection Police Report
             currentMode = false;

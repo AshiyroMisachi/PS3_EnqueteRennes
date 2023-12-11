@@ -14,16 +14,24 @@ public class FunctionHolderNoteBook : MonoBehaviour
     //Prefab
     public GameObject proofNote;
 
-    //Var
+    //Var NoteBook
     public GameObject[] proofNotes;
     public TextMeshProUGUI proofName;
     public TextMeshProUGUI proofDescription;
     public GameObject gameObjectRender;
+    public Vector3 baseScaleRender;
+
+    //Var Inspection
+    //If true = notebook, false = inspecitonMode
+    private bool currentMode = true; 
+    public GameObject noteBookCanvas, inspectionCanvas;
+    public TextMeshProUGUI insName, insDesc;
 
     private void Start()
     {
         dataHolder = FindObjectOfType<DataHolder>();
         proofNotes = new GameObject[dataHolder.proofsLevel.Length];
+        inspectionCanvas.SetActive(false);
 
         //Spawn Proof Note
         for (int i = 0; i < dataHolder.proofsLevel.Length; i++)
@@ -60,6 +68,28 @@ public class FunctionHolderNoteBook : MonoBehaviour
             gameObjectRender = Instantiate(newRender, new Vector3(0, 0, 0), Quaternion.identity);
             gameObjectRender.transform.localScale = scaleNewRender;
             gameObjectRender.transform.eulerAngles = rotationNewRender;
+        }
+    }
+
+    public void InspectObject()
+    {
+        if (currentMode)
+        {
+            //Go Inspection Mode
+            currentMode = false;
+            noteBookCanvas.SetActive(false);
+            inspectionCanvas.SetActive(true);
+            insName.text = proofName.text;
+            insDesc.text = proofDescription.text;
+        }
+        else
+        {
+            //Go Notebook
+            currentMode = true;
+            noteBookCanvas.SetActive(true);
+            inspectionCanvas.SetActive(false);
+            gameObjectRender.transform.localScale = baseScaleRender;
+            gameObjectRender.transform.position = new Vector3 (0, 0, 0);
         }
     }
 
