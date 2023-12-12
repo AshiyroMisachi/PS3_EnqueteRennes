@@ -2046,6 +2046,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 2.362
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fa70c68d7f6eb25448ae921c29b3efa4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fe52c77243b60ae4e927f2cc3015dc9b, type: 2}
     - target: {fileID: 919132149155446097, guid: fa70c68d7f6eb25448ae921c29b3efa4, type: 3}
       propertyPath: m_Name
       value: chaise (1)
@@ -2922,6 +2926,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 32.041
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6c0c7699781ef17468a9b62891468f2e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1644757aedc9f534498879b004090169, type: 2}
     - target: {fileID: 919132149155446097, guid: 6c0c7699781ef17468a9b62891468f2e, type: 3}
       propertyPath: m_Name
       value: malle
@@ -3976,6 +3984,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 222.318
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fa70c68d7f6eb25448ae921c29b3efa4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fe52c77243b60ae4e927f2cc3015dc9b, type: 2}
     - target: {fileID: 919132149155446097, guid: fa70c68d7f6eb25448ae921c29b3efa4, type: 3}
       propertyPath: m_Name
       value: chaise (2)
