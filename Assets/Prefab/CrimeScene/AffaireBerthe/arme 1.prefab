@@ -66,9 +66,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0acc4f8da4d024f448c1619224cf8b75, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5452632841234049991}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0acc4f8da4d024f448c1619224cf8b75, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4854844350860140630}
   m_SourcePrefab: {fileID: 100100000, guid: 0acc4f8da4d024f448c1619224cf8b75, type: 3}
 --- !u!1 &1589087216320559658 stripped
@@ -76,30 +73,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0acc4f8da4d024f448c1619224cf8b75, type: 3}
   m_PrefabInstance: {fileID: 1931195101517416315}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5452632841234049991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589087216320559658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  myName: Revolver
-  description: "Un mod\xE8le [...]. Tr\xE8s populaire. Cela dit, il manque une balle
-    dans le barillet/chargeur (d\xE9pendant du mod\xE8le)."
-  myNumber: 2
-  myGameObjectRender: {fileID: 919132149155446097, guid: 0acc4f8da4d024f448c1619224cf8b75, type: 3}
-  myScaleRender: {x: 0, y: 0, z: 0}
-  myRotationRender: {x: 0, y: 0, z: 0}
-  plot: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-  distancePlot: {x: 0, y: 0, z: 0}
-  clueLightPosition: {x: 0, y: 0, z: 0}
-  dataHolder: {fileID: 0}
 --- !u!65 &4854844350860140630
 BoxCollider:
   m_ObjectHideFlags: 0
