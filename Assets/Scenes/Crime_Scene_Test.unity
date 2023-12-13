@@ -123,68 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &73203731
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.959
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.011
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6080429573053821066, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-      propertyPath: m_Name
-      value: plot 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
---- !u!1 &73203732 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-  m_PrefabInstance: {fileID: 73203731}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &78207763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2133,6 +2071,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5754a400b6523674e9b2af35a3713ecd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 617900a3b0a734c4a9df8694aa970b17, type: 2}
     - target: {fileID: 919132149155446097, guid: 5754a400b6523674e9b2af35a3713ecd, type: 3}
       propertyPath: m_Name
       value: tapis 1 (1)
@@ -2524,7 +2466,7 @@ MonoBehaviour:
   myGameObjectRender: {fileID: 745540943}
   myScaleRender: {x: 0, y: 0, z: 0}
   myRotationRender: {x: 0, y: 0, z: 0}
-  plot: {fileID: 73203732}
+  plot: {fileID: 0}
   distancePlot: {x: 0, y: 0, z: 0}
   clueLightPosition: {x: 0, y: 0, z: 0}
   dataHolder: {fileID: 0}
@@ -4467,7 +4409,7 @@ MonoBehaviour:
   myGameObjectRender: {fileID: 919132149155446097, guid: 0acc4f8da4d024f448c1619224cf8b75, type: 3}
   myScaleRender: {x: 0, y: 0, z: 0}
   myRotationRender: {x: 0, y: 0, z: 0}
-  plot: {fileID: 73203732}
+  plot: {fileID: 0}
   distancePlot: {x: 0, y: 0, z: 0}
   clueLightPosition: {x: 0, y: 0, z: 0}
   dataHolder: {fileID: 0}
@@ -5931,6 +5873,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5754a400b6523674e9b2af35a3713ecd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2477184422f0bf4aaf60a08df121ba8, type: 2}
     - target: {fileID: 919132149155446097, guid: 5754a400b6523674e9b2af35a3713ecd, type: 3}
       propertyPath: m_Name
       value: tapis 1 (2)
@@ -6643,6 +6589,7 @@ Transform:
   - {fileID: 1622736014657404074}
   - {fileID: 7952684920138143955}
   - {fileID: 2147156558}
+  - {fileID: 1191654058}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2003678433
@@ -8371,6 +8318,5 @@ SceneRoots:
   - {fileID: 381098515}
   - {fileID: 2860214716198331766}
   - {fileID: 774738088}
-  - {fileID: 73203731}
   - {fileID: 220876967}
   - {fileID: 1844004705}
