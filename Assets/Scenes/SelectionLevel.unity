@@ -2077,7 +2077,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: myName
-      value: Test_Level
+      value: 1912 - Meurtre Rue de Bourdon
       objectReference: {fileID: 0}
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: unlock
@@ -2089,7 +2089,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 2d78e68d3dbf5364e92f11c0df543d9b, type: 3}
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: myScene
-      value: Crime_Scene_Test
+      value: Crime_Scene_BertheLeClair
       objectReference: {fileID: 0}
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: maxProof
@@ -2097,11 +2097,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: myNewsPaper
-      value: NewsPaper_TestScene
+      value: NewsPaper_BertheLeClair
       objectReference: {fileID: 0}
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: myDescription
-      value: Ceci est un niveau test pour le prototype
+      value: "Un cri se fait entendre depuis un appartement rue de Bourdon. Une silhouette
+        franchit le commissariat de police. Un meurtre \xE0 eu lieu."
       objectReference: {fileID: 0}
     - target: {fileID: 854191505746622199, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: m_Pivot.x

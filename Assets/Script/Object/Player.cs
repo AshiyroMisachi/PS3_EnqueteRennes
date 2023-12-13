@@ -176,7 +176,6 @@ public class Player : MonoBehaviour
             if (Input.touchCount == 1)
             {
                 Touch touch = Input.GetTouch(0);
-                Debug.Log(touch.deltaPosition.y);
                 //Slide Right
                 if (touch.deltaPosition.x > 10)
                 {
