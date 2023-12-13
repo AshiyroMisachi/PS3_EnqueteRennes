@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Level : MonoBehaviour
     public string myNewsPaper;
     public int myNumber;
     public float myScore;
+    public int myScoreProof;
+    public int maxProof;
+    public Sprite myImage;
 
     public RectTransform myTransform;
 
@@ -29,6 +33,7 @@ public class Level : MonoBehaviour
 
         //GetScore
         myScore = dataHolder.scoreArray[myNumber];
+        myScoreProof = dataHolder.scoreProofArray[myNumber];
 
         //Get Canvas to spawn Lock on Canvas
         canvas = FindObjectOfType<Canvas>();

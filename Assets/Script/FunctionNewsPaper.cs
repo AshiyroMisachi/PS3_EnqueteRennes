@@ -88,7 +88,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
                     dataHolder.mistake++;
                 }
             }
-            if (dataHolder.mistake == 0)
+            if (dataHolder.mistake == 0 || dataHolder.difficulty)
             {
                 continueVerification();
             }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DataHolder : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class DataHolder : MonoBehaviour
 
     //Selection Level
     public float[] scoreArray;
+    public int[] scoreProofArray;
     public int levelSelectedNumber;
     public string levelName;
     public string levelNewsPaper;
@@ -34,7 +36,9 @@ public class DataHolder : MonoBehaviour
     public int mistake;
 
     //Parameters
-    public bool cameraMode;
+    public float volume, son;
+    public bool cameraMode, difficulty;
+    public Language language;
     void Start()
     {
         DontDestroyOnLoad(gameObject);

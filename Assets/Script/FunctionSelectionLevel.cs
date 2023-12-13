@@ -15,6 +15,8 @@ public class FunctionSelectionLevel : MonoBehaviour
     public TextMeshProUGUI levelName;
     public TextMeshProUGUI levelDescription;
     public Image levelScore;
+    public Image levelImage;
+    public TextMeshProUGUI levelScoreProof;
     public string levelSelected;
 
     //Make Launch Button Work
@@ -47,7 +49,7 @@ public class FunctionSelectionLevel : MonoBehaviour
         timerDeselection -= Time.deltaTime;
         if (timerDeselection < 0f)
         {
-            levelDisplay.anchoredPosition = new Vector3(500f, 0f, 0f);
+            levelDisplay.anchoredPosition = new Vector3(900f, 0f, 0f);
         }
     }
 
@@ -55,8 +57,10 @@ public class FunctionSelectionLevel : MonoBehaviour
     {
         levelName.text = levels[numberLevel].GetComponent<Level>().myName;
         levelDescription.text = levels[numberLevel].GetComponent<Level>().myDescription;
+        levelImage.sprite = levels[numberLevel].GetComponent<Level>().myImage;
         levelScore.fillAmount = levels[numberLevel].GetComponent<Level>().myScore;
-        levelDisplay.anchoredPosition = new Vector3(-315f, 0f, 0f);
+        levelScoreProof.text = levels[numberLevel].GetComponent<Level>().myScoreProof + "/" + levels[numberLevel].GetComponent<Level>().maxProof;
+        levelDisplay.anchoredPosition = new Vector3(-275f, 0f, 0f);
         levelSelected = levels[numberLevel].GetComponent<Level>().myScene;
         timerDeselection = timerDeselectionTime;
 

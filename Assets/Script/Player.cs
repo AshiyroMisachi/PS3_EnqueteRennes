@@ -124,7 +124,8 @@ public class Player : MonoBehaviour
 
             Camera myCamera = Camera.main;
 
-            if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask))
+            //Light
+            if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask) && !dataholder.difficulty)
             {
                 Proof proofDetected = infoBis.transform.GetComponent<Proof>();
 
@@ -135,7 +136,6 @@ public class Player : MonoBehaviour
 
                 clueLight.transform.position = lightPosition;
             }
-
             else
             {
                 clueLight.intensity = 0;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44402242, g: 0.49316543, b: 0.5722324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -236,7 +236,11 @@ MonoBehaviour:
   currentScene: 
   scoreArray:
   - 0
+  scoreProofArray: 00000000
   levelSelectedNumber: 0
+  levelName: 
+  levelNewsPaper: 
+  levelLastNotebook: 
   levelStarted: 0
   proofsLevel: 0000000000000000000000000000000000000000
   proofsName:
@@ -314,7 +318,11 @@ MonoBehaviour:
   - 
   numberTry: 3
   mistake: 0
+  volume: 0.5
+  son: 0.5
   cameraMode: 1
+  difficulty: 1
+  language: 0
 --- !u!4 &211094133
 Transform:
   m_ObjectHideFlags: 0
