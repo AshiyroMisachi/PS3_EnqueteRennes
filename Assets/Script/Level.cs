@@ -8,6 +8,7 @@ public class Level : MonoBehaviour
     public string myName;
     public string myDescription;
     public string myScene;
+    public string myNewsPaper;
     public int myNumber;
     public float myScore;
 

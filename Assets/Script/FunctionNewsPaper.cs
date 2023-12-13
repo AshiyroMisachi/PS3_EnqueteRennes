@@ -29,6 +29,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     {
         //Find dataholder
         dataHolder = FindObjectOfType<DataHolder>();
+        dataHolder.UpdateNoteBookScene();
 
         //Setup
         warningTry.SetActive(false);
@@ -54,6 +55,14 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         {
             currentSelected.changeWord(wordSelected);
             wordSelected = null;
+        }
+    }
+
+    public void GoNoteBook()
+    {
+        if (!inWarning)
+        {
+            SceneManager.LoadScene("NoteBook");
         }
     }
 

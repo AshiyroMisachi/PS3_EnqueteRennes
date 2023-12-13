@@ -13,6 +13,9 @@ public class DataHolder : MonoBehaviour
     //Selection Level
     public float[] scoreArray;
     public int levelSelectedNumber;
+    public string levelName;
+    public string levelNewsPaper;
+    public string levelLastNotebook;
 
     //Navigation in Level
     public bool levelStarted;
@@ -50,6 +53,10 @@ public class DataHolder : MonoBehaviour
         lastScene = currentScene;
     }
 
+    public void UpdateNoteBookScene()
+    {
+        levelLastNotebook = SceneManager.GetActiveScene().name;
+    }
 
     public void setupArray(int numberElement)
     {
@@ -64,6 +71,7 @@ public class DataHolder : MonoBehaviour
     public void resetLevelVAR()
     {
         //Level Crime Scene
+        levelLastNotebook = "NoteBook";
         levelStarted = false;
         for (int i = 0; i < proofsLevel.Length; i++)
         {

@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     //Var Player
     public bool cameraMode;
     public int numberProof;
-    public string newsPaperScene;
     public GameObject policeReport;
 
     public TextMeshProUGUI popUpText;
@@ -283,7 +282,7 @@ public class Player : MonoBehaviour
         if (dataholder.levelStarted)
         {
             dataholder.updateLastScene();
-            SceneManager.LoadScene(newsPaperScene);
+            SceneManager.LoadScene(dataholder.levelNewsPaper);
         }
     }
 
@@ -292,7 +291,8 @@ public class Player : MonoBehaviour
         if (dataholder.levelStarted)
         {
             dataholder.updateLastScene();
-            SceneManager.LoadScene("NoteBook");
+            SceneManager.LoadScene(dataholder.levelLastNotebook);
         }
     }
+
 }
