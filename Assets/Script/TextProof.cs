@@ -10,7 +10,6 @@ public class TextProof : MonoBehaviour
 
     //Var Text Proof
     public string myName;
-    public TextMeshProUGUI textName;
     public bool gotMove;
 
     // Start is called before the first frame update
@@ -18,7 +17,7 @@ public class TextProof : MonoBehaviour
     {
         dataHolder = FindObjectOfType<DataHolder>();
         manager = FindObjectOfType<FunctionHolderNewsPaper>();
-        textName.text = myName;
+        gameObject.GetComponent<TextMeshProUGUI>().text = myName;
     }
 
     public void selectWord()
