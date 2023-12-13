@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FunctionHolderNoteBook : MonoBehaviour
+public class FunctionNoteBook : MonoBehaviour
 {
     //Reference
     public DataHolder dataHolder;
@@ -24,7 +24,7 @@ public class FunctionHolderNoteBook : MonoBehaviour
     //Var Inspection
     //If true = notebook, false = inspecitonMode
     private bool currentMode = true; 
-    public GameObject noteBookCanvas, inspectionCanvas;
+    public GameObject noteBookCanvas, inspectionCanvas, backButton;
     public TextMeshProUGUI insName, insDesc;
     public float insSlideSpeed, scaleSpeed;
 
@@ -134,6 +134,7 @@ public class FunctionHolderNoteBook : MonoBehaviour
             //Go Inspection Mode
             currentMode = false;
             noteBookCanvas.SetActive(false);
+            backButton.SetActive(false);
             inspectionCanvas.SetActive(true);
             insName.text = proofName.text;
             insDesc.text = proofDescription.text;
@@ -143,6 +144,7 @@ public class FunctionHolderNoteBook : MonoBehaviour
             //Go Notebook
             currentMode = true;
             noteBookCanvas.SetActive(true);
+            backButton.SetActive(true);
             inspectionCanvas.SetActive(false);
             gameObjectRender.transform.localScale = baseScaleRender;
             gameObjectRender.transform.position = new Vector3 (0, 0, 0);

@@ -6,7 +6,7 @@ using UnityEngine;
 public class ProofNote : MonoBehaviour
 {
     public DataHolder dataHolder;
-    public FunctionHolderNoteBook manager;
+    public FunctionNoteBook manager;
 
     //Var
     public string myName;
@@ -19,7 +19,7 @@ public class ProofNote : MonoBehaviour
     private void Start()
     {
         dataHolder = FindObjectOfType<DataHolder>();
-        manager = FindObjectOfType<FunctionHolderNoteBook>();
+        manager = FindObjectOfType<FunctionNoteBook>();
     }
 
     public void ShowProof()
