@@ -31,6 +31,7 @@ public class FunctionNoteBook : MonoBehaviour
     private void Start()
     {
         dataHolder = FindObjectOfType<DataHolder>();
+        dataHolder.UpdateNoteBookScene();
         proofNotes = new GameObject[dataHolder.proofsLevel.Length];
         inspectionCanvas.SetActive(false);
 
@@ -166,7 +167,10 @@ public class FunctionNoteBook : MonoBehaviour
         }
     }
 
-
+    public void GoNewsPaper()
+    {
+        SceneManager.LoadScene(dataHolder.levelNewsPaper);
+    }
     public void goBackScene()
     {
         SceneManager.LoadScene(dataHolder.lastScene);

@@ -60,7 +60,9 @@ public class FunctionSelectionLevel : MonoBehaviour
         levelSelected = levels[numberLevel].GetComponent<Level>().myScene;
         timerDeselection = timerDeselectionTime;
 
+        dataHolder.levelName = levels[numberLevel].GetComponent<Level>().myName;
         dataHolder.levelSelectedNumber = levels[numberLevel].GetComponent<Level>().myNumber;
+        dataHolder.levelNewsPaper = levels[numberLevel].GetComponent<Level>().myNewsPaper;
     }
     public void launchSettings()
     {
