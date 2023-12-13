@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class Player : MonoBehaviour
 {
     //Data Holder
     public DataHolder dataholder;
+    public TouchManager touchManager;
 
     public float lerpFactor;
 
@@ -50,6 +52,7 @@ public class Player : MonoBehaviour
     {
         //Find dataholder
         dataholder = FindObjectOfType<DataHolder>();
+        touchManager = FindObjectOfType<TouchManager>();
 
         //Enable the gyroscope
         Input.gyro.enabled = true;
@@ -149,9 +152,12 @@ public class Player : MonoBehaviour
                     //Camera myCamera = Camera.main;
                     Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
                     Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
-                    if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
+                    if (touchManager.IsTouchUI())
                     {
-                        info.transform.GetComponent<Proof>().getPickUp(this);
+                        if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
+                        {
+                            info.transform.GetComponent<Proof>().getPickUp(this);
+                        }
                     }
                 }
                 raycastOneTime = true;
@@ -182,7 +188,7 @@ public class Player : MonoBehaviour
                     insProof.transform.localPosition += Vector3.right * insSlideSpeed;
                 }
                 //Slide Left
-                else if (touch.deltaPosition.x < -10 )
+                else if (touch.deltaPosition.x < -10)
                 {
                     insProof.transform.localPosition += Vector3.left * insSlideSpeed;
 
@@ -292,6 +298,25 @@ public class Player : MonoBehaviour
             dataholder.updateLastScene();
             SceneManager.LoadScene(dataholder.levelLastNotebook);
         }
+    }
+
+    //TEST
+    public static bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.touches[0].deltaPosition.x, Input.touches[0].deltaPosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+
+        for (int i = 0; i < results.Count; i++)
+        {
+            if (results[i].gameObject.layer == 5) //5 = UI layer
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
 }

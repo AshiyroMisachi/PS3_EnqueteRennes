@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Test : MonoBehaviour, ITouchable
 {
-
     public void OnTouchedDown(Vector3 touchPosition)
     {
     }
-
 
     public void OnTouchedStay(Vector3 touchPosition)
     {
@@ -18,6 +16,8 @@ public class Test : MonoBehaviour, ITouchable
     public void OnTouchedUp()
     {
     }
+
+
 
     // Start is called before the first frame update
     void Start()
