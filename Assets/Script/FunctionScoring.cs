@@ -11,7 +11,7 @@ public class FunctionScoring : MonoBehaviour
 
     //Text and Image
     public TextMeshProUGUI proofsText;
-    public TextMeshProUGUI tryText;
+    public TextMeshProUGUI caseName;
     public Image star;
 
     void Start()
@@ -20,8 +20,8 @@ public class FunctionScoring : MonoBehaviour
         dataHolder = FindObjectOfType<DataHolder>();
 
         //Setup
-        proofsText.text = "Nombre de preuves trouvées: " + (dataHolder.proofsCount-1) + "/" + (dataHolder.proofsLevel.Length-1);
-        tryText.text = "Nombre d'essais restant:" + dataHolder.numberTry + "/2";
+        caseName.text = dataHolder.levelName;
+        proofsText.text = "Nombre de preuves trouvées: " + (dataHolder.proofsCount) + "/" + (dataHolder.proofsLevel.Length-1);
         switch (dataHolder.mistake)
         {
             case 0:
