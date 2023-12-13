@@ -81,12 +81,10 @@ public class TouchManager : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
-            Debug.Log("Touche de l'UI");
             return false;
         }
         else
         {
-            Debug.Log("Touche pas de l'UI");
             return true;
         }
     }

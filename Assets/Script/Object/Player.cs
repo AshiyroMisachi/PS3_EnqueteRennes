@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     //Var Button Camera Mode 2
     //Left, Right, Up, Down
     public GameObject[] arrows;
+    public float angleX;
 
     //Var InspectionMode
     public GameObject insProof;
@@ -115,6 +116,7 @@ public class Player : MonoBehaviour
             {
 
                 transform.rotation = Input.gyro.attitude;
+                //transform.rotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, 0, Input.gyro.attitude.w);
 
                 // Attempt to make a smooth rotation of the camera when using gyroscoping (not working atm)
 
@@ -123,6 +125,7 @@ public class Player : MonoBehaviour
 
                 transform.Rotate(0f, 0f, 180f, Space.Self);
                 transform.Rotate(90f, 180f, 0f, Space.World);
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
             }
 
             Camera myCamera = Camera.main;
@@ -224,25 +227,37 @@ public class Player : MonoBehaviour
 
             zoomCamera(difference);
         }
+
+        //RotationArrows
+        angleX = transform.localEulerAngles.x;
+        //if()?{} : else{}
+        angleX = (angleX > 180) ? angleX - 360 : angleX;
+        Debug.Log(transform.localEulerAngles.x);
     }
 
     //Camera Mode 2, Move by clicking button
     public void rotateDown()
     {
-        transform.eulerAngles += Vector3.right;
+        if (angleX <= 80)
+            transform.eulerAngles += Vector3.right;
     }
+
     public void rotateUp()
     {
-        transform.eulerAngles += Vector3.left;
+        if (angleX >= -80)
+            transform.eulerAngles += Vector3.left;
     }
+
     public void rotateLeft()
     {
         transform.eulerAngles += Vector3.down;
     }
+
     public void rotateRight()
     {
         transform.eulerAngles += Vector3.up;
     }
+
     //Switch Inspection Mode to SearchMode
     public void BackSearchMode()
     {
