@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,6 +14,7 @@ public class Player : MonoBehaviour
     public TouchManager touchManager;
 
     public float lerpFactor;
+    private Vector3 lastAcceleromter;
 
     // Var Zoom
     public float zoomOutMin = 60;
@@ -111,22 +113,15 @@ public class Player : MonoBehaviour
             timerText += Time.deltaTime;
 
             //Change the rotation of the camera acording to the phone's rotation
-            //Need to freeze Z axis
-            if (cameraMode)
+            if (cameraMode && Vector3.Distance(Input.gyro.attitude.eulerAngles, lastAcceleromter) > 0.35f)
             {
-
                 transform.rotation = Input.gyro.attitude;
-                //transform.rotation = new Quaternion(Input.gyro.attitude.x, Input.gyro.attitude.y, 0, Input.gyro.attitude.w);
-
-                // Attempt to make a smooth rotation of the camera when using gyroscoping (not working atm)
-
-                //Vector3 newRotation = Vector3.Lerp(transform.eulerAngles, Input.gyro.attitude.eulerAngles, lerpFactor);
-                //transform.rotation = Quaternion.Euler(newRotation.x, newRotation.y, newRotation.z);
-
                 transform.Rotate(0f, 0f, 180f, Space.Self);
                 transform.Rotate(90f, 180f, 0f, Space.World);
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
             }
+            Debug.Log(Vector3.Distance(Input.gyro.attitude.eulerAngles, lastAcceleromter));
+            lastAcceleromter = Input.gyro.attitude.eulerAngles;
 
             Camera myCamera = Camera.main;
 
@@ -232,7 +227,6 @@ public class Player : MonoBehaviour
         angleX = transform.localEulerAngles.x;
         //if()?{} : else{}
         angleX = (angleX > 180) ? angleX - 360 : angleX;
-        Debug.Log(transform.localEulerAngles.x);
     }
 
     //Camera Mode 2, Move by clicking button
