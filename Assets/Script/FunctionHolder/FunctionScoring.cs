@@ -52,7 +52,7 @@ public class FunctionScoring : MonoBehaviour
             dataHolder.scoreArray[dataHolder.levelSelectedNumber] = star.fillAmount;
         }
 
-        if (dataHolder.scoreProofArray[dataHolder.levelSelectedNumber] < dataHolder.scoreProofArray[dataHolder.levelSelectedNumber])
+        if (dataHolder.proofsCount > dataHolder.scoreProofArray[dataHolder.levelSelectedNumber])
         {
             dataHolder.scoreProofArray[dataHolder.levelSelectedNumber] = dataHolder.proofsCount;
         }
