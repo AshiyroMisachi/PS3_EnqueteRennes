@@ -2386,8 +2386,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.020000005, z: 0.0003718744}
-  m_Center: {x: -0.000000029804145, y: -5.871856e-13, z: 0.000015275828}
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &745540945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2406,9 +2406,9 @@ MonoBehaviour:
     lue par n'importe qui."
   myNumber: 4
   myGameObjectRender: {fileID: 745540943}
-  myScaleRender: {x: 0, y: 0, z: 0}
+  myScaleRender: {x: 14.850001, y: 10.499999, z: 100}
   myRotationRender: {x: 0, y: 0, z: 0}
-  plot: {fileID: 0}
+  plot: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
   distancePlot: {x: 0, y: 0, z: 0}
   clueLightPosition: {x: 0, y: 0, z: 0}
   dataHolder: {fileID: 0}
@@ -3922,7 +3922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1138807007}
-  - component: {fileID: 1138807006}
+  - component: {fileID: 1138807008}
   m_Layer: 0
   m_Name: TouchManager
   m_TagString: Untagged
@@ -3930,20 +3930,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1138807006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138807005}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80ff756014579144288d98e0e1e8e814, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  tc: 0
 --- !u!4 &1138807007
 Transform:
   m_ObjectHideFlags: 0
@@ -3959,6 +3945,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1138807008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138807005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7efec46ed9b98f947aff7c7109e3bf99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  tc: 0
 --- !u!1001 &1147740583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6842,7 +6842,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.034628697, y: 0.0490662, z: 0.08036294}
-  m_Center: {x: 0.0034372886, y: 0.0031954655, z: -0.025342923}
+  m_Center: {x: 0, y: 0, z: -0.025342923}
 --- !u!1001 &2860214716198331766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7329,8 +7329,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.014261262
-  m_Center: {x: 1.3195744e-10, y: -6.597872e-11, z: 0.004427757}
+  m_Radius: 0.012
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4951110275483273743
 GameObject:
   m_ObjectHideFlags: 0
@@ -7719,19 +7719,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9733967
+      value: 0.9737182
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.22912647
+      value: 0.22775611
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7739,7 +7739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 26.491
+      value: 26.33
       objectReference: {fileID: 0}
     - target: {fileID: 3912448652126120708, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
