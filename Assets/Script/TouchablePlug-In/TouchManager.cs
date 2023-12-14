@@ -19,30 +19,44 @@ public class TouchManager : MonoBehaviour
 
     void Update()
     {
-
+        
 
         tc = Input.touchCount;
 
-        if (Input.touchCount <= 0)
+        if(Input.touchCount<=0)
         {
             ChangeITouchable(null);
             return;
         }
+        if(EventSystem.current.IsPointerOverGameObject())
+        {
+            print("coucou");
+            return;
+
+        }
+
+
         var touchePos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, _mainCamera.farClipPlane);
         var touchePosInWorld = _mainCamera.ScreenToWorldPoint(touchePos);
-
-        if (debug)
+        
+        if(debug)
         {
             Debug.DrawLine(_mainCamera.transform.position, touchePosInWorld, Color.red);
         }
 
         if (Physics.Raycast(_mainCamera.transform.position, touchePosInWorld - _mainCamera.transform.position, out var info))
         {
-            var touchePosNear = _mainCamera.ScreenToWorldPoint(new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, _mainCamera.nearClipPlane + 10));
-            if (info.collider != _collider)
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                print("coucou");
+                return;
+            }
+
+            var touchePosNear = _mainCamera.ScreenToWorldPoint(new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, _mainCamera.nearClipPlane+10));
+            if(info.collider != _collider)
             {
                 _collider = info.collider;
-                ChangeITouchable(info.collider.GetComponent<ITouchable>());
+                ChangeITouchable( info.collider.GetComponent<ITouchable>());
 
                 _iTouchable?.OnTouchedDown(touchePosNear);
             }
@@ -57,13 +71,13 @@ public class TouchManager : MonoBehaviour
 
     private void ChangeITouchable(ITouchable newValue)
     {
-        if (_iTouchable == newValue)
+        if(_iTouchable==newValue)
         {
             return;
         }
         _iTouchable?.OnTouchedUp();
         _iTouchable = newValue;
-        if (newValue == null)
+        if(newValue == null)
         {
             _collider = null;
         }

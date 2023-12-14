@@ -328,4 +328,12 @@ public class Player : MonoBehaviour
         return false;
     }
 
+    private bool IsPointerOverUIObject_2()
+    {
+        var touchPosition = Input.touches[0].deltaPosition;
+        var eventData = new PointerEventData(EventSystem.current) { position = touchPosition };
+        var results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+        return results.Count > 0;
+    }
 }
