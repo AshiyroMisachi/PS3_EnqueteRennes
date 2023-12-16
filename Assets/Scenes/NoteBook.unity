@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 569614028}
   - component: {fileID: 569614027}
   m_Layer: 5
-  m_Name: BackGround
+  m_Name: Notebook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1479,7 +1479,7 @@ GameObject:
   - component: {fileID: 1203759573}
   - component: {fileID: 1203759572}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
