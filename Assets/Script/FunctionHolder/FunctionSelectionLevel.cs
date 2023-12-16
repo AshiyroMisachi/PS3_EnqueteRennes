@@ -49,7 +49,7 @@ public class FunctionSelectionLevel : MonoBehaviour
         timerDeselection -= Time.deltaTime;
         if (timerDeselection < 0f)
         {
-            levelDisplay.anchoredPosition = new Vector3(900f, 0f, 0f);
+            levelDisplay.anchoredPosition = new Vector3(1800f, 0f, 0f);
         }
     }
 
@@ -60,7 +60,7 @@ public class FunctionSelectionLevel : MonoBehaviour
         levelImage.sprite = levels[numberLevel].GetComponent<Level>().myImage;
         levelScore.fillAmount = levels[numberLevel].GetComponent<Level>().myScore;
         levelScoreProof.text = levels[numberLevel].GetComponent<Level>().myScoreProof + "/" + levels[numberLevel].GetComponent<Level>().maxProof;
-        levelDisplay.anchoredPosition = new Vector3(-275f, 0f, 0f);
+        levelDisplay.anchoredPosition = new Vector3(-850f, 0f, 0f);
         levelSelected = levels[numberLevel].GetComponent<Level>().myScene;
         timerDeselection = timerDeselectionTime;
 
