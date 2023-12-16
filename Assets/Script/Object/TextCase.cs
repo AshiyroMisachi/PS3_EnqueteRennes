@@ -54,7 +54,7 @@ public class TextCase : MonoBehaviour
                 }
                 else if (!manager.pannelListWord[j].GetComponent<TextProof>().gotMove)
                 {
-                    manager.pannelListWord[j].GetComponent<RectTransform>().localPosition = new Vector3(-650f, -1.5f, 0f);
+                    manager.pannelListWord[j].GetComponent<RectTransform>().localPosition = new Vector3(-4800f, -1.5f, 0f);
                 }
             }
         }

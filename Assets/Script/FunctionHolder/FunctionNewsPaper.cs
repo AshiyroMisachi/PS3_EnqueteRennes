@@ -41,7 +41,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             GameObject newTextProof = Instantiate(textproof);
             newTextProof.gameObject.GetComponent<TextProof>().myName = wordList[j];
             newTextProof.GetComponent<RectTransform>().SetParent(pannelWord.GetComponent<RectTransform>(), false);
-            newTextProof.GetComponent<RectTransform>().localPosition = new Vector3(-650f, -1.5f, 0f);
+            newTextProof.GetComponent<RectTransform>().localPosition = new Vector3(-4800f, -1.5f, 0f);
 
             pannelListWord.Add(newTextProof);
         }
@@ -88,16 +88,14 @@ public class FunctionHolderNewsPaper : MonoBehaviour
                     dataHolder.mistake++;
                 }
             }
-            if (dataHolder.mistake == 0 || dataHolder.difficulty)
+            if (dataHolder.mistake == 0 || dataHolder.difficulty || dataHolder.numberTry == 0)
             {
                 continueVerification();
             }
-
-            warningTry.SetActive(true);
-            warningTryText.text = "Vous avez " + dataHolder.numberTry + " tentatives restantes";
-            if (dataHolder.numberTry == 0)
+            else
             {
-                continueVerification();
+                warningTry.SetActive(true);
+                warningTryText.text = "Vous avez " + dataHolder.numberTry + " tentatives restantes";
             }
         }
     }
