@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1178311426148725563}
   - component: {fileID: 4468998765150214242}
   - component: {fileID: 4284059148419390566}
-  - component: {fileID: 7803279235824707580}
   - component: {fileID: 947041238242542291}
   m_Layer: 3
   m_Name: LetterAlbert
@@ -85,30 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7803279235824707580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4573665601088703548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  myName: Lettre intime
-  description: "Cette lettre n'\xE9tait s\xFBrement pas destin\xE9e \xE0 \xEAtre
-    lue par n'importe qui."
-  myNumber: 4
-  myGameObjectRender: {fileID: 5698595646126412422, guid: d9a9653815aca964eaaa2b85cb3bfbba, type: 3}
-  myScaleRender: {x: 190.98, y: 270.1003, z: 1818.857}
-  myRotationRender: {x: 0, y: 180, z: 180}
-  plot: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-  distancePlot: {x: -0.8797, y: 1.021, z: -5.789}
-  clueLightPosition: {x: -0.217, y: 0.333, z: -0.316}
-  dataHolder: {fileID: 0}
 --- !u!65 &947041238242542291
 BoxCollider:
   m_ObjectHideFlags: 0

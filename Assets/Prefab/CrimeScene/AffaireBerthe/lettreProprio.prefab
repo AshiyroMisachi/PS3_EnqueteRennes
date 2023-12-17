@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 8221644546442773944}
   - component: {fileID: 943050034253885356}
   - component: {fileID: 4795303045489776986}
-  - component: {fileID: 2806929160546831950}
   - component: {fileID: 328082846159274718}
   m_Layer: 3
-  m_Name: LettreProprio
+  m_Name: lettreProprio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,30 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2806929160546831950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104730524695036140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
-  myName: "Lettre du propri\xE9taire"
-  description: "Les retards de paiement sur les loyers sont \xE0 l'origine de nombreux
-    conflits."
-  myNumber: 3
-  myGameObjectRender: {fileID: 1104730524695036140}
-  myScaleRender: {x: 271.67, y: 192.08989, z: 1829.4277}
-  myRotationRender: {x: 0, y: 180, z: 90}
-  plot: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-  distancePlot: {x: 0.3407, y: 1.0043, z: -7.7945}
-  clueLightPosition: {x: 0, y: 0, z: 0}
-  dataHolder: {fileID: 0}
 --- !u!65 &328082846159274718
 BoxCollider:
   m_ObjectHideFlags: 0
