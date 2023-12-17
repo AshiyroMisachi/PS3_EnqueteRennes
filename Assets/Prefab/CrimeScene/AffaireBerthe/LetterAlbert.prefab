@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1104730524695036140
+--- !u!1 &4573665601088703548
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8221644546442773944}
-  - component: {fileID: 943050034253885356}
-  - component: {fileID: 4795303045489776986}
-  - component: {fileID: 2806929160546831950}
-  - component: {fileID: 328082846159274718}
+  - component: {fileID: 1178311426148725563}
+  - component: {fileID: 4468998765150214242}
+  - component: {fileID: 4284059148419390566}
+  - component: {fileID: 7803279235824707580}
+  - component: {fileID: 947041238242542291}
   m_Layer: 3
-  m_Name: LettreProprio
+  m_Name: LetterAlbert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8221644546442773944
+--- !u!4 &1178311426148725563
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104730524695036140}
+  m_GameObject: {fileID: 4573665601088703548}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.66312647, y: -0.245486, z: -0.24548599, w: 0.6631264}
-  m_LocalPosition: {x: 1.046, y: 0.302, z: -2.4705248}
-  m_LocalScale: {x: 10.5, y: 14.85, z: 100}
+  m_LocalRotation: {x: -0.3725485, y: -0.6010055, z: -0.60100555, w: 0.37254846}
+  m_LocalPosition: {x: 4.98, y: -0.08, z: 1.876}
+  m_LocalScale: {x: 10.500001, y: 14.850001, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -40.629}
---- !u!33 &943050034253885356
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -116.413}
+--- !u!33 &4468998765150214242
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104730524695036140}
-  m_Mesh: {fileID: -462981019419857548, guid: 451c2f9620b47794b9005758babcc5dd, type: 3}
---- !u!23 &4795303045489776986
+  m_GameObject: {fileID: 4573665601088703548}
+  m_Mesh: {fileID: 6416302070336371891, guid: f47bb85571cbb7743905b34be8df24fe, type: 3}
+--- !u!23 &4284059148419390566
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104730524695036140}
+  m_GameObject: {fileID: 4573665601088703548}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2fc71041054f5ba439ae27cc7f62c97f, type: 2}
+  - {fileID: 2100000, guid: aee6f1d6e6e47ef4ea21bdcc0cac73fd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,37 +85,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2806929160546831950
+--- !u!114 &7803279235824707580
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104730524695036140}
+  m_GameObject: {fileID: 4573665601088703548}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  myName: "Lettre du propri\xE9taire"
-  description: "Les retards de paiement sur les loyers sont \xE0 l'origine de nombreux
-    conflits."
-  myNumber: 3
-  myGameObjectRender: {fileID: 1104730524695036140}
-  myScaleRender: {x: 271.67, y: 192.08989, z: 1829.4277}
-  myRotationRender: {x: 0, y: 180, z: 90}
+  myName: Lettre intime
+  description: "Cette lettre n'\xE9tait s\xFBrement pas destin\xE9e \xE0 \xEAtre
+    lue par n'importe qui."
+  myNumber: 4
+  myGameObjectRender: {fileID: 5698595646126412422, guid: d9a9653815aca964eaaa2b85cb3bfbba, type: 3}
+  myScaleRender: {x: 190.98, y: 270.1003, z: 1818.857}
+  myRotationRender: {x: 0, y: 180, z: 180}
   plot: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-  distancePlot: {x: 0.3407, y: 1.0043, z: -7.7945}
-  clueLightPosition: {x: 0, y: 0, z: 0}
+  distancePlot: {x: -0.8797, y: 1.021, z: -5.789}
+  clueLightPosition: {x: -0.217, y: 0.333, z: -0.316}
   dataHolder: {fileID: 0}
---- !u!65 &328082846159274718
+--- !u!65 &947041238242542291
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1104730524695036140}
+  m_GameObject: {fileID: 4573665601088703548}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -128,5 +128,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.020000007, y: 0.02, z: 0.001}
+  m_Size: {x: 0.02, y: 0.02, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}

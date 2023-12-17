@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &10578857078371405
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.9362636
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5145691
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.77092505
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a711699f3107948409264d5d8804e801, type: 2}
+    - target: {fileID: 919132149155446097, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_Name
+      value: flyer
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9086975733700323172}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6619781912975758497}
+  m_SourcePrefab: {fileID: 100100000, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+--- !u!1 &929145307500120348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a7a3f2e3e497c947adeec87914c4139, type: 3}
+  m_PrefabInstance: {fileID: 10578857078371405}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9086975733700323172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929145307500120348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  myName: "Flyer du F\xE9mina Bar"
+  description: "Le F\xE9mina Bar, c\xE9l\xE8bre maison de passe de la Rue Duhamel.
+    Tiens... un message a \xE9t\xE9 griffonn\xE9 dessus."
+  myNumber: 11
+  myGameObjectRender: {fileID: 929145307500120348}
+  myScaleRender: {x: 0, y: 0, z: 0}
+  myRotationRender: {x: 0, y: 0, z: 0}
+  plot: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
+  distancePlot: {x: -0.4, y: 0, z: 0}
+  clueLightPosition: {x: 0, y: 0, z: 0}
+  dataHolder: {fileID: 0}
+--- !u!65 &6619781912975758497
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929145307500120348}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.002, y: 0.0021, z: 0.0029699998}
+  m_Center: {x: 1.1641532e-10, y: 0.0000000037252903, z: 0}
