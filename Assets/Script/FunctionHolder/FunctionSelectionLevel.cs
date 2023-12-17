@@ -76,7 +76,6 @@ public class FunctionSelectionLevel : MonoBehaviour
 
     public void launchLevel()
     {
-        Debug.Log("Launch");
         SceneManager.LoadScene(levelSelected);
     }
 }
