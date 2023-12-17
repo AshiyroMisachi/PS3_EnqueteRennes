@@ -14,6 +14,7 @@ public class FunctionSettings : MonoBehaviour
     //Parameters
     public bool cameraMode;
     public TextMeshProUGUI textCameraMode, textLanguage, textDifficulty;
+    public Image difficultyButton;
     public Slider volumeSlider, sonSlider;
 
 
@@ -36,9 +37,12 @@ public class FunctionSettings : MonoBehaviour
             {
                 case Language.Français:
                     textDifficulty.text = "Normal";
+                    difficultyButton.color = new Color(0.5f, 0.6f, 0.2f);
                     break;
                 case Language.English:
                     textDifficulty.text = "Normal";
+                    difficultyButton.color = new Color(0.5f, 0.6f, 0.2f);
+
                     break;
             }
         }
@@ -48,9 +52,11 @@ public class FunctionSettings : MonoBehaviour
             {
                 case Language.Français:
                     textDifficulty.text = "Facile";
+                    difficultyButton.color = new Color(0.2f, 0.6f, 0.3f);
                     break;
                 case Language.English:
                     textDifficulty.text = "Easy";
+                    difficultyButton.color = new Color(0.2f, 0.6f, 0.3f);
                     break;
             }
         }
