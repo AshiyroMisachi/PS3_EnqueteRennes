@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Proof : MonoBehaviour
 {
     //Universsal Var
-    public TypeProof type;
     public string myName;
     public string description;
     public int myNumber;
@@ -16,7 +15,6 @@ public class Proof : MonoBehaviour
 
     public GameObject plot;
     public Vector3 distancePlot;
-    public Vector3 clueLightPosition;
 
     private bool canPickUp = true;
 
