@@ -120,7 +120,6 @@ public class Player : MonoBehaviour
                 transform.Rotate(90f, 180f, 0f, Space.World);
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
             }
-            Debug.Log(Vector3.Distance(Input.gyro.attitude.eulerAngles, lastAcceleromter));
             lastAcceleromter = Input.gyro.attitude.eulerAngles;
 
             Camera myCamera = Camera.main;
