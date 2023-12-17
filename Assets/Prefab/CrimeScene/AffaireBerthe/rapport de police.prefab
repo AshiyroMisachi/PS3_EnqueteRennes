@@ -67,7 +67,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 16e2afee2531c7e469dff32c41ccf9dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5699ae5f54032164cbb873488ee72665, type: 2}
+      objectReference: {fileID: 2100000, guid: b634460660c2d874b9a98d3320868b14, type: 2}
     - target: {fileID: 919132149155446097, guid: 16e2afee2531c7e469dff32c41ccf9dd, type: 3}
       propertyPath: m_Name
       value: rapport de police
