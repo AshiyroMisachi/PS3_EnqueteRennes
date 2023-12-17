@@ -535,6 +535,7 @@ GameObject:
   - component: {fileID: 611442116}
   - component: {fileID: 611442118}
   - component: {fileID: 611442117}
+  - component: {fileID: 611442119}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -658,6 +659,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611442115}
   m_CullTransparentMesh: 1
+--- !u!114 &611442119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611442115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: "Difficult\xE9"
+  english: Difficulty
 --- !u!1 &635454172
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,6 +855,7 @@ GameObject:
   - component: {fileID: 830484148}
   - component: {fileID: 830484150}
   - component: {fileID: 830484149}
+  - component: {fileID: 830484151}
   m_Layer: 5
   m_Name: Son
   m_TagString: Untagged
@@ -965,6 +982,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830484147}
   m_CullTransparentMesh: 1
+--- !u!114 &830484151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830484147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: Son
+  english: Sound
 --- !u!1 &867299027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1174,6 +1206,7 @@ GameObject:
   - component: {fileID: 964177923}
   - component: {fileID: 964177925}
   - component: {fileID: 964177924}
+  - component: {fileID: 964177926}
   m_Layer: 5
   m_Name: Volume
   m_TagString: Untagged
@@ -1298,6 +1331,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964177922}
   m_CullTransparentMesh: 1
+--- !u!114 &964177926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964177922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: Volume
+  english: Volume
 --- !u!1 &1018396748
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,6 +2275,7 @@ GameObject:
   - component: {fileID: 1838275348}
   - component: {fileID: 1838275350}
   - component: {fileID: 1838275349}
+  - component: {fileID: 1838275351}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -2350,6 +2399,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838275347}
   m_CullTransparentMesh: 1
+--- !u!114 &1838275351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838275347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: "Mode de cam\xE9ra"
+  english: Camera mode
 --- !u!1 &2011270849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,6 +2924,7 @@ GameObject:
   - component: {fileID: 2123489808}
   - component: {fileID: 2123489810}
   - component: {fileID: 2123489809}
+  - component: {fileID: 2123489811}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -2983,6 +3048,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123489807}
   m_CullTransparentMesh: 1
+--- !u!114 &2123489811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123489807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: Langue
+  english: Language
 --- !u!1 &2142246705
 GameObject:
   m_ObjectHideFlags: 0

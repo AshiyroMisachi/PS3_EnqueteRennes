@@ -32,11 +32,27 @@ public class FunctionSettings : MonoBehaviour
         //Difficulty
         if (dataHolder.difficulty)
         {
-            textDifficulty.text = "Normal";
+            switch (dataHolder.language)
+            {
+                case Language.Français:
+                    textDifficulty.text = "Normal";
+                    break;
+                case Language.English:
+                    textDifficulty.text = "Normal";
+                    break;
+            }
         }
         else
         {
-            textDifficulty.text = "Facile";
+            switch (dataHolder.language)
+            {
+                case Language.Français:
+                    textDifficulty.text = "Facile";
+                    break;
+                case Language.English:
+                    textDifficulty.text = "Easy";
+                    break;
+            }
         }
 
         //CameraMode
@@ -78,12 +94,28 @@ public class FunctionSettings : MonoBehaviour
         if (dataHolder.difficulty)
         {
             dataHolder.difficulty = false;
-            textDifficulty.text = "Facile";
+            switch (dataHolder.language)
+            {
+                case Language.Français:
+                    textDifficulty.text = "Facile";
+                    break;
+                case Language.English:
+                    textDifficulty.text = "Easy";
+                    break;
+            }
         }
         else
         {
             dataHolder.difficulty = true;
-            textDifficulty.text = "Normal";
+            switch (dataHolder.language)
+            {
+                case Language.Français:
+                    textDifficulty.text = "Normal";
+                    break;
+                case Language.English:
+                    textDifficulty.text = "Normal";
+                    break;
+            }
         }
     }
 
@@ -108,7 +140,7 @@ public class FunctionSettings : MonoBehaviour
                 dataHolder.language = Language.Français;
                 break;
         }
-        textLanguage.text = dataHolder.language.ToString();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }
