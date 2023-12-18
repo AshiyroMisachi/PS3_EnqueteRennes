@@ -14,6 +14,10 @@ public class FunctionScoring : MonoBehaviour
     public TextMeshProUGUI caseName;
     public Image star;
 
+    public GameObject moreInfoImage;
+    public TextMeshProUGUI moreInfoName;
+    public TextMeshProUGUI moreInfoDescription;
+
     void Start()
     {
         //Find Dataholder
@@ -56,11 +60,27 @@ public class FunctionScoring : MonoBehaviour
         {
             dataHolder.scoreProofArray[dataHolder.levelSelectedNumber] = dataHolder.proofsCount;
         }
+
+        moreInfoImage.SetActive(false);
     }
 
     public void goBackSelectionLevel()
     {
         //Launch SelectionLevel
         SceneManager.LoadScene("SelectionLevel");
+    }
+
+    public void ShowMoreInfo()
+    {
+        if (moreInfoImage.activeInHierarchy)
+        {
+            moreInfoImage.SetActive(false);
+        }
+        else
+        {
+            moreInfoImage.SetActive(true);
+            moreInfoName.text = dataHolder.levelName;
+            moreInfoDescription.text = dataHolder.levelMoreInfo;
+        }
     }
 }

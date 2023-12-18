@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
             //Setup mode inspection Police Report
             currentMode = false;
             insProof = Instantiate(policeReport, transform);
-            insProof.transform.localPosition = new Vector3(0, 0, 1);
+            insProof.transform.localPosition = new Vector3(0, 0.06f, 1);
             insNameProof.text = "Rapport de Police";
             insDescriptionProof.text = "Voilà le rapport qu'on a pu me délivrer avant que le corps ne soit emporté.";
         }

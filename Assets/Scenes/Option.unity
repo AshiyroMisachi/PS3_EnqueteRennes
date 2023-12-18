@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 830484149}
   - component: {fileID: 830484151}
   m_Layer: 5
-  m_Name: Son
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -442, y: 123}
+  m_AnchoredPosition: {x: -442, y: 207}
   m_SizeDelta: {x: 530, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830484149
@@ -769,9 +769,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Son
-
-'
+  m_text: Musique
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0957d462c27418040a5d993269ad4a6d, type: 2}
   m_sharedMaterial: {fileID: -7551165728234243446, guid: 0957d462c27418040a5d993269ad4a6d, type: 2}
@@ -861,8 +859,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataHolder: {fileID: 0}
-  french: Son
-  english: Sound
+  french: Musique
+  english: Music
 --- !u!1 &861111027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,7 +1147,7 @@ GameObject:
   - component: {fileID: 964177924}
   - component: {fileID: 964177926}
   m_Layer: 5
-  m_Name: Volume
+  m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1172,7 +1170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -442, y: 258}
+  m_AnchoredPosition: {x: -442, y: 382}
   m_SizeDelta: {x: 530, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &964177924
@@ -1195,7 +1193,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Volume
+  m_text: Son
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0957d462c27418040a5d993269ad4a6d, type: 2}
   m_sharedMaterial: {fileID: -7551165728234243446, guid: 0957d462c27418040a5d993269ad4a6d, type: 2}
@@ -1285,8 +1283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataHolder: {fileID: 0}
-  french: Volume
-  english: Volume
+  french: Son
+  english: Sound
 --- !u!1 &1018396748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1323,7 +1321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152, y: -338}
+  m_AnchoredPosition: {x: 152, y: -318}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018396750
@@ -2589,7 +2587,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152, y: -188}
+  m_AnchoredPosition: {x: 152, y: -143}
   m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2080764393
@@ -2805,7 +2803,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 152, y: -22}
+  m_AnchoredPosition: {x: 152, y: 32}
   m_SizeDelta: {x: 500, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2116647197

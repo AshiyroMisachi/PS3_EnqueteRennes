@@ -60,7 +60,7 @@ public class Proof : MonoBehaviour
             player.insNameProof.text = myName;
             player.insDescriptionProof.text = description;
             player.insProof = Instantiate(myGameObjectRender, player.transform);
-            player.insProof.transform.localPosition = new Vector3(0, 0, 1);
+            player.insProof.transform.localPosition = new Vector3(0, 0.06f, 1);
             player.insProof.transform.localScale = myScaleRender / 5;
             player.insProof.transform.localEulerAngles = myRotationRender;
 

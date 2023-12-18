@@ -89,6 +89,7 @@ public class FunctionSelectionLevel : MonoBehaviour
         levelSelected = levels[numberLevel].GetComponent<Level>().myScene;
 
         dataHolder.levelName = levels[numberLevel].GetComponent<Level>().myName;
+        dataHolder.levelMoreInfo = levels[numberLevel].GetComponent<Level>().myMoreInfo;
         dataHolder.levelSelectedNumber = levels[numberLevel].GetComponent<Level>().myNumber;
         dataHolder.levelNewsPaper = levels[numberLevel].GetComponent<Level>().myNewsPaper;
     }

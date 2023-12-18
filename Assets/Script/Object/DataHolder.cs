@@ -16,6 +16,7 @@ public class DataHolder : MonoBehaviour
     public int[] scoreProofArray;
     public int levelSelectedNumber;
     public string levelName;
+    public string levelMoreInfo;
     public string levelNewsPaper;
     public string levelLastNotebook;
 
