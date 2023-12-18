@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextCase : MonoBehaviour
 {
@@ -35,7 +36,13 @@ public class TextCase : MonoBehaviour
 
     public void BeSelected()
     {
+        if (manager.currentSelected != null)
+        {
+            manager.currentSelected.GetComponent<Image>().color = new Color(1f,1f,1f,0.25f);
+        }
         manager.currentSelected = gameObject.GetComponent<TextCase>();
+        gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+
         manager.pannelWordPositionCount = 0;
         for (int i = 0; i < manager.pannelListWord.Count; i++)
         {
