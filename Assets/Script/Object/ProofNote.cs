@@ -24,6 +24,7 @@ public class ProofNote : MonoBehaviour
 
     public void ShowProof()
     {
+        manager.feedBackImage.GetComponent<RectTransform>().position = gameObject.GetComponent<RectTransform>().position;
         manager.proofName.text = myName;
         manager.proofDescription.text = myDescription;
         manager.switchRender(myGameObject, myScale, myRotation);
