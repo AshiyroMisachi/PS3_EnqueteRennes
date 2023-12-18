@@ -40,7 +40,7 @@ public class FunctionSelectionLevel : MonoBehaviour
 
         if (!Application.isEditor)
         {
-            levelDisplayMultiplier /= 6;
+            levelDisplayMultiplier /= 8;
         }
     }
     void Update()

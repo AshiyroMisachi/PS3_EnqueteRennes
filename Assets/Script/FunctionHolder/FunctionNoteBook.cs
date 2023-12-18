@@ -58,7 +58,7 @@ public class FunctionNoteBook : MonoBehaviour
         //proofNotes[0].GetComponent<ProofNote>().ShowProof();
         if (!Application.isEditor)
         {
-            insSlideSpeed *= 4;
+            insSlideSpeed *= 8;
             scaleSpeed *= 4;
         }
     }

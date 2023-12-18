@@ -8533,7 +8533,7 @@ PrefabInstance:
       objectReference: {fileID: 1903524941}
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: speedArrows
-      value: 0.1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: insNameProof
