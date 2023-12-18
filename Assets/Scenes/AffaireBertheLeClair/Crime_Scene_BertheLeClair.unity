@@ -7635,8 +7635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myName: Revolver
-  description: "Un mod\xE8le [...]. Tr\xE8s populaire. Cela dit, il manque une balle
-    dans le barillet/chargeur (d\xE9pendant du mod\xE8le)."
+  description: "Un mod\xE8le tr\xE8s populaire. Cela dit, il manque une balle dans
+    le barillet."
   myNumber: 2
   myGameObjectRender: {fileID: 1589087216320559658, guid: e2dedae3dce00c94ea9c6e499ef430d1, type: 3}
   myScaleRender: {x: 1280, y: 1280, z: 1280}
