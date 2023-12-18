@@ -634,6 +634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataHolder: {fileID: 0}
   levelDisplay: {fileID: 1884062175}
+  levelDisplayAnimator: {fileID: 1884062179}
   levelName: {fileID: 1571723624}
   levelDescription: {fileID: 1487252248}
   levelScore: {fileID: 219047651}
@@ -1804,6 +1805,7 @@ GameObject:
   - component: {fileID: 1884062177}
   - component: {fileID: 1884062176}
   - component: {fileID: 1884062178}
+  - component: {fileID: 1884062179}
   m_Layer: 5
   m_Name: LevelDisplay
   m_TagString: Untagged
@@ -1834,7 +1836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -725, y: 0}
+  m_AnchoredPosition: {x: -1600, y: 0}
   m_SizeDelta: {x: 805, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884062176
@@ -1920,6 +1922,27 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isSelected: 0
+--- !u!95 &1884062179
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884062174}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e907fb19b49c324ca60cf409bb64652, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1922360061
 GameObject:
   m_ObjectHideFlags: 0

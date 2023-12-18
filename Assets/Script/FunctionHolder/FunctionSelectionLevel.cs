@@ -12,6 +12,7 @@ public class FunctionSelectionLevel : MonoBehaviour
 
     //Var LevelDisplay
     public RectTransform levelDisplay;
+    public float levelDisplayLerp;
     public TextMeshProUGUI levelName;
     public TextMeshProUGUI levelDescription;
     public Image levelScore;
@@ -22,10 +23,11 @@ public class FunctionSelectionLevel : MonoBehaviour
     //Make Launch Button Work
     public bool noSelection;
     private float timerDeselection;
+    private bool deselection;
     private float timerDeselectionTime = 0.5f;
 
     //Var Get Level Selected Info
-    public ButtonButBetter[] levels;
+    public ButtonButBetter[] levels;    
 
     private void Start()
     {
@@ -46,17 +48,24 @@ public class FunctionSelectionLevel : MonoBehaviour
                 {
                     SetupLevelDisplay(i);
                 }
-                levelDisplay.anchoredPosition = new Vector3(-725f, 0f, 0f);
+                levelDisplay.anchoredPosition = Vector3.Lerp(levelDisplay.anchoredPosition, new Vector3(-725f, 0f, 0f), levelDisplayLerp);
+                levelDisplayLerp += Time.deltaTime / 500;
+                levelDisplayLerp = (levelDisplayLerp > 1f) ? 1f : levelDisplayLerp;
                 timerDeselection = timerDeselectionTime;
+                deselection = false;
             }
 
         }
 
-        timerDeselection -= Time.deltaTime;
-        if (timerDeselection < 0f)
+        
+        if (deselection)
         {
-            levelDisplay.anchoredPosition = new Vector3(1800f, 0f, 0f);
+            levelDisplay.anchoredPosition = Vector3.Lerp(levelDisplay.anchoredPosition, new Vector3(-1600f, 0f, 0f), levelDisplayLerp);
+            levelDisplayLerp -= Time.deltaTime / 500;
+            levelDisplayLerp = (levelDisplayLerp < 0f) ? 0f : levelDisplayLerp;
         }
+        timerDeselection -= Time.deltaTime;
+        deselection = true;
     }
 
     public void SetupLevelDisplay(int numberLevel)
