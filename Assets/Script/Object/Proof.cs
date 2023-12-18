@@ -76,4 +76,9 @@ public class Proof : MonoBehaviour
         Debug.Log("A proof is located at the Camera center");
     }
 
+    public bool GetCanPickUp()
+    {
+        return canPickUp;
+    }
+
 }
