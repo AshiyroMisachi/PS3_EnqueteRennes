@@ -21,6 +21,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
 
     public GameObject validateButton;
     public TextMeshProUGUI validateText;
+    private bool canConfirm = false;
 
     //Warning Tab
     private bool inWarning = false;
@@ -51,11 +52,6 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         }
 
     }
-    public void Update()
-    {
-
-    }
-
 
     public void ApplyWord()
     {
@@ -78,6 +74,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         { 
             validateButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
             validateText.color = new Color(0f, 0f, 0f, 1f);
+            canConfirm = true;
         }
     }
 
@@ -99,7 +96,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
 
     public void OpenWarningTry()
     {
-        if (!inWarning)
+        if (!inWarning && canConfirm)
         {
             inWarning = true;
             //CHECK MISTAKE

@@ -2153,6 +2153,10 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myMoreInfo
+      value: "Ils c'est pass\xE9 plein de truc \xE0 Rennes c'est fou"
+      objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: myNewsPaper
       value: NewsPaper_BertheLeClair
       objectReference: {fileID: 0}
