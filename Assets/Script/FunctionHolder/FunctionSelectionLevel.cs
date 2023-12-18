@@ -58,7 +58,7 @@ public class FunctionSelectionLevel : MonoBehaviour
         }
 
         
-        if (deselection)
+        if (timerDeselection < 0)
         {
             levelDisplay.anchoredPosition = Vector3.Lerp(levelDisplay.anchoredPosition, new Vector3(-1600f, 0f, 0f), levelDisplayLerp);
             levelDisplayLerp -= Time.deltaTime / 500;
