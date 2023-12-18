@@ -14,6 +14,8 @@ public class FunctionNoteBook : MonoBehaviour
     //Prefab
     public GameObject proofNote;
 
+    public GameObject feedBackImage;
+
     //Var NoteBook
     public GameObject[] proofNotes;
     public TextMeshProUGUI proofName;
