@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     //Var Button Camera Mode 2
     //Left, Right, Up, Down
     public GameObject[] arrows;
+    public float speedArrows;
     public float angleX;
 
     //Var InspectionMode
@@ -100,6 +101,13 @@ public class Player : MonoBehaviour
 
         clueLight = Instantiate(prefabLight, myCamera.transform.position, Quaternion.Euler(0, 0, 0));
 
+
+        if (!Application.isEditor)
+        {
+            speedArrows = 1f;
+            insSlideSpeed = insSlideSpeed * 4;
+        }
+
     }
 
     void Update()
@@ -129,17 +137,20 @@ public class Player : MonoBehaviour
             if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask) && !dataholder.difficulty)
             {
                 Proof proofDetected = infoBis.transform.GetComponent<Proof>();
-                if (vibrate)
+                if (proofDetected.GetCanPickUp())
                 {
-                    vibrate = false;
-                    Handheld.Vibrate();
+                    if (vibrate)
+                    {
+                        vibrate = false;
+                        Handheld.Vibrate();
+                    }
+                    clueLight.intensity = 1;
+
+                    // Light appears at mid distance between the origin of the player and the origin of the proof
+                    Vector3 lightPosition = gameObject.transform.position - ((gameObject.transform.position - proofDetected.transform.position) / 2);
+
+                    clueLight.transform.position = lightPosition;
                 }
-                clueLight.intensity = 1;
-
-                // Light appears at mid distance between the origin of the player and the origin of the proof
-                Vector3 lightPosition = gameObject.transform.position - ((gameObject.transform.position - proofDetected.transform.position) / 2);
-
-                clueLight.transform.position = lightPosition;
             }
             else
             {
@@ -238,23 +249,27 @@ public class Player : MonoBehaviour
     public void rotateDown()
     {
         if (angleX <= 80)
-            transform.eulerAngles += Vector3.right;
+        {
+            transform.eulerAngles += Vector3.right * speedArrows;
+        }
     }
 
     public void rotateUp()
     {
         if (angleX >= -80)
-            transform.eulerAngles += Vector3.left;
+        {
+            transform.eulerAngles += Vector3.left * speedArrows;
+        }
     }
 
     public void rotateLeft()
     {
-        transform.eulerAngles += Vector3.down;
+        transform.eulerAngles += Vector3.down * speedArrows;
     }
 
     public void rotateRight()
     {
-        transform.eulerAngles += Vector3.up;
+        transform.eulerAngles += Vector3.up * speedArrows;
     }
 
     //Switch Inspection Mode to SearchMode

@@ -12,7 +12,8 @@ public class FunctionSelectionLevel : MonoBehaviour
 
     //Var LevelDisplay
     public RectTransform levelDisplay;
-    public float levelDisplayLerp;
+    private float levelDisplayLerp;
+    private float levelDisplayMultiplier = 300;
     public TextMeshProUGUI levelName;
     public TextMeshProUGUI levelDescription;
     public Image levelScore;
@@ -36,6 +37,11 @@ public class FunctionSelectionLevel : MonoBehaviour
 
         //Reset Dataholder info
         dataHolder.resetLevelVAR();
+
+        if (!Application.isEditor)
+        {
+            levelDisplayMultiplier /= 8;
+        }
     }
     void Update()
     {
@@ -53,14 +59,13 @@ public class FunctionSelectionLevel : MonoBehaviour
                     levelDisplayLerp = 0f;
                 }
                 levelDisplay.anchoredPosition = Vector3.Lerp(levelDisplay.anchoredPosition, new Vector3(-725f, 0f, 0f), levelDisplayLerp);
-                levelDisplayLerp += Time.deltaTime / 300;
+                levelDisplayLerp += Time.deltaTime / levelDisplayMultiplier;
                 levelDisplayLerp = (levelDisplayLerp > 1f) ? 1f : levelDisplayLerp;
                 timerDeselection = timerDeselectionTime;
                 deselection = false;
             }
 
         }
-
 
         if (timerDeselection < 0)
         {
@@ -70,13 +75,11 @@ public class FunctionSelectionLevel : MonoBehaviour
             }
 
             levelDisplay.anchoredPosition = Vector3.Lerp(levelDisplay.anchoredPosition, new Vector3(-1600f, 0f, 0f), levelDisplayLerp);
-            levelDisplayLerp += Time.deltaTime / 300;
+            levelDisplayLerp += Time.deltaTime / levelDisplayMultiplier;
             levelDisplayLerp = (levelDisplayLerp < 0f) ? 0f : levelDisplayLerp;
             deselection = true;
         }
         timerDeselection -= Time.deltaTime;
-
-
     }
 
     public void SetupLevelDisplay(int numberLevel)
