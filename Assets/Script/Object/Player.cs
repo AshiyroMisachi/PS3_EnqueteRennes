@@ -50,6 +50,7 @@ public class Player : MonoBehaviour
 
     public Light prefabLight;
     private Light clueLight;
+    private bool vibrate = false;
 
     void Start()
     {
@@ -128,7 +129,11 @@ public class Player : MonoBehaviour
             if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask) && !dataholder.difficulty)
             {
                 Proof proofDetected = infoBis.transform.GetComponent<Proof>();
-
+                if (vibrate)
+                {
+                    vibrate = false;
+                    Handheld.Vibrate();
+                }
                 clueLight.intensity = 1;
 
                 // Light appears at mid distance between the origin of the player and the origin of the proof
@@ -139,6 +144,7 @@ public class Player : MonoBehaviour
             else
             {
                 clueLight.intensity = 0;
+                vibrate = true;
             }
 
             //Raycast when touch screen to detect object

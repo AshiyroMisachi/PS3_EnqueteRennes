@@ -8049,7 +8049,7 @@ MonoBehaviour:
   myScaleRender: {x: 2630.4, y: 2630.4, z: 1315.2}
   myRotationRender: {x: 0, y: 270, z: 0}
   plot: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
-  distancePlot: {x: 1.1102, y: 0.1804, z: -6.0969}
+  distancePlot: {x: 0.782, y: 0.1752, z: -5.667}
   dataHolder: {fileID: 0}
 --- !u!114 &7939490477147570944
 MonoBehaviour:
