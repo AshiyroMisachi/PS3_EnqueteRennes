@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     //Var Button Camera Mode 2
     //Left, Right, Up, Down
     public GameObject[] arrows;
+    public float speedArrows;
     public float angleX;
 
     //Var InspectionMode
@@ -99,6 +100,13 @@ public class Player : MonoBehaviour
         Camera myCamera = Camera.main;
 
         clueLight = Instantiate(prefabLight, myCamera.transform.position, Quaternion.Euler(0, 0, 0));
+
+
+        if (!Application.isEditor)
+        {
+            speedArrows = 1f;
+            insSlideSpeed = insSlideSpeed * 4;
+        }
 
     }
 
@@ -241,23 +249,27 @@ public class Player : MonoBehaviour
     public void rotateDown()
     {
         if (angleX <= 80)
-            transform.eulerAngles += Vector3.right;
+        {
+            transform.eulerAngles += Vector3.right * speedArrows;
+        }
     }
 
     public void rotateUp()
     {
         if (angleX >= -80)
-            transform.eulerAngles += Vector3.left;
+        {
+            transform.eulerAngles += Vector3.left * speedArrows;
+        }
     }
 
     public void rotateLeft()
     {
-        transform.eulerAngles += Vector3.down;
+        transform.eulerAngles += Vector3.down * speedArrows;
     }
 
     public void rotateRight()
     {
-        transform.eulerAngles += Vector3.up;
+        transform.eulerAngles += Vector3.up * speedArrows;
     }
 
     //Switch Inspection Mode to SearchMode
