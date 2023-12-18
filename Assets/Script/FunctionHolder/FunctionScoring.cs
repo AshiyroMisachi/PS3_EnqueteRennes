@@ -25,7 +25,7 @@ public class FunctionScoring : MonoBehaviour
 
         //Setup
         caseName.text = dataHolder.levelName;
-        proofsText.text = "Nombre de preuves trouvées: " + (dataHolder.proofsCount) + "/" + (dataHolder.proofsLevel.Length-1);
+        proofsText.text = "Nombre de preuves trouvées: " + (dataHolder.proofsCount) + "/" + (dataHolder.proofsLevel.Length - 1);
         switch (dataHolder.mistake)
         {
             case 0:
@@ -82,5 +82,11 @@ public class FunctionScoring : MonoBehaviour
             moreInfoName.text = dataHolder.levelName;
             moreInfoDescription.text = dataHolder.levelMoreInfo;
         }
+    }
+
+    public void TakeScreenshot()
+    {
+        Debug.Log("Take Screenshot");
+        ScreenCapture.CaptureScreenshot("RollandDeRennes_" + dataHolder.levelName + ".png");
     }
 }
