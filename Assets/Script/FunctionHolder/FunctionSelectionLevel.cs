@@ -27,7 +27,7 @@ public class FunctionSelectionLevel : MonoBehaviour
     private float timerDeselectionTime = 0.5f;
 
     //Var Get Level Selected Info
-    public ButtonButBetter[] levels;    
+    public ButtonButBetter[] levels;
 
     private void Start()
     {
@@ -48,8 +48,12 @@ public class FunctionSelectionLevel : MonoBehaviour
                 {
                     SetupLevelDisplay(i);
                 }
+                if (deselection)
+                {
+                    levelDisplayLerp = 0f;
+                }
                 levelDisplay.anchoredPosition = Vector3.Lerp(levelDisplay.anchoredPosition, new Vector3(-725f, 0f, 0f), levelDisplayLerp);
-                levelDisplayLerp += Time.deltaTime / 500;
+                levelDisplayLerp += Time.deltaTime / 300;
                 levelDisplayLerp = (levelDisplayLerp > 1f) ? 1f : levelDisplayLerp;
                 timerDeselection = timerDeselectionTime;
                 deselection = false;
@@ -57,15 +61,22 @@ public class FunctionSelectionLevel : MonoBehaviour
 
         }
 
-        
+
         if (timerDeselection < 0)
         {
+            if (!deselection)
+            {
+                levelDisplayLerp = 0f;
+            }
+
             levelDisplay.anchoredPosition = Vector3.Lerp(levelDisplay.anchoredPosition, new Vector3(-1600f, 0f, 0f), levelDisplayLerp);
-            levelDisplayLerp -= Time.deltaTime / 500;
+            levelDisplayLerp += Time.deltaTime / 300;
             levelDisplayLerp = (levelDisplayLerp < 0f) ? 0f : levelDisplayLerp;
+            deselection = true;
         }
         timerDeselection -= Time.deltaTime;
-        deselection = true;
+
+
     }
 
     public void SetupLevelDisplay(int numberLevel)
