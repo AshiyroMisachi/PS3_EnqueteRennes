@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -87,6 +88,18 @@ public class FunctionScoring : MonoBehaviour
     public void TakeScreenshot()
     {
         Debug.Log("Take Screenshot");
-        ScreenCapture.CaptureScreenshot("RollandDeRennes_" + dataHolder.levelName + ".png");
+        ScreenCapture.CaptureScreenshot("/storage/emulated/0/DCIM/" + "RollandDeRennes_" + dataHolder.levelName + ".png");
+    }
+
+    private string GetAndroidExternalStoragePath()
+    {
+        if (Application.platform != RuntimePlatform.Android)
+            return Application.persistentDataPath;
+
+        var jc = new AndroidJavaClass("android.os.Environment");
+        var path = jc.CallStatic<AndroidJavaObject>("getExternalStoragePublicDirectory",
+            jc.GetStatic<string>("DIRECTORY_DCIM"))
+            .Call<string>("getAbsolutePath");
+        return path;
     }
 }
