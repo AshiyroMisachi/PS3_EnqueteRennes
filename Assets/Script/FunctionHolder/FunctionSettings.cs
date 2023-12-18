@@ -13,7 +13,10 @@ public class FunctionSettings : MonoBehaviour
 
     //Parameters
     public bool cameraMode;
-    public TextMeshProUGUI textCameraMode, textLanguage, textDifficulty;
+    public Sprite gyroscope;
+    public Sprite arrows;
+    public Image renderImageCameraMode;
+    public TextMeshProUGUI textLanguage, textDifficulty;
     public Image difficultyButton;
     public Slider volumeSlider, sonSlider;
 
@@ -64,11 +67,11 @@ public class FunctionSettings : MonoBehaviour
         cameraMode = dataHolder.cameraMode;
         if (cameraMode)
         {
-            textCameraMode.text = "Gyroscope";
+            renderImageCameraMode.sprite = gyroscope;
         }
         else
         {
-            textCameraMode.text = "Flèche";
+            renderImageCameraMode.sprite = arrows;
         }
     }
 
@@ -84,12 +87,12 @@ public class FunctionSettings : MonoBehaviour
         if (cameraMode)
         {
             cameraMode = false;
-            textCameraMode.text = "Flèche";
+            renderImageCameraMode.sprite = arrows;
         }
         else
         {
             cameraMode = true;
-            textCameraMode.text = "Gyroscope";
+            renderImageCameraMode.sprite = gyroscope;
         }
         dataHolder.cameraMode = cameraMode;
     }
