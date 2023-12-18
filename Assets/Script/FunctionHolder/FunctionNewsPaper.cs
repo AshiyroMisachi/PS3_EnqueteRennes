@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class FunctionHolderNewsPaper : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     public List<GameObject> pannelListWord;
     public Vector3[] pannelWordPosition;
     public int pannelWordPositionCount;
+
+    public GameObject validateButton;
+    public TextMeshProUGUI validateText;
 
     //Warning Tab
     private bool inWarning = false;
@@ -47,6 +51,10 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         }
 
     }
+    public void Update()
+    {
+
+    }
 
 
     public void ApplyWord()
@@ -55,6 +63,21 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         {
             currentSelected.changeWord(wordSelected);
             wordSelected = null;
+        }
+
+        var check = 0;
+        for (int i = 0; i < textCases.Length; i++)
+        {
+            if (textCases[i].currentName != "")
+            {
+                check++;
+            }
+        }
+
+        if (check == 6)
+        { 
+            validateButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+            validateText.color = new Color(0f, 0f, 0f, 1f);
         }
     }
 
