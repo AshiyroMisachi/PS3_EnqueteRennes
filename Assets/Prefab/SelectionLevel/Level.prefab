@@ -104,9 +104,9 @@ MonoBehaviour:
   objectLock: {fileID: 1427195171654033832, guid: 7758e7ace420fab46a1db451707710c1, type: 3}
   canvas: {fileID: 0}
   dataHolder: {fileID: 0}
-  noSelected: {fileID: 0}
-  selected: {fileID: 0}
-  notUnlock: {fileID: 0}
+  noSelected: {fileID: 21300000, guid: 9aa11aa0179811f4db5f3f95cef306a2, type: 3}
+  selected: {fileID: 21300000, guid: fd0bea9e46c3a9647a2f5a5104752a36, type: 3}
+  notUnlock: {fileID: 21300000, guid: 0063300b28bf44b4599be9fdf91d010f, type: 3}
 --- !u!114 &5803583401968557059
 MonoBehaviour:
   m_ObjectHideFlags: 0
