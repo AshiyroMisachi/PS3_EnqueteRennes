@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7739,6 +7739,7 @@ GameObject:
   - component: {fileID: 490383364587308997}
   - component: {fileID: 4843637538473707706}
   - component: {fileID: 6299762012118394567}
+  - component: {fileID: 6299762012118394568}
   m_Layer: 3
   m_Name: LettrePlainte
   m_TagString: Untagged
@@ -8449,6 +8450,7 @@ GameObject:
   - component: {fileID: 5030950344752364167}
   - component: {fileID: 1364413292484247837}
   - component: {fileID: 8322967993857139762}
+  - component: {fileID: 8322967993857139763}
   m_Layer: 3
   m_Name: LetterAlbert
   m_TagString: Untagged
@@ -8626,6 +8628,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.02, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6299762012118394568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147879894692095504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f8a5625ef25e147b48e0b5e7ead5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: {fileID: 2100000, guid: 8ac8b6f8e25bd49489c63a0316b9f6e5, type: 2}
+  english: {fileID: 2100000, guid: 882f56d43a01df14581095a75c9fc242, type: 2}
 --- !u!33 &6481321265570223990
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8957,6 +8974,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.02, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8322967993857139763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746058536202267357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f8a5625ef25e147b48e0b5e7ead5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: {fileID: 2100000, guid: aee6f1d6e6e47ef4ea21bdcc0cac73fd, type: 2}
+  english: {fileID: 2100000, guid: f69879880a28f154caec6c113072dac3, type: 2}
 --- !u!1001 &8434256742800318034
 PrefabInstance:
   m_ObjectHideFlags: 0
