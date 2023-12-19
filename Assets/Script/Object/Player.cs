@@ -54,6 +54,8 @@ public class Player : MonoBehaviour
     private bool vibrate = false;
 
     public GameObject blackImage;
+    public GameObject musicCrimeScene;
+    public AudioSource feedBackProof;
 
     void Start()
     {
@@ -70,6 +72,7 @@ public class Player : MonoBehaviour
         //Parameters Switch Scene
         if (!dataholder.levelStarted)
         {
+            Instantiate(musicCrimeScene, gameObject.transform);
             dataholder.levelStarted = true;
             dataholder.setupArray(numberProof);
             dataholder.proofsLevel[0] = true;
@@ -174,6 +177,7 @@ public class Player : MonoBehaviour
                     {
                         if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
                         {
+                            feedBackProof.Play();
                             info.transform.GetComponent<Proof>().getPickUp(this);
                         }
                     }

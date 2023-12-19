@@ -32,6 +32,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
 
     public GameObject blackImage;
 
+    public AudioSource feedbackTextCase;
     private void Start()
     {
         //Find dataholder
@@ -58,6 +59,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
 
     public void ApplyWord()
     {
+        feedbackTextCase.Play();
         if (wordSelected != null)
         {
             currentSelected.changeWord(wordSelected);
