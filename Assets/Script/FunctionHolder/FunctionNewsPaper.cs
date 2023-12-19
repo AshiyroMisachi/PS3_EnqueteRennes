@@ -30,6 +30,8 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     public GameObject warningMistake;
     public TextMeshProUGUI warningMistakeText;
 
+    public GameObject blackImage;
+
     private void Start()
     {
         //Find dataholder
@@ -39,6 +41,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         //Setup
         warningTry.SetActive(false);
         warningMistake.SetActive(false);
+        blackImage.GetComponent<Animator>().SetTrigger("Clear");
 
         //Spawn TextProofs
         for (int j = 0; j < wordList.Length; j++)
@@ -143,7 +146,13 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     public void continueVerification()
     {
         //Switch Score scene, save number of mistake
-        SceneManager.LoadScene("Scoring");
+        StartCoroutine(LaunchScene("Scoring"));
     }
 
+    public IEnumerator LaunchScene(string sceneName)
+    {
+        blackImage.GetComponent<Animator>().SetTrigger("FadeIn");
+        yield return new WaitUntil(() => blackImage.GetComponent<Image>().color.a == 1);
+        SceneManager.LoadScene(sceneName);
+    }
 }

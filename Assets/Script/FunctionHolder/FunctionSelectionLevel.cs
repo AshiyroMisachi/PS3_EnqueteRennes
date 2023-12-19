@@ -30,6 +30,8 @@ public class FunctionSelectionLevel : MonoBehaviour
     //Var Get Level Selected Info
     public ButtonButBetter[] levels;
 
+    public GameObject blackImage;
+
     private void Start()
     {
         //Find dataHolder
@@ -40,8 +42,10 @@ public class FunctionSelectionLevel : MonoBehaviour
 
         if (!Application.isEditor)
         {
-            levelDisplayMultiplier /= 8;
+            levelDisplayMultiplier /= 9;
         }
+
+        blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
     }
     void Update()
     {
@@ -74,7 +78,7 @@ public class FunctionSelectionLevel : MonoBehaviour
                 levelDisplayLerp = 0f;
             }
 
-            levelDisplay.anchoredPosition = Vector3.Lerp(levelDisplay.anchoredPosition, new Vector3(-1600f, 0f, 0f), levelDisplayLerp);
+            levelDisplay.anchoredPosition = Vector3.Lerp(levelDisplay.anchoredPosition, new Vector3(-2000f, 0f, 0f), levelDisplayLerp);
             levelDisplayLerp += Time.deltaTime / levelDisplayMultiplier;
             levelDisplayLerp = (levelDisplayLerp < 0f) ? 0f : levelDisplayLerp;
             deselection = true;
@@ -104,6 +108,13 @@ public class FunctionSelectionLevel : MonoBehaviour
 
     public void launchLevel()
     {
-        SceneManager.LoadScene(levelSelected);
+        StartCoroutine(LaunchScene(levelSelected));
+    }
+
+    public IEnumerator LaunchScene(string sceneName)
+    {
+        blackImage.GetComponent<Animator>().SetTrigger("FadeIn");
+        yield return new WaitUntil(() => blackImage.GetComponent<Image>().color.a == 1);
+        SceneManager.LoadScene(sceneName);
     }
 }
