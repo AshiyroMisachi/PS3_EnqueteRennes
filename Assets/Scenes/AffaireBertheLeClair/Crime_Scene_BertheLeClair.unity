@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9971,7 +9971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myName: Lunette
   description: "Ces lunettes appartenaient \xE0 la victime. Je doute qu'elle portait
-    un verre bris\xE9 de son vivant. Et ce sang ? Etrange..."
+    un verre bris\xE9 de son vivant."
   myNumber: 7
   myGameObjectRender: {fileID: 6233307227597553418, guid: 08d2536ea1a57374b9797e936868cd2a, type: 3}
   myScaleRender: {x: 58.7, y: 58.7, z: 1.0747}
