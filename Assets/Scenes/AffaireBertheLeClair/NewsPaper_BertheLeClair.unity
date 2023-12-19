@@ -4654,7 +4654,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8aca6ea3dd5d3ef4db90b74df510bfcf, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5454,6 +5454,7 @@ MonoBehaviour:
   warningMistake: {fileID: 1539073344}
   warningMistakeText: {fileID: 1666092561}
   blackImage: {fileID: 1904733874}
+  feedbackTextCase: {fileID: 1796901060}
 --- !u!1001 &2649942982693662562
 PrefabInstance:
   m_ObjectHideFlags: 0
