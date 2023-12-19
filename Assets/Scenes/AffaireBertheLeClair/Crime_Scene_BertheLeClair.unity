@@ -7817,6 +7817,7 @@ GameObject:
   - component: {fileID: 7594051324159347867}
   - component: {fileID: 944380381200276367}
   - component: {fileID: 3414500765960967967}
+  - component: {fileID: 7594051324159347868}
   m_Layer: 3
   m_Name: LettreProprio
   m_TagString: Untagged
@@ -8804,6 +8805,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7594051324159347868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2646956905475642669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f8a5625ef25e147b48e0b5e7ead5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: {fileID: 2100000, guid: 2fc71041054f5ba439ae27cc7f62c97f, type: 2}
+  english: {fileID: 2100000, guid: ab35d9c3927e7d041be5d8b36596f889, type: 2}
 --- !u!114 &7759698053089739889
 MonoBehaviour:
   m_ObjectHideFlags: 0

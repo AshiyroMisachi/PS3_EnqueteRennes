@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 943050034253885356}
   - component: {fileID: 4795303045489776986}
   - component: {fileID: 328082846159274718}
+  - component: {fileID: 7571557760878299798}
   m_Layer: 3
   m_Name: lettreProprio
   m_TagString: Untagged
@@ -105,3 +106,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.020000007, y: 0.02, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7571557760878299798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104730524695036140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f8a5625ef25e147b48e0b5e7ead5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: {fileID: 2100000, guid: 2fc71041054f5ba439ae27cc7f62c97f, type: 2}
+  english: {fileID: 2100000, guid: ab35d9c3927e7d041be5d8b36596f889, type: 2}

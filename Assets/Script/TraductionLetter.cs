@@ -6,10 +6,7 @@ using UnityEngine;
 public class TraductionLetter : MonoBehaviour
 {
     public DataHolder dataHolder;
-
-
     public Material french, english;
-
 
     void Start()
     {
