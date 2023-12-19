@@ -72,6 +72,11 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        UnlockValidateButton();
+    }
+
     public void ApplyWord()
     {
         feedbackTextCase.Play();
@@ -142,7 +147,15 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             else
             {
                 warningTry.SetActive(true);
-                warningTryText.text = "Il vous restera " + dataHolder.numberTry + " tentatives.";
+                switch (dataHolder.language)
+                {
+                    case Language.Français:
+                        warningTryText.text = "Il vous restera " + dataHolder.numberTry + " tentatives.";
+                        break;
+                    case Language.English:
+                        warningTryText.text = "There will be " + dataHolder.numberTry + " tries left.";
+                        break;
+                }
             }
         }
     }
@@ -157,7 +170,16 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     {
         warningTry.SetActive(false);
         warningMistake.SetActive(true);
-        warningMistakeText.text = "Vous avez " + dataHolder.mistake + " erreurs.";
+
+        switch (dataHolder.language)
+        {
+            case Language.Français:
+                warningMistakeText.text = "Vous avez " + dataHolder.mistake + " erreurs.";
+                break;
+            case Language.English:
+                warningMistakeText.text = "You made " + dataHolder.mistake + " mistakes.";
+                break;
+        }
     }
 
     public void CloseWarningMistake()

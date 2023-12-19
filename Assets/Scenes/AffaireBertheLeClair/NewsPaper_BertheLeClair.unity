@@ -213,6 +213,7 @@ GameObject:
   - component: {fileID: 61361829}
   - component: {fileID: 61361831}
   - component: {fileID: 61361830}
+  - component: {fileID: 61361832}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -236,7 +237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -52, y: -3}
+  m_AnchoredPosition: {x: -64, y: -3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &61361830
@@ -259,7 +260,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Valider
+  m_text: Confirm
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0957d462c27418040a5d993269ad4a6d, type: 2}
   m_sharedMaterial: {fileID: -7551165728234243446, guid: 0957d462c27418040a5d993269ad4a6d, type: 2}
@@ -287,12 +288,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 84.8
+  m_fontSize: 70.7
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 84.8
+  m_fontSizeMax: 70.7
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -337,6 +338,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61361828}
   m_CullTransparentMesh: 1
+--- !u!114 &61361832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61361828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: Valider
+  english: Confirm
 --- !u!1 &88542619
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +365,7 @@ GameObject:
   - component: {fileID: 88542621}
   - component: {fileID: 88542620}
   - component: {fileID: 88542623}
+  - component: {fileID: 88542624}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -445,6 +462,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9a745e467502a8448c8edcb7bbf874c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &88542624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88542619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &207182251
 GameObject:
   m_ObjectHideFlags: 0
@@ -2062,7 +2123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -31}
+  m_AnchoredPosition: {x: 0.000015258789, y: -8}
   m_SizeDelta: {x: 825, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1041923677
@@ -2113,12 +2174,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 70
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 50
+  m_fontSizeMax: 70
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -4248,6 +4309,7 @@ GameObject:
   - component: {fileID: 1559008789}
   - component: {fileID: 1559008791}
   - component: {fileID: 1559008790}
+  - component: {fileID: 1559008792}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4271,8 +4333,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -374}
-  m_SizeDelta: {x: 825, y: 200}
+  m_AnchoredPosition: {x: 0, y: -353}
+  m_SizeDelta: {x: 987.7336, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1559008790
 MonoBehaviour:
@@ -4323,12 +4385,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.65
+  m_fontSize: 55
   m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 55
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -4373,6 +4435,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559008788}
   m_CullTransparentMesh: 1
+--- !u!114 &1559008792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559008788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: "Attention vous avez des erreurs. \xCAtes vous s\xFBr de vouloir terminer
+    la partie ?"
+  english: Be careful, you have some mistakes. Are you sure you want to end the level
+    ?
 --- !u!1 &1567176748
 GameObject:
   m_ObjectHideFlags: 0
@@ -4408,7 +4487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -374}
+  m_AnchoredPosition: {x: 0, y: -353}
   m_SizeDelta: {x: 987.7336, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567176750
@@ -4465,7 +4544,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 55
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -4523,8 +4602,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataHolder: {fileID: 0}
-  french: 
-  english: 
+  french: "Attention vous \xEAtes sur le point de valider vos r\xE9ponses. \xCAtes
+    vous s\xFBr de valider ?"
+  english: Be careful, you are about to confirm your answers. Are you sure you want
+    to confirm?
 --- !u!1 &1638927489
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,7 +4895,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -31}
+  m_AnchoredPosition: {x: 0.000015258789, y: -8}
   m_SizeDelta: {x: 825, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1666092561
@@ -4865,12 +4946,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 70
   m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 50
+  m_fontSizeMax: 70
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -4927,7 +5008,6 @@ GameObject:
   - component: {fileID: 1667542318}
   - component: {fileID: 1667542317}
   - component: {fileID: 1667542316}
-  - component: {fileID: 1667542319}
   m_Layer: 5
   m_Name: Validation
   m_TagString: Untagged
@@ -5049,21 +5129,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667542314}
   m_CullTransparentMesh: 1
---- !u!114 &1667542319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667542314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataHolder: {fileID: 0}
-  french: Valider
-  english: Confirm
 --- !u!1001 &1777976446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6434,6 +6499,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1012067401}
     m_Modifications:
+    - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
+      propertyPath: myNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -1098531310832668511, guid: 97d2c6195b7e8834bad332c86558c024, type: 3}
       propertyPath: answers.Array.data[1]
       value: Henri Leroy
