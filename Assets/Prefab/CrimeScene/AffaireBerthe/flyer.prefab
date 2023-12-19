@@ -114,5 +114,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataHolder: {fileID: 0}
-  french: {fileID: 0}
-  english: {fileID: 0}
+  french: {fileID: 2100000, guid: a711699f3107948409264d5d8804e801, type: 2}
+  english: {fileID: 2100000, guid: 08de9f66514aaf24ebcc2cdad56e7fac, type: 2}
