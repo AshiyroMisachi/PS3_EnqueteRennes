@@ -952,6 +952,7 @@ GameObject:
   - component: {fileID: 490398324}
   - component: {fileID: 490398326}
   - component: {fileID: 490398325}
+  - component: {fileID: 490398327}
   m_Layer: 5
   m_Name: HeadPageNewsPaper
   m_TagString: Untagged
@@ -1018,6 +1019,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 490398323}
   m_CullTransparentMesh: 1
+--- !u!114 &490398327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490398323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: "Enqu\xEAte"
+  english: Case
 --- !u!1 &508948170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1263,7 @@ GameObject:
   - component: {fileID: 887709821}
   - component: {fileID: 887709823}
   - component: {fileID: 887709822}
+  - component: {fileID: 887709824}
   m_Layer: 5
   m_Name: VictimeWhen
   m_TagString: Untagged
@@ -1371,6 +1388,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887709820}
   m_CullTransparentMesh: 1
+--- !u!114 &887709824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887709820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: "Heure du d\xE9c\xE8s ?"
+  english: Time of death ?
 --- !u!1 &928144765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1641,7 @@ GameObject:
   - component: {fileID: 1012067401}
   - component: {fileID: 1012067403}
   - component: {fileID: 1012067402}
+  - component: {fileID: 1012067404}
   m_Layer: 5
   m_Name: Killer
   m_TagString: Untagged
@@ -1733,6 +1766,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012067400}
   m_CullTransparentMesh: 1
+--- !u!114 &1012067404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012067400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: "Identit\xE9 de l'assassin ? "
+  english: Murderer's identity ?
 --- !u!1 &1025605605
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,6 +2060,7 @@ GameObject:
   - component: {fileID: 1046056503}
   - component: {fileID: 1046056505}
   - component: {fileID: 1046056504}
+  - component: {fileID: 1046056506}
   m_Layer: 5
   m_Name: KillReason
   m_TagString: Untagged
@@ -2136,6 +2185,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046056502}
   m_CullTransparentMesh: 1
+--- !u!114 &1046056506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1046056502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: Motif du crime ?
+  english: Reason of the murder ?
 --- !u!1 &1103949043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,6 +2211,7 @@ GameObject:
   - component: {fileID: 1103949044}
   - component: {fileID: 1103949046}
   - component: {fileID: 1103949045}
+  - component: {fileID: 1103949047}
   m_Layer: 5
   m_Name: Victime
   m_TagString: Untagged
@@ -2271,6 +2336,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103949043}
   m_CullTransparentMesh: 1
+--- !u!114 &1103949047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103949043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: "Identit\xE9 de la victime ?"
+  english: Victim's identity ?
 --- !u!1 &1103990272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,6 +2705,7 @@ GameObject:
   - component: {fileID: 1276692745}
   - component: {fileID: 1276692744}
   - component: {fileID: 1276692746}
+  - component: {fileID: 1276692747}
   m_Layer: 5
   m_Name: HeadPageNotebook
   m_TagString: Untagged
@@ -2746,6 +2827,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1276692747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276692742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: Preuves
+  english: Evidences
 --- !u!1 &1310058694
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,6 +3595,7 @@ GameObject:
   - component: {fileID: 1537942618}
   - component: {fileID: 1537942620}
   - component: {fileID: 1537942619}
+  - component: {fileID: 1537942621}
   m_Layer: 5
   m_Name: VictimeWhat
   m_TagString: Untagged
@@ -3623,6 +3720,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537942617}
   m_CullTransparentMesh: 1
+--- !u!114 &1537942621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537942617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: "Activit\xE9 de la victime ?"
+  english: Victim's job ?
 --- !u!1 &1539073344
 GameObject:
   m_ObjectHideFlags: 0
@@ -3713,6 +3825,7 @@ GameObject:
   - component: {fileID: 1549463005}
   - component: {fileID: 1549463007}
   - component: {fileID: 1549463006}
+  - component: {fileID: 1549463008}
   m_Layer: 5
   m_Name: KillHow
   m_TagString: Untagged
@@ -3837,6 +3950,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549463004}
   m_CullTransparentMesh: 1
+--- !u!114 &1549463008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549463004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: "Cause du d\xE9c\xE8s ?"
+  english: Cause of the death ?
 --- !u!1 &1559008788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4491,6 +4619,7 @@ GameObject:
   - component: {fileID: 1667542318}
   - component: {fileID: 1667542317}
   - component: {fileID: 1667542316}
+  - component: {fileID: 1667542319}
   m_Layer: 5
   m_Name: Validation
   m_TagString: Untagged
@@ -4612,6 +4741,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667542314}
   m_CullTransparentMesh: 1
+--- !u!114 &1667542319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667542314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: Valider
+  english: Confirm
 --- !u!1001 &1777976446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5064,6 +5208,7 @@ GameObject:
   - component: {fileID: 1891448609}
   - component: {fileID: 1891448611}
   - component: {fileID: 1891448610}
+  - component: {fileID: 1891448612}
   m_Layer: 5
   m_Name: AnswersList
   m_TagString: Untagged
@@ -5187,6 +5332,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1891448608}
   m_CullTransparentMesh: 1
+--- !u!114 &1891448612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891448608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e5d1905af68a2f4185805405dbb51d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: Informations
+  english: Informations
 --- !u!1 &1904247714
 GameObject:
   m_ObjectHideFlags: 0
