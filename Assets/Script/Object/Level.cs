@@ -24,6 +24,8 @@ public class Level : MonoBehaviour
     public Canvas canvas;
     //Get DataHolder
     public DataHolder dataHolder;
+
+    public Sprite noSelected, selected, notUnlock;
     void Start()
     {
         //Get Transform
@@ -42,8 +44,26 @@ public class Level : MonoBehaviour
         //is Unlock
         if (!unlock)
         {
-            GameObject myLock =Instantiate(objectLock,myTransform.anchoredPosition, transform.rotation);
-            myLock.transform.SetParent(canvas.transform, false);
+            gameObject.GetComponent<Image>().sprite = notUnlock;
+        }
+    }
+
+    public void Update()
+    {
+        //is Unlock
+        if (!unlock)
+        {
+            gameObject.GetComponent<Image>().sprite = notUnlock;
+        }
+        
+
+        if (gameObject.GetComponent<ButtonButBetter>().isSelected && unlock)
+        {
+            gameObject.GetComponent<Image>().sprite = selected;
+        }
+        else if (unlock)
+        {
+            gameObject.GetComponent<Image>().sprite = noSelected;
         }
     }
 }

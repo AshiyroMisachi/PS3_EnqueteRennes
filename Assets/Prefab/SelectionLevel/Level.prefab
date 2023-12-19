@@ -104,6 +104,9 @@ MonoBehaviour:
   objectLock: {fileID: 1427195171654033832, guid: 7758e7ace420fab46a1db451707710c1, type: 3}
   canvas: {fileID: 0}
   dataHolder: {fileID: 0}
+  noSelected: {fileID: 0}
+  selected: {fileID: 0}
+  notUnlock: {fileID: 0}
 --- !u!114 &5803583401968557059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,7 +126,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 0.3726415, b: 0.3726415, a: 1}
     m_HighlightedColor: {r: 1, g: 0.37254903, b: 0.37254903, a: 1}

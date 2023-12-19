@@ -52,7 +52,7 @@ public class FunctionSelectionLevel : MonoBehaviour
         //Show Display
         for (int i = 0; i < levels.Length; i++)
         {
-            if (levels[i].isSelected)
+            if (levels[i].isSelected && levels[i].gameObject.GetComponent<Level>().unlock)
             {
                 if (i != 0)
                 {
