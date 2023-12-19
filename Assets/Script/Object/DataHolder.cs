@@ -17,6 +17,7 @@ public class DataHolder : MonoBehaviour
     public int levelSelectedNumber;
     public string levelName;
     public string levelMoreInfo;
+    public string levelCrimeScene;
     public string levelNewsPaper;
     public string levelLastNotebook;
 

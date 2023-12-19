@@ -30,6 +30,8 @@ public class FunctionNoteBook : MonoBehaviour
     public TextMeshProUGUI insName, insDesc;
     public float insSlideSpeed, scaleSpeed;
 
+    public AudioSource feedbackEnterNotebook, feedbackSwitchPage;
+
     private void Start()
     {
         dataHolder = FindObjectOfType<DataHolder>();
@@ -60,6 +62,15 @@ public class FunctionNoteBook : MonoBehaviour
         {
             insSlideSpeed *= 8;
             scaleSpeed *= 4;
+        }
+
+        if (dataHolder.lastScene == dataHolder.levelCrimeScene)
+        {
+            feedbackEnterNotebook.Play();
+        }
+        else if (dataHolder.lastScene == dataHolder.levelNewsPaper)
+        {
+            feedbackSwitchPage.Play();
         }
     }
 
@@ -118,7 +129,7 @@ public class FunctionNoteBook : MonoBehaviour
         }
     }
 
-    public void switchRender(GameObject newRender, Vector3 scaleNewRender, Vector3 rotationNewRender)
+    public void SwitchRender(GameObject newRender, Vector3 scaleNewRender, Vector3 rotationNewRender)
     {
         if (gameObjectRender != null && newRender != null)
         {
@@ -176,10 +187,12 @@ public class FunctionNoteBook : MonoBehaviour
 
     public void GoNewsPaper()
     {
+        dataHolder.updateLastScene();
         SceneManager.LoadScene(dataHolder.levelNewsPaper);
     }
-    public void goBackScene()
+    public void GoBackScene()
     {
-        SceneManager.LoadScene(dataHolder.lastScene);
+        dataHolder.updateLastScene();
+        SceneManager.LoadScene(dataHolder.levelCrimeScene);
     }
 }

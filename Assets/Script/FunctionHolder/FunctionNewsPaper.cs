@@ -32,7 +32,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
 
     public GameObject blackImage;
 
-    public AudioSource feedbackTextCase;
+    public AudioSource feedbackTextCase, feedbackEnterNotebook, feedbackSwitchpage;
     private void Start()
     {
         //Find dataholder
@@ -55,6 +55,14 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             pannelListWord.Add(newTextProof);
         }
 
+        if (dataHolder.lastScene == dataHolder.levelCrimeScene)
+        {
+            feedbackEnterNotebook.Play();
+        }
+        else if (dataHolder.lastScene == "NoteBook")
+        {
+            feedbackSwitchpage.Play();
+        }
     }
 
     public void ApplyWord()
@@ -87,15 +95,17 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     {
         if (!inWarning)
         {
+            dataHolder.updateLastScene();
             SceneManager.LoadScene("NoteBook");
         }
     }
 
-    public void goBackScene()
+    public void GoBackScene()
     {
         if (!inWarning)
         {
-            SceneManager.LoadScene(dataHolder.lastScene);
+            dataHolder.updateLastScene();
+            SceneManager.LoadScene(dataHolder.levelCrimeScene);
         }
     }
 

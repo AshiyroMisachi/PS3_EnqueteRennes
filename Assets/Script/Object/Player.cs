@@ -307,7 +307,7 @@ public class Player : MonoBehaviour
     }
 
     //Move to settings
-    public void launchSettings()
+    public void LaunchSettings()
     {
         if (dataholder.levelStarted)
         {
@@ -319,7 +319,7 @@ public class Player : MonoBehaviour
     }
 
     //Move to News Paper
-    public void launchNewsPaper()
+    public void LaunchNewsPaper()
     {
         if (dataholder.levelStarted)
         {
