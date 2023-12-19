@@ -27,7 +27,7 @@ public class ProofNote : MonoBehaviour
         manager.feedBackImage.GetComponent<RectTransform>().position = gameObject.GetComponent<RectTransform>().position;
         manager.proofName.text = myName;
         manager.proofDescription.text = myDescription;
-        manager.switchRender(myGameObject, myScale, myRotation);
+        manager.SwitchRender(myGameObject, myScale, myRotation);
         manager.baseScaleRender = myScale;
     }
 }

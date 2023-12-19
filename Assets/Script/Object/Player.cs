@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
         //Parameters Switch Scene
         if (!dataholder.levelStarted)
         {
-            Instantiate(musicCrimeScene, gameObject.transform);
+            Instantiate(musicCrimeScene, gameObject.transform.position, Quaternion.identity);
             dataholder.levelStarted = true;
             dataholder.setupArray(numberProof);
             dataholder.proofsLevel[0] = true;
@@ -307,7 +307,7 @@ public class Player : MonoBehaviour
     }
 
     //Move to settings
-    public void launchSettings()
+    public void LaunchSettings()
     {
         if (dataholder.levelStarted)
         {
@@ -319,7 +319,7 @@ public class Player : MonoBehaviour
     }
 
     //Move to News Paper
-    public void launchNewsPaper()
+    public void LaunchNewsPaper()
     {
         if (dataholder.levelStarted)
         {
