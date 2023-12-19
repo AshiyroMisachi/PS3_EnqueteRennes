@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,8 +14,10 @@ public class TextCase : MonoBehaviour
     //Var 
     public int myNumber;
     public string currentName;
-    public string[] answers;
-    public string correction;
+    public string[] answersFrench;
+    public string[] answersEnglish;
+    public Array[] allAnswers;
+    public string[] correction;
     public TextMeshProUGUI myText;
 
     void Start()
@@ -32,13 +35,17 @@ public class TextCase : MonoBehaviour
         {
             changeWord("");
         }
+
+        allAnswers = new Array[2];
+        allAnswers[0] = answersFrench;
+        allAnswers[1] = answersEnglish;
     }
 
     public void BeSelected()
     {
         if (manager.currentSelected != null)
         {
-            manager.currentSelected.GetComponent<Image>().color = new Color(1f,1f,1f,0.25f);
+            manager.currentSelected.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.25f);
         }
         manager.currentSelected = gameObject.GetComponent<TextCase>();
         gameObject.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
@@ -49,11 +56,12 @@ public class TextCase : MonoBehaviour
             manager.pannelListWord[i].GetComponent<TextProof>().gotMove = false;
         }
 
-        for (int i = 0; i < answers.Length; i++)
+        string[] currentAnswers = (string[])allAnswers[(int)dataHolder.language];
+        for (int i = 0; i < currentAnswers.Length; i++)
         {
             for (int j = 0; j < manager.pannelListWord.Count; j++)
             {
-                if (manager.pannelListWord[j].GetComponent<TextProof>().myName == answers[i])
+                if (manager.pannelListWord[j].GetComponent<TextProof>().myName == currentAnswers[i])
                 {
                     manager.pannelListWord[j].GetComponent<RectTransform>().localPosition = manager.pannelWordPosition[manager.pannelWordPositionCount];
                     manager.pannelListWord[j].GetComponent<TextProof>().gotMove = true;

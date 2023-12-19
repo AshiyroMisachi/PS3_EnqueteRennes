@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,7 +15,9 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     public TextCase currentSelected;
     public string wordSelected;
     public GameObject pannelWord;
-    public string[] wordList;
+    public string[] wordListFrench;
+    public string[] wordListEnglish;
+    public Array[] allWordList;
     public List<GameObject> pannelListWord;
     public Vector3[] pannelWordPosition;
     public int pannelWordPositionCount;
@@ -44,14 +47,18 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         warningMistake.SetActive(false);
         blackImage.GetComponent<Animator>().SetTrigger("Clear");
 
+        allWordList = new Array[2];
+        allWordList[0] = wordListFrench;
+        allWordList[1] = wordListEnglish;
+
         //Spawn TextProofs
-        for (int j = 0; j < wordList.Length; j++)
+        string[] currentWordList = (string[])allWordList[(int)dataHolder.language];
+        for (int j = 0; j < currentWordList.Length; j++)
         {
             GameObject newTextProof = Instantiate(textproof);
-            newTextProof.gameObject.GetComponent<TextProof>().myName = wordList[j];
+            newTextProof.gameObject.GetComponent<TextProof>().myName = currentWordList[j];
             newTextProof.GetComponent<RectTransform>().SetParent(pannelWord.GetComponent<RectTransform>(), false);
             newTextProof.GetComponent<RectTransform>().localPosition = new Vector3(-4800f, -1.5f, 0f);
-
             pannelListWord.Add(newTextProof);
         }
 
@@ -123,7 +130,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             dataHolder.mistake = 0;
             for (int i = 0; i < textCases.Length; i++)
             {
-                if (textCases[i].correction != textCases[i].currentName)
+                if (textCases[i].correction[(int)dataHolder.language] != textCases[i].currentName)
                 {
                     dataHolder.mistake++;
                 }
