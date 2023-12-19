@@ -16,7 +16,6 @@ public class FunctionScoring : MonoBehaviour
     public Image star;
 
     public GameObject moreInfoImage;
-    public TextMeshProUGUI moreInfoName;
     public TextMeshProUGUI moreInfoDescription;
 
     public GameObject blackImage;
@@ -83,7 +82,6 @@ public class FunctionScoring : MonoBehaviour
         else
         {
             moreInfoImage.SetActive(true);
-            moreInfoName.text = dataHolder.levelName;
             moreInfoDescription.text = dataHolder.levelMoreInfo;
         }
     }
