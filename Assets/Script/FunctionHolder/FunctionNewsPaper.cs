@@ -130,7 +130,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             else
             {
                 warningTry.SetActive(true);
-                warningTryText.text = "Vous avez " + dataHolder.numberTry + " tentatives restantes";
+                warningTryText.text = "Il vous restera " + dataHolder.numberTry + " tentatives.";
             }
         }
     }
@@ -145,7 +145,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     {
         warningTry.SetActive(false);
         warningMistake.SetActive(true);
-        warningMistakeText.text = "Vous avez " + dataHolder.mistake + " fautes";
+        warningMistakeText.text = "Vous avez " + dataHolder.mistake + " erreurs.";
     }
 
     public void CloseWarningMistake()
