@@ -2702,7 +2702,7 @@ PrefabInstance:
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: myDescription.Array.data[1]
       value: A scream was heard from an appartment, in Bourbon Street. A woman came
-        to the police station. A murder just happened
+        to the police station. A murder just happened.
       objectReference: {fileID: 0}
     - target: {fileID: 854191505746622199, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: m_Pivot.x
