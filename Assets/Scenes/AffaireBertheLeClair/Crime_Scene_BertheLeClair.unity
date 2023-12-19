@@ -9969,7 +9969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Lunette
+  myName: Lunettes
   description: "Ces lunettes appartenaient \xE0 la victime. Je doute qu'elle portait
     un verre bris\xE9 de son vivant."
   myNumber: 7
