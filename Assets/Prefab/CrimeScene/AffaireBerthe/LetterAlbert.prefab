@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4468998765150214242}
   - component: {fileID: 4284059148419390566}
   - component: {fileID: 947041238242542291}
+  - component: {fileID: 6688044044984091956}
   m_Layer: 3
   m_Name: LetterAlbert
   m_TagString: Untagged
@@ -105,3 +106,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.02, z: 0.001}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6688044044984091956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4573665601088703548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f8a5625ef25e147b48e0b5e7ead5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: {fileID: 2100000, guid: aee6f1d6e6e47ef4ea21bdcc0cac73fd, type: 2}
+  english: {fileID: 2100000, guid: f69879880a28f154caec6c113072dac3, type: 2}
