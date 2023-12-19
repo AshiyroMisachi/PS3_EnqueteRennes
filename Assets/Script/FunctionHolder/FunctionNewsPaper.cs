@@ -74,21 +74,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             wordSelected = null;
         }
 
-        var check = 0;
-        for (int i = 0; i < textCases.Length; i++)
-        {
-            if (textCases[i].currentName != "")
-            {
-                check++;
-            }
-        }
-
-        if (check == 6)
-        { 
-            validateButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
-            validateText.color = new Color(0f, 0f, 0f, 1f);
-            canConfirm = true;
-        }
+        UnlockValidateButton();
     }
 
     public void GoNoteBook()
@@ -109,6 +95,25 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         }
     }
 
+    public void UnlockValidateButton()
+    {
+        var check = 0;
+        for (int i = 0; i < textCases.Length; i++)
+        {
+            if (textCases[i].currentName != "")
+            {
+                check++;
+            }
+        }
+
+        if (check == 6)
+        {
+            validateButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+            validateText.color = new Color(0f, 0f, 0f, 1f);
+            canConfirm = true;
+        }
+    }
+
     public void OpenWarningTry()
     {
         if (!inWarning && canConfirm)
@@ -125,12 +130,12 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             }
             if (dataHolder.mistake == 0 || dataHolder.difficulty || dataHolder.numberTry == 0)
             {
-                continueVerification();
+                ContinueVerification();
             }
             else
             {
                 warningTry.SetActive(true);
-                warningTryText.text = "Vous avez " + dataHolder.numberTry + " tentatives restantes";
+                warningTryText.text = "Il vous restera " + dataHolder.numberTry + " tentatives.";
             }
         }
     }
@@ -145,7 +150,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     {
         warningTry.SetActive(false);
         warningMistake.SetActive(true);
-        warningMistakeText.text = "Vous avez " + dataHolder.mistake + " fautes";
+        warningMistakeText.text = "Vous avez " + dataHolder.mistake + " erreurs.";
     }
 
     public void CloseWarningMistake()
@@ -155,7 +160,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         warningMistake.SetActive(false);
     }
 
-    public void continueVerification()
+    public void ContinueVerification()
     {
         //Switch Score scene, save number of mistake
         StartCoroutine(LaunchScene("Scoring"));

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 103309244420134383}
   - component: {fileID: 3995950765261325101}
   - component: {fileID: 6266177638751046144}
+  - component: {fileID: -3331149853051971517}
   m_Layer: 0
   m_Name: Player
   m_TagString: MainCamera
@@ -106,17 +107,74 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataholder: {fileID: 0}
+  touchManager: {fileID: 0}
   lerpFactor: 0
   zoomOutMin: 60
   zoomOutMax: 30
   cameraMode: 1
   numberProof: 0
+  policeReport: {fileID: 0}
   popUpText: {fileID: 0}
   timerText: 0
-  newsPaperScene: 
+  currentMode: 0
+  shearchMode: {fileID: 0}
+  inspectionMode: {fileID: 0}
   arrows: []
-  policeReport: {fileID: 0}
+  speedArrows: 0
+  angleX: 0
+  insProof: {fileID: 0}
+  insNameProof: {fileID: 0}
+  insDescriptionProof: {fileID: 0}
+  insSlideSpeed: 0
   mask:
     serializedVersion: 2
     m_Bits: 0
+  raycastOneTime: 0
   prefabLight: {fileID: 5477317613189756311, guid: 511d5595990589648801af7939c8cab3, type: 3}
+  blackImage: {fileID: 0}
+  musicCrimeScene: {fileID: 0}
+  feedBackProof: {fileID: 0}
+--- !u!114 &-3331149853051971517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493180901860562537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
