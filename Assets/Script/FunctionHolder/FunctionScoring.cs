@@ -26,7 +26,7 @@ public class FunctionScoring : MonoBehaviour
         dataHolder = FindObjectOfType<DataHolder>();
 
         //Setup
-        caseName.text = dataHolder.levelName;
+        caseName.text = dataHolder.levelName[(int)dataHolder.language];
         proofsText.text = "Nombre de preuves trouvées: " + (dataHolder.proofsCount) + "/" + (dataHolder.proofsLevel.Length - 1);
         switch (dataHolder.mistake)
         {
@@ -87,7 +87,7 @@ public class FunctionScoring : MonoBehaviour
         else
         {
             moreInfoImage.SetActive(true);
-            moreInfoDescription.text = dataHolder.levelMoreInfo;
+            moreInfoDescription.text = dataHolder.levelMoreInfo[(int)dataHolder.language];
         }
     }
 

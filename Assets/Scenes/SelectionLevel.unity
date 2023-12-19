@@ -2640,6 +2640,70 @@ PrefabInstance:
       value: Un cri se fait entendre depuis un appartement rue de Bourbon. Une silhouette
         franchit le commissariat de police. Un meurtre a eu lieu.
       objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myName.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myName.Array.data[0]
+      value: 1912 - Meutre Rue de Bourdon
+      objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myName.Array.data[1]
+      value: 1912 - Murder of Rue de Bourbon
+      objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myMoreInfo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myDescription.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myMoreInfo.Array.data[0]
+      value: "L'Ouest \xC9clair, anc\xEAtre du c\xE9l\xE8bre journal Ouest France,
+        publia un num\xE9ro sp\xE9cial autour de cette affaire qui fut un v\xE9ritable
+        succ\xE8s : 18000 exemplaires furent tir\xE9s en une journ\xE9e.  Malgr\xE9
+        sa culpabilit\xE9, l'opinion publique tourna majoritairement en faveur de
+        Berthe Leclair durant son proc\xE8s. L'histoire de cette femme de bonne famille,
+        d\xE9cidant de se venger de l'humiliation provoqu\xE9e par les tromperies
+        de son mari, lui fit gagner  la sympathie de nombreuses femmes mari\xE9es.
+        De fait, Berthe Leclair ne purgea que 5 ann\xE9es d'emprisonnement pour son
+        crime.  La Rue de Bourbon n'existe plus aujourd'hui. Mais \xE0 l'\xE9poque,
+        en plus d'\xEAtre le th\xE9\xE2tre d'un crime digne d'un roman, elle \xE9tait
+        aussi un lieu de passage important entre R\xE9publique et le Parlement de
+        Bretagne.  Le F\xE9mina Bar, lieu de travail de Jeanne Obitz, \xE9tait une
+        v\xE9ritable maison de prostitution situ\xE9e \xE0 Rennes, jusqu'\xE0 sa
+        fermeture quelques d\xE9cennies plus tard, en 1946, quand la Loi Marthe-Richard
+        fit fermer toutes les maisons de passe en France."
+      objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myMoreInfo.Array.data[1]
+      value: "The Ouest Eclair, elder version of the well-known newspaper called
+        Ouest France, published a special serie about this case that became a real
+        success : about 18000 prints in a day.  Despite she was found guilty, the
+        public opinion was in majority in favor of Berthe Leclair during the trial.
+        The story of this rich woman, finding nothing else to do but to get revenge
+        for the humiliation provoked by the adultery of her cheating husband, made
+        her popular among numerous married women. That was why Berthe Leclair stayed
+        05 years in prison for her crime.  The Rue de Bourbon doesn't exist anymore.
+        Past in the time, in addition to being the setting of a theatrical crime,
+        it was also an important passageway between R\xE9publique and the Parliament
+        of Brittany.  The F\xE9mina Bar, working place of Jeanne Obitz, was a real
+        brothel in Rennes, until its closure a few decades later in 1946, when the
+        Marthe-Richard law closed every brothel in France."
+      objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myDescription.Array.data[0]
+      value: Un cri se fait entendre depuis un appartement Rue de Bourbon. Une silhouette
+        franchit le commissariat de police. Un meurtre a eu lieu.
+      objectReference: {fileID: 0}
+    - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
+      propertyPath: myDescription.Array.data[1]
+      value: A scream was heard from an appartment, in Bourbon Street. A woman came
+        to the police station. A murder just happened
+      objectReference: {fileID: 0}
     - target: {fileID: 854191505746622199, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

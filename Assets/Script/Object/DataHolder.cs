@@ -15,8 +15,8 @@ public class DataHolder : MonoBehaviour
     public float[] scoreArray;
     public int[] scoreProofArray;
     public int levelSelectedNumber;
-    public string levelName;
-    public string levelMoreInfo;
+    public string[] levelName;
+    public string[] levelMoreInfo;
     public string levelCrimeScene;
     public string levelNewsPaper;
     public string levelLastNotebook;
@@ -25,8 +25,8 @@ public class DataHolder : MonoBehaviour
     public bool levelStarted;
 
     public bool[] proofsLevel;
-    public string[] proofsName;
-    public string[] proofsDescription;
+    public Array[] proofsName;
+    public Array[] proofsDescription;
     public GameObject[] proofsGameObject;
     public Vector3[] proofsScaleRender;
     public Vector3[] proofsRotationRender;
@@ -67,8 +67,8 @@ public class DataHolder : MonoBehaviour
     public void setupArray(int numberElement)
     {
         proofsLevel = new bool[numberElement];
-        proofsName = new string[numberElement];
-        proofsDescription = new string[numberElement];
+        proofsName = new Array[numberElement];
+        proofsDescription = new Array[numberElement];
         proofsGameObject = new GameObject[numberElement];
         proofsScaleRender = new Vector3[numberElement];
         proofsRotationRender = new Vector3[numberElement];
@@ -83,14 +83,14 @@ public class DataHolder : MonoBehaviour
         {
             proofsLevel[i] = false;
         }
-        for (int i = 0; i < proofsName.Length; i++)
+        /*for (int i = 0; i < proofsName.Length; i++)
         {
-            proofsName[i] = "";
+            proofsName[i] = new string[1];
         }
         for (int i = 0; i < proofsDescription.Length; i++)
         {
-            proofsDescription[i] = "";
-        }
+            proofsDescription[i] = new string[1];
+        }*/
         for (int i = 0; i < proofsGameObject.Length; i++)
         {
             proofsGameObject[i] = null;

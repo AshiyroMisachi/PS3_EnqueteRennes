@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class Level : MonoBehaviour
 {
     //Var of Level
-    public string myName;
-    public string myDescription;
-    public string myMoreInfo;
+    public string[] myName;
+    public string[] myDescription;
+    public string[] myMoreInfo;
     public string myScene;
     public string myNewsPaper;
     public int myNumber;

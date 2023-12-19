@@ -46,10 +46,11 @@ public class FunctionNoteBook : MonoBehaviour
             {
                 GameObject newProofNote = Instantiate(proofNote);
                 newProofNote.GetComponent<RectTransform>().SetParent(proofShelf.GetComponent<RectTransform>(), false);
-
-                newProofNote.GetComponent<ProofNote>().myName = dataHolder.proofsName[i];
-                newProofNote.GetComponent<TextMeshProUGUI>().text = dataHolder.proofsName[i];
-                newProofNote.GetComponent<ProofNote>().myDescription = dataHolder.proofsDescription[i];
+                string[] nameList = (string[])dataHolder.proofsName[i];
+                newProofNote.GetComponent<ProofNote>().myName = nameList[(int)dataHolder.language];
+                newProofNote.GetComponent<TextMeshProUGUI>().text = nameList[(int)dataHolder.language];
+                string[] descList = (string[])dataHolder.proofsDescription[i];
+                newProofNote.GetComponent<ProofNote>().myDescription = descList[(int)dataHolder.language];
                 newProofNote.GetComponent<ProofNote>().myGameObject = dataHolder.proofsGameObject[i];
                 newProofNote.GetComponent<ProofNote>().myScale = dataHolder.proofsScaleRender[i];
                 newProofNote.GetComponent<ProofNote>().myRotation = dataHolder.proofsRotationRender[i];

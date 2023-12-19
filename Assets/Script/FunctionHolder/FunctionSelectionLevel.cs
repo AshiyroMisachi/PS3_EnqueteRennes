@@ -95,8 +95,8 @@ public class FunctionSelectionLevel : MonoBehaviour
 
     public void SetupLevelDisplay(int numberLevel)
     {
-        levelName.text = levels[numberLevel].GetComponent<Level>().myName;
-        levelDescription.text = levels[numberLevel].GetComponent<Level>().myDescription;
+        levelName.text = levels[numberLevel].GetComponent<Level>().myName[(int)dataHolder.language];
+        levelDescription.text = levels[numberLevel].GetComponent<Level>().myDescription[(int)dataHolder.language];
         levelImage.sprite = levels[numberLevel].GetComponent<Level>().myImage;
         levelScore.fillAmount = levels[numberLevel].GetComponent<Level>().myScore;
         levelScoreProof.text = levels[numberLevel].GetComponent<Level>().myScoreProof + "/" + levels[numberLevel].GetComponent<Level>().maxProof;
