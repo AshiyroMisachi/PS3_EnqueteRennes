@@ -4798,8 +4798,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 580, y: 337.27698}
-  m_SizeDelta: {x: 759.5429, y: 85.8189}
+  m_AnchoredPosition: {x: 557.02344, y: 310.62433}
+  m_SizeDelta: {x: 981.955, y: 139.1243}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891448610
 MonoBehaviour:
@@ -4848,12 +4848,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67.55
+  m_fontSize: 108
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 108
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -5296,12 +5296,12 @@ MonoBehaviour:
   - Couture
   pannelListWord: []
   pannelWordPosition:
-  - {x: 580, y: 240, z: 0}
-  - {x: 580, y: 120, z: 0}
-  - {x: 580, y: 0, z: 0}
-  - {x: 580, y: -120, z: 0}
-  - {x: 580, y: -240, z: 0}
-  - {x: 580, y: -360, z: 0}
+  - {x: 580, y: 166, z: 0}
+  - {x: 580, y: 46, z: 0}
+  - {x: 580, y: -74, z: 0}
+  - {x: 580, y: -194, z: 0}
+  - {x: 580, y: -314, z: 0}
+  - {x: 580, y: -434, z: 0}
   pannelWordPositionCount: 0
   validateButton: {fileID: 1667542314}
   validateText: {fileID: 61361830}
