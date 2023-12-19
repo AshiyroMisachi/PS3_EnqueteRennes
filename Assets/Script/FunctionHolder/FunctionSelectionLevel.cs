@@ -38,14 +38,21 @@ public class FunctionSelectionLevel : MonoBehaviour
         dataHolder = FindObjectOfType<DataHolder>();
 
         //Reset Dataholder info
-        dataHolder.resetLevelVAR();
+        dataHolder.ResetLevelVAR();
 
         if (!Application.isEditor)
         {
             levelDisplayMultiplier /= 9;
         }
 
-        blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
+        if (dataHolder.lastScene == "MainScreen")
+        {
+            blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
+        }
+        else
+        {
+            blackImage.GetComponent<Animator>().SetTrigger("Clear");
+        }
     }
     void Update()
     {
@@ -104,6 +111,7 @@ public class FunctionSelectionLevel : MonoBehaviour
     public void launchSettings()
     {
         //Launch Settings Scene
+        dataHolder.UpdateLastScene();
         SceneManager.LoadScene("Option");
     }
 

@@ -187,12 +187,12 @@ public class FunctionNoteBook : MonoBehaviour
 
     public void GoNewsPaper()
     {
-        dataHolder.updateLastScene();
+        dataHolder.UpdateLastScene();
         SceneManager.LoadScene(dataHolder.levelNewsPaper);
     }
     public void GoBackScene()
     {
-        dataHolder.updateLastScene();
+        dataHolder.UpdateLastScene();
         SceneManager.LoadScene(dataHolder.levelCrimeScene);
     }
 }

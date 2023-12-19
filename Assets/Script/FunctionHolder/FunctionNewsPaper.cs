@@ -95,7 +95,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     {
         if (!inWarning)
         {
-            dataHolder.updateLastScene();
+            dataHolder.UpdateLastScene();
             SceneManager.LoadScene("NoteBook");
         }
     }
@@ -104,7 +104,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     {
         if (!inWarning)
         {
-            dataHolder.updateLastScene();
+            dataHolder.UpdateLastScene();
             SceneManager.LoadScene(dataHolder.levelCrimeScene);
         }
     }

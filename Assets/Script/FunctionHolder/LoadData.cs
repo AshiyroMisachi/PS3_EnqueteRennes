@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LoadData : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public DataHolder dataHolder;
     void Start()
     {
+        dataHolder = FindObjectOfType<DataHolder>();
+
+        dataHolder.UpdateLastScene();
         SceneManager.LoadScene(1);
     }
 }

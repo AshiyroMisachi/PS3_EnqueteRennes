@@ -55,24 +55,32 @@ public class Proof : MonoBehaviour
             dataHolder.proofsScaleRender[myNumber] = myScaleRender;
             dataHolder.proofsRotationRender[myNumber] = myRotationRender;
 
-            //Inspection Mode
-            Camera.main.fieldOfView = 60;
-            player.currentMode = false;
-            player.insNameProof.text = myName;
-            player.insDescriptionProof.text = description;
-            player.insProof = Instantiate(myGameObjectRender, player.transform);
-            player.insProof.transform.localPosition = new Vector3(0, 0.06f, 1);
-            player.insProof.transform.localScale = myScaleRender / 5;
-            player.insProof.transform.localEulerAngles = myRotationRender;
-            player.blackImage.SetActive(false);
+            ShowInspection(player);
 
             //Pop up Text to show you pick up
             player.popUpText.text = "Vous avez trouvé " + myName;
             player.popUpText.alpha = 1f;
             player.timerText = 0f;
         }
+        else
+        {
+            ShowInspection(player);
+        }
     }
 
+    public void ShowInspection(Player player)
+    {
+        //Inspection Mode
+        Camera.main.fieldOfView = 60;
+        player.currentMode = false;
+        player.insNameProof.text = myName;
+        player.insDescriptionProof.text = description;
+        player.insProof = Instantiate(myGameObjectRender, player.transform);
+        player.insProof.transform.localPosition = new Vector3(0, 0.06f, 1);
+        player.insProof.transform.localScale = myScaleRender / 5;
+        player.insProof.transform.localEulerAngles = myRotationRender;
+        player.blackImage.SetActive(false);
+    }
     public void showFeedback()
     {
         Debug.Log("A proof is located at the Camera center");

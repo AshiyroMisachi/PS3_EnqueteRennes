@@ -15,7 +15,7 @@ public class FunctionScoring : MonoBehaviour
     public TextMeshProUGUI caseName;
     public Image star;
 
-    public GameObject moreInfoImage;
+    public GameObject moreInfoButton, moreInfoImage;
     public TextMeshProUGUI moreInfoDescription;
 
     public GameObject blackImage;
@@ -51,6 +51,11 @@ public class FunctionScoring : MonoBehaviour
             case 6:
                 star.fillAmount = 0f;
                 break;
+        }
+
+        if (star.fillAmount != 1f)
+        {
+            moreInfoButton.SetActive(false);
         }
 
         if (dataHolder.scoreArray[dataHolder.levelSelectedNumber] < star.fillAmount)

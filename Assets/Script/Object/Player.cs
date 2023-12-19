@@ -311,7 +311,7 @@ public class Player : MonoBehaviour
         if (dataholder.levelStarted)
         {
             //Launch Settings Scene
-            dataholder.updateLastScene();
+            dataholder.UpdateLastScene();
             SceneManager.LoadScene("Option");
         }
 
@@ -322,7 +322,7 @@ public class Player : MonoBehaviour
     {
         if (dataholder.levelStarted)
         {
-            dataholder.updateLastScene();
+            dataholder.UpdateLastScene();
             SceneManager.LoadScene(dataholder.levelNewsPaper);
         }
     }
@@ -331,7 +331,7 @@ public class Player : MonoBehaviour
     {
         if (dataholder.levelStarted)
         {
-            dataholder.updateLastScene();
+            dataholder.UpdateLastScene();
             SceneManager.LoadScene(dataholder.levelLastNotebook);
         }
     }

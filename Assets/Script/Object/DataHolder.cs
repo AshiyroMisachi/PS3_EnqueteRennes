@@ -54,7 +54,7 @@ public class DataHolder : MonoBehaviour
         }
     }
 
-    public void updateLastScene()
+    public void UpdateLastScene()
     {
         lastScene = currentScene;
     }
@@ -74,7 +74,7 @@ public class DataHolder : MonoBehaviour
         proofsRotationRender = new Vector3[numberElement];
     }
 
-    public void resetLevelVAR()
+    public void ResetLevelVAR()
     {
         //Level Crime Scene
         levelLastNotebook = "NoteBook";

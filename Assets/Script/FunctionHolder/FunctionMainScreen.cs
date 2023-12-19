@@ -6,24 +6,36 @@ using UnityEngine.UI;
 
 public class FunctionMainScreen : MonoBehaviour
 {
+    public DataHolder dataHolder;
     public GameObject creditImage;
     public GameObject blackImage;
 
     private void Start()
     {
-        blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
+        dataHolder = FindObjectOfType<DataHolder>();
+
+        if (dataHolder.lastScene == "")
+        {
+            blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
+        }
+        else
+        {
+            blackImage.GetComponent<Animator>().SetTrigger("Clear");
+        }
 
         creditImage.SetActive(false);
     }
     public void launchSelectionLevel()
     {
         //Launch Selection Scene
+        dataHolder.UpdateLastScene();
         StartCoroutine(LaunchScene("SelectionLevel"));
     }
 
     public void launchSettings()
     {
         //Launch Settings Scene
+        dataHolder.UpdateLastScene();
         SceneManager.LoadScene("Option");
     }
 
@@ -42,7 +54,7 @@ public class FunctionMainScreen : MonoBehaviour
     public IEnumerator LaunchScene(string sceneName)
     {
         blackImage.GetComponent<Animator>().SetTrigger("FadeIn");
-        yield return new WaitUntil(()=>blackImage.GetComponent<Image>().color.a == 1);
+        yield return new WaitUntil(() => blackImage.GetComponent<Image>().color.a == 1);
         SceneManager.LoadScene(sceneName);
     }
 }
