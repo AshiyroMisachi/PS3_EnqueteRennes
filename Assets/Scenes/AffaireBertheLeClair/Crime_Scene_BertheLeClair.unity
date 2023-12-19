@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2830,7 +2830,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 963194229}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: launchSettings
+        m_MethodName: LaunchSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7698,6 +7698,7 @@ GameObject:
   - component: {fileID: 166792372658801628}
   - component: {fileID: 7759698053089739889}
   - component: {fileID: 5650505287619114932}
+  - component: {fileID: 7759698053089739890}
   m_Layer: 3
   m_Name: flyer
   m_TagString: Untagged
@@ -8859,6 +8860,21 @@ MonoBehaviour:
   plot: {fileID: 6857248129592814128, guid: 903e8dfac1e6a6a45b3cf9a0c77ec3a8, type: 3}
   distancePlot: {x: 0.782, y: 0.1752, z: -5.667}
   dataHolder: {fileID: 0}
+--- !u!114 &7759698053089739890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824077383615719945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f8a5625ef25e147b48e0b5e7ead5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: {fileID: 2100000, guid: a711699f3107948409264d5d8804e801, type: 2}
+  english: {fileID: 2100000, guid: 08de9f66514aaf24ebcc2cdad56e7fac, type: 2}
 --- !u!114 &7939490477147570944
 MonoBehaviour:
   m_ObjectHideFlags: 0

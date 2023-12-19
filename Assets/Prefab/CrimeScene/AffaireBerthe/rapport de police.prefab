@@ -75,5 +75,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 16e2afee2531c7e469dff32c41ccf9dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3012216321413915009}
   m_SourcePrefab: {fileID: 100100000, guid: 16e2afee2531c7e469dff32c41ccf9dd, type: 3}
+--- !u!1 &5933811528918510677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 16e2afee2531c7e469dff32c41ccf9dd, type: 3}
+  m_PrefabInstance: {fileID: 6816281549470896388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3012216321413915009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5933811528918510677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3f8a5625ef25e147b48e0b5e7ead5fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataHolder: {fileID: 0}
+  french: {fileID: 2100000, guid: b634460660c2d874b9a98d3320868b14, type: 2}
+  english: {fileID: 2100000, guid: 49e996c5bfe0291408fe3b8318db6a35, type: 2}
