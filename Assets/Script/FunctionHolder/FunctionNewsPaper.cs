@@ -135,7 +135,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             dataHolder.mistake = 0;
             for (int i = 0; i < textCases.Length; i++)
             {
-                if (textCases[i].correction[(int)dataHolder.language] != textCases[i].currentName)
+                if (textCases[i].correction[0] != textCases[i].currentName || textCases[i].correction[1] != textCases[i].currentName)
                 {
                     dataHolder.mistake++;
                 }
