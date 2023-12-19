@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SoundMusic : MonoBehaviour
+public class SoundMusicMainTheme : MonoBehaviour
 {
     // Start is called before the first frame update
     public DataHolder dataHolder;
     public AudioSource sound;
+    public string sceneDestroy;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class SoundMusic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name == "SelectionLevel")
+        if (SceneManager.GetActiveScene().name == sceneDestroy)
         {
             Destroy(gameObject);
         }

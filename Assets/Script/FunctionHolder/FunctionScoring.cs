@@ -20,6 +20,8 @@ public class FunctionScoring : MonoBehaviour
 
     public GameObject blackImage;
 
+    public GameObject musicMainTheme;
+
     void Start()
     {
         //Find Dataholder
@@ -123,6 +125,7 @@ public class FunctionScoring : MonoBehaviour
     {
         blackImage.GetComponent<Animator>().SetTrigger("FadeIn");
         yield return new WaitUntil(() => blackImage.GetComponent<Image>().color.a == 1);
+        Instantiate(musicMainTheme);
         SceneManager.LoadScene(sceneName);
     }
 }

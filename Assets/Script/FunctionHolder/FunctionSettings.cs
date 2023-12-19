@@ -19,7 +19,7 @@ public class FunctionSettings : MonoBehaviour
     public TextMeshProUGUI textLanguage, textDifficulty;
     public Image difficultyButton;
     public Slider volumeSlider, sonSlider;
-
+    public AudioSource clickButtonFeedback;
 
     void Start()
     {
@@ -84,6 +84,8 @@ public class FunctionSettings : MonoBehaviour
     //Change CameraMode
     public void changeCameraMode()
     {
+        clickButtonFeedback.Play();
+
         if (cameraMode)
         {
             cameraMode = false;
@@ -101,6 +103,8 @@ public class FunctionSettings : MonoBehaviour
     {
         if (dataHolder.difficulty)
         {
+            clickButtonFeedback.Play();
+
             dataHolder.difficulty = false;
             switch (dataHolder.language)
             {

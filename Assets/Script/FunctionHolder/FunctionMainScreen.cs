@@ -9,6 +9,7 @@ public class FunctionMainScreen : MonoBehaviour
     public DataHolder dataHolder;
     public GameObject creditImage;
     public GameObject blackImage;
+    public AudioSource clickButtonFeedback;
 
     private void Start()
     {
@@ -49,6 +50,7 @@ public class FunctionMainScreen : MonoBehaviour
         else
         {
             creditImage.SetActive(true);
+            clickButtonFeedback.Play();
         }
     }
     public IEnumerator LaunchScene(string sceneName)

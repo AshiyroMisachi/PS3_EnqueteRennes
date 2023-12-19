@@ -9947,11 +9947,11 @@ PrefabInstance:
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: policeReportDescription.Array.data[0]
       value: "Voil\xE0 le rapport qu'on a pu me d\xE9livrer avant que le corps ne
-        soit emport\xE9;"
+        soit emport\xE9."
       objectReference: {fileID: 0}
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: policeReportDescription.Array.data[1]
-      value: Here's the report they gave me before the corpse was taken away
+      value: Here's the report they gave me before the corpse was taken away.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10074,7 +10074,7 @@ MonoBehaviour:
   - Glasses
   description:
   - "Ces lunettes appartenaient \xE0 la victime. Je doute qu'elle portait un verre
-    bris\xE9 de son vivant. Et ce sang ? Etrange..."
+    bris\xE9 de son vivant."
   - The glasses belong to the victim. I doubt she wore it broken like that, when
     she was alive.
   myNumber: 7
