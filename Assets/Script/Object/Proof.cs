@@ -39,6 +39,7 @@ public class Proof : MonoBehaviour
         if (canPickUp)
         {
             //Block Pick Up        
+            player.feedBackProof.Play();
             canPickUp = false;
 
             //Spawn Object to show you can't pickup anymore

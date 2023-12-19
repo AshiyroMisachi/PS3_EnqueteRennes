@@ -173,11 +173,10 @@ public class Player : MonoBehaviour
                     //Camera myCamera = Camera.main;
                     Vector3 touchPos = new Vector3(Input.touches[0].position.x, Input.touches[0].position.y, myCamera.farClipPlane);
                     Vector3 touchPosInWorld = myCamera.ScreenToWorldPoint(touchPos);
-                    if (touchManager.IsTouchUI())
+                    if (!MouseOverUILayerObject.IsPointerOverUIObject())
                     {
                         if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
                         {
-                            feedBackProof.Play();
                             info.transform.GetComponent<Proof>().getPickUp(this);
                         }
                     }
