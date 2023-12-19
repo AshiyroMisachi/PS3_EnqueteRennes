@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class Proof : MonoBehaviour
 {
     //Universsal Var
-    public string myName;
-    public string description;
+    public string[] myName;
+    public string[] description;
     public int myNumber;
     public GameObject myGameObjectRender;
     public Vector3 myScaleRender;
@@ -58,7 +58,7 @@ public class Proof : MonoBehaviour
             ShowInspection(player);
 
             //Pop up Text to show you pick up
-            player.popUpText.text = "Vous avez trouvé " + myName;
+            player.popUpText.text = player.feedBackProofFound[(int)dataHolder.language] + myName[(int)dataHolder.language];
             player.popUpText.alpha = 1f;
             player.timerText = 0f;
         }
@@ -73,8 +73,8 @@ public class Proof : MonoBehaviour
         //Inspection Mode
         Camera.main.fieldOfView = 60;
         player.currentMode = false;
-        player.insNameProof.text = myName;
-        player.insDescriptionProof.text = description;
+        player.insNameProof.text = myName[(int)dataHolder.language];
+        player.insDescriptionProof.text = description[(int)dataHolder.language];
         player.insProof = Instantiate(myGameObjectRender, player.transform);
         player.insProof.transform.localPosition = new Vector3(0, 0.06f, 1);
         player.insProof.transform.localScale = myScaleRender / 5;

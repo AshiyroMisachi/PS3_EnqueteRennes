@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3708985, g: 0.3783704, b: 0.35722548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5743,6 +5743,10 @@ PrefabInstance:
       value: 600
       objectReference: {fileID: 0}
     - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
+      propertyPath: myName.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
       propertyPath: myGameObjectRender
       value: 
       objectReference: {fileID: 5453460705150694949, guid: 9162a6e7e20345e409fa5eeea5d0e4bb, type: 3}
@@ -5775,8 +5779,29 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
+      propertyPath: myName.Array.data[0]
+      value: Coin de table
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
+      propertyPath: myName.Array.data[1]
+      value: Table corner
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
+      propertyPath: description.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
       propertyPath: wordList.Array.data[0]
       value: "Une chute mortelle apr\xE8s avoir \xE9t\xE9 pouss\xE9e"
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
+      propertyPath: description.Array.data[0]
+      value: "Quelqu'un a heurt\xE9 brutalement cette table. Peut-\xEAtre que la
+        victime a \xE9t\xE9 pouss\xE9e ?"
+      objectReference: {fileID: 0}
+    - target: {fileID: -8843124477457175303, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
+      propertyPath: description.Array.data[1]
+      value: Someone must have collided that table. May be the victim had been pushed.
       objectReference: {fileID: 0}
     - target: {fileID: 67345495935501339, guid: be715d0e172e03f4483294fb8ac2446d, type: 3}
       propertyPath: m_LocalScale.x
@@ -8244,9 +8269,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: "Lettre du propri\xE9taire"
-  description: "Les retards de paiement sur les loyers sont \xE0 l'origine de nombreux
-    conflits."
+  myName:
+  - "Lettre du propri\xE9taire"
+  - Landlord letter
+  description:
+  - "Les retards de paiement sur les loyers sont \xE0 l'origine de nombreux conflits."
+  - The payments delays are usually source of conflicts.
   myNumber: 3
   myGameObjectRender: {fileID: 1104730524695036140, guid: 28d48d82a223a8c449f562af4598a350, type: 3}
   myScaleRender: {x: 192, y: 271.67, z: 1829.4277}
@@ -8281,9 +8309,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Lettre intime
-  description: "Cette lettre n'\xE9tait s\xFBrement pas destin\xE9e \xE0 \xEAtre
-    lue par n'importe qui."
+  myName:
+  - Lettre intime
+  - Love letter
+  description:
+  - "Cette lettre n'\xE9tait s\xFBrement pas destin\xE9e \xE0 \xEAtre lue par n'importe
+    qui."
+  - That letter must not been read by everyone...
   myNumber: 4
   myGameObjectRender: {fileID: 4573665601088703548, guid: ba444d9198d705842b0cce85a91af3e4, type: 3}
   myScaleRender: {x: 190.98, y: 270.1003, z: 1818.857}
@@ -8424,9 +8456,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Carte de Visite
-  description: Au vu de son appartement, la victime n'avait pas les moyens d'acheter
-    une automobile. Quel lien pouvait-elle avoir avec cette entreprise ?
+  myName:
+  - Carte de visite
+  - Visit card
+  description:
+  - Au vu de son appartement, la victime n'avait pas les moyens d'acheter une automobile.
+    Quel lien pouvait-elle avoir avec cette entreprise ?
+  - On the basis of the appartment, the victim did have enough money to buy a car.
+    How could she be related to this ?
   myNumber: 10
   myGameObjectRender: {fileID: 3671619126712370919, guid: 111f751b90120f248a381c7b95822c4a, type: 3}
   myScaleRender: {x: 272.23, y: 181.4867, z: 10}
@@ -8978,9 +9015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Horloge
-  description: "Cette horloge a l'air sacr\xE9ment amoch\xE9e. Je me demande depuis
-    quand."
+  myName:
+  - Horloge
+  - Clock
+  description:
+  - "Cette horloge a l'air sacr\xE9ment amoch\xE9e. Je me demande depuis quand."
+  - The clock is badly damaged. I wonder when it happened...
   myNumber: 6
   myGameObjectRender: {fileID: 5425934684606073305, guid: 4402d7d51e7af9647bd5fe17b47c9035, type: 3}
   myScaleRender: {x: 128.4, y: 83.936646, z: 128.4}
@@ -9000,9 +9040,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Revolver
-  description: "Un mod\xE8le tr\xE8s populaire. Cela dit, il manque une balle dans
-    le barillet."
+  myName:
+  - Revolver
+  - Revolver
+  description:
+  - "Un mod\xE8le tr\xE8s populaire. Cela dit, il manque une balle dans le barillet."
+  - A very popular model. However, it seems like a bullet is missing in the barrel.
   myNumber: 2
   myGameObjectRender: {fileID: 1589087216320559658, guid: e2dedae3dce00c94ea9c6e499ef430d1, type: 3}
   myScaleRender: {x: 1280, y: 1280, z: 1280}
@@ -9021,8 +9064,8 @@ GameObject:
   - component: {fileID: 4507801431960914526}
   - component: {fileID: 657866469765809659}
   - component: {fileID: 3370312481772204337}
-  - component: {fileID: 2056163072820501594}
   - component: {fileID: 9216918480778811390}
+  - component: {fileID: 2056163072820501594}
   m_Layer: 3
   m_Name: Lunette
   m_TagString: Untagged
@@ -9107,9 +9150,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Lettre de Plainte
-  description: "L'autrice de cette lettre semblait inqui\xE8te. D'ailleurs, elle
-    n'a pas eu le temps de finir sa lettre."
+  myName:
+  - Lettre de plainte
+  - Complaint letter
+  description:
+  - "L'autrice de cette lettre semblait inqui\xE8te. D'ailleurs, elle n'a pas eu
+    le temps de finir sa lettre."
+  - The one who wrote that letter seemed worried. Moreover, it seems that she didn't
+    had the time to finish it.
   myNumber: 9
   myGameObjectRender: {fileID: 5698595646126412422, guid: d9a9653815aca964eaaa2b85cb3bfbba, type: 3}
   myScaleRender: {x: 190.98, y: 270.1003, z: 1818.857}
@@ -9331,9 +9379,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: 'Peignoir '
-  description: "Une matin\xE9e... d\xE9shabill\xE9 typiquement f\xE9minin. Mais g\xE9n\xE9ralement,
+  myName:
+  - Peignoir
+  - Bathrobe
+  description:
+  - "Une matin\xE9e... d\xE9shabill\xE9 typiquement f\xE9minin. Mais g\xE9n\xE9ralement,
     aucune t\xE2che de sang ne vient ent\xE2cher le haut de ce v\xEAtement."
+  - A morning dress... typical robe for women. Usually, there is no bloodstain on
+    the collar of the clothes.
   myNumber: 1
   myGameObjectRender: {fileID: 8866021048507552070, guid: f310296512089e9449e5054edb40c229, type: 3}
   myScaleRender: {x: 332.5, y: 332.5, z: 332.5}
@@ -9486,9 +9539,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: "Flyer du F\xE9mina Bar"
-  description: "Le F\xE9mina Bar, c\xE9l\xE8bre maison de passe de la Rue Duhamel.
-    Tiens... un message a \xE9t\xE9 griffonn\xE9 dessus."
+  myName:
+  - "Flyer du F\xE9mina Bar"
+  - Femina Bar flyer
+  description:
+  - "Le F\xE9mina Bar, c\xE9l\xE8bre maison de passe de la Rue Duhamel. Tiens...
+    un message a \xE9t\xE9 griffonn\xE9 dessus."
+  - The Femina Bar, well-known brothel in Duhamel Street. Oh... someone write a message
+    on it.
   myNumber: 11
   myGameObjectRender: {fileID: 929145307500120348, guid: 083f163a8672b3345833abbb6e05243a, type: 3}
   myScaleRender: {x: 2630.4, y: 2630.4, z: 1315.2}
@@ -9523,9 +9581,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Pot de chambre
-  description: "Ce pot de chambre a \xE9t\xE9 enti\xE8rement renvers\xE9. Peut-\xEAtre
-    lors d'une rixe ? Ou pire ?"
+  myName:
+  - Pot de chambre
+  - Chamber pot
+  description:
+  - "Ce pot de chambre a \xE9t\xE9 enti\xE8rement renvers\xE9. Peut-\xEAtre lors
+    d'une rixe ? Ou pire ?"
+  - The chamber pot is completely spilled out. It might happened during a fight.
+    Or worse...
   myNumber: 5
   myGameObjectRender: {fileID: 8283699809425178971, guid: 8d46e4c6ee94811499d7d585226330ab, type: 3}
   myScaleRender: {x: 191.13, y: 191.13, z: 120.6382}
@@ -9842,8 +9905,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: policeReportName.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: policeReportWord.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: feedBackProofFound.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: policeReportName.Array.data[0]
+      value: Rapport de police
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: policeReportName.Array.data[1]
+      value: Police report
       objectReference: {fileID: 0}
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: policeReportWord.Array.data[0]
@@ -9852,6 +9931,27 @@ PrefabInstance:
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: policeReportWord.Array.data[1]
       value: Jeanne Obitz
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: feedBackProofFound.Array.data[0]
+      value: "Vous avez trouv\xE9e "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: feedBackProofFound.Array.data[1]
+      value: 'You have found '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: policeReportDescription.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: policeReportDescription.Array.data[0]
+      value: "Voil\xE0 le rapport qu'on a pu me d\xE9livrer avant que le corps ne
+        soit emport\xE9;"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
+      propertyPath: policeReportDescription.Array.data[1]
+      value: Here's the report they gave me before the corpse was taken away
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9969,9 +10069,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4635f7c635e84e8a83e3d02ad182e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myName: Lunette
-  description: "Ces lunettes appartenaient \xE0 la victime. Je doute qu'elle portait
-    un verre bris\xE9 de son vivant. Et ce sang ? Etrange..."
+  myName:
+  - Paire de lunettes
+  - Glasses
+  description:
+  - "Ces lunettes appartenaient \xE0 la victime. Je doute qu'elle portait un verre
+    bris\xE9 de son vivant. Et ce sang ? Etrange..."
+  - The glasses belong to the victim. I doubt she wore it broken like that, when
+    she was alive.
   myNumber: 7
   myGameObjectRender: {fileID: 6233307227597553418, guid: 08d2536ea1a57374b9797e936868cd2a, type: 3}
   myScaleRender: {x: 58.7, y: 58.7, z: 1.0747}

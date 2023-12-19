@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -24,6 +25,9 @@ public class Player : MonoBehaviour
     public bool cameraMode;
     public int numberProof;
     public GameObject policeReport;
+    public string[] policeReportName;
+    public string[] policeReportDescription;
+    public string[] feedBackProofFound;
 
     public TextMeshProUGUI popUpText;
     public float timerText;
@@ -50,6 +54,7 @@ public class Player : MonoBehaviour
     public bool raycastOneTime;
 
     public Light prefabLight;
+    [SerializeField]
     private Light clueLight;
     private bool vibrate = false;
 
@@ -76,8 +81,8 @@ public class Player : MonoBehaviour
             dataholder.levelStarted = true;
             dataholder.setupArray(numberProof);
             dataholder.proofsLevel[0] = true;
-            dataholder.proofsName[0] = "Rapport de Police";
-            dataholder.proofsDescription[0] = "Voilà le rapport qu'on a pu me délivrer avant que le corps ne soit emporté.";
+            dataholder.proofsName[0] = policeReportName;
+            dataholder.proofsDescription[0] = policeReportDescription;
             dataholder.proofsGameObject[0] = policeReport;
             dataholder.proofsScaleRender[0] = new Vector3(187.210007f, 264.768372f, 1782.95203f);
             dataholder.proofsRotationRender[0] = new Vector3(0, 180, 0);
@@ -86,8 +91,8 @@ public class Player : MonoBehaviour
             currentMode = false;
             insProof = Instantiate(policeReport, transform);
             insProof.transform.localPosition = new Vector3(0, 0.06f, 1);
-            insNameProof.text = "Rapport de Police";
-            insDescriptionProof.text = "Voilà le rapport qu'on a pu me délivrer avant que le corps ne soit emporté.";
+            insNameProof.text = policeReportName[(int)dataholder.language];
+            insDescriptionProof.text = policeReportDescription[(int)dataholder.language];
             blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
         }
 
@@ -161,7 +166,8 @@ public class Player : MonoBehaviour
             }
             else
             {
-                clueLight.intensity = 0;
+                if (clueLight != null)
+                    clueLight.intensity = 0;
                 vibrate = true;
             }
 
