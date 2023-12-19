@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataHolder: {fileID: 0}
   french: "Preuves trouv\xE9es:"
-  english: 'Proofs found:'
+  english: 'Evidences found:'
 --- !u!1 &1055194931
 GameObject:
   m_ObjectHideFlags: 0

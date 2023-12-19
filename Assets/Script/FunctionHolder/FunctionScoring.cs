@@ -27,7 +27,17 @@ public class FunctionScoring : MonoBehaviour
 
         //Setup
         caseName.text = dataHolder.levelName[(int)dataHolder.language];
-        proofsText.text = "Nombre de preuves trouvées: " + (dataHolder.proofsCount) + "/" + (dataHolder.proofsLevel.Length - 1);
+
+        switch (dataHolder.language)
+        {
+            case Language.Français:
+                proofsText.text = "Nombre de preuves trouvées: " + (dataHolder.proofsCount) + "/" + (dataHolder.proofsLevel.Length - 1);
+                break;
+            case Language.English:
+                proofsText.text = "Number of evidences found: " + (dataHolder.proofsCount) + "/" + (dataHolder.proofsLevel.Length - 1);
+                break;
+        }
+
         switch (dataHolder.mistake)
         {
             case 0:
