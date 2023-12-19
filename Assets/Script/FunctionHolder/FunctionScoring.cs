@@ -19,6 +19,8 @@ public class FunctionScoring : MonoBehaviour
     public TextMeshProUGUI moreInfoName;
     public TextMeshProUGUI moreInfoDescription;
 
+    public GameObject blackImage;
+
     void Start()
     {
         //Find Dataholder
@@ -63,12 +65,13 @@ public class FunctionScoring : MonoBehaviour
         }
 
         moreInfoImage.SetActive(false);
+        blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
     }
 
-    public void goBackSelectionLevel()
+    public void GoBackSelectionLevel()
     {
         //Launch SelectionLevel
-        SceneManager.LoadScene("SelectionLevel");
+        StartCoroutine(LaunchScene("SelectionLevel"));
     }
 
     public void ShowMoreInfo()
@@ -101,5 +104,12 @@ public class FunctionScoring : MonoBehaviour
             jc.GetStatic<string>("DIRECTORY_DCIM"))
             .Call<string>("getAbsolutePath");
         return path;
+    }
+
+    public IEnumerator LaunchScene(string sceneName)
+    {
+        blackImage.GetComponent<Animator>().SetTrigger("FadeIn");
+        yield return new WaitUntil(() => blackImage.GetComponent<Image>().color.a == 1);
+        SceneManager.LoadScene(sceneName);
     }
 }

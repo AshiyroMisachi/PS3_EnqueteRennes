@@ -53,6 +53,8 @@ public class Player : MonoBehaviour
     private Light clueLight;
     private bool vibrate = false;
 
+    public GameObject blackImage;
+
     void Start()
     {
         //Find dataholder
@@ -83,7 +85,9 @@ public class Player : MonoBehaviour
             insProof.transform.localPosition = new Vector3(0, 0.06f, 1);
             insNameProof.text = "Rapport de Police";
             insDescriptionProof.text = "Voilà le rapport qu'on a pu me délivrer avant que le corps ne soit emporté.";
+            blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
         }
+
 
         //Hide UI
         popUpText.alpha = 0f;

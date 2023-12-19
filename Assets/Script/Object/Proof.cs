@@ -63,6 +63,7 @@ public class Proof : MonoBehaviour
             player.insProof.transform.localPosition = new Vector3(0, 0.06f, 1);
             player.insProof.transform.localScale = myScaleRender / 5;
             player.insProof.transform.localEulerAngles = myRotationRender;
+            player.blackImage.SetActive(false);
 
             //Pop up Text to show you pick up
             player.popUpText.text = "Vous avez trouvé " + myName;
