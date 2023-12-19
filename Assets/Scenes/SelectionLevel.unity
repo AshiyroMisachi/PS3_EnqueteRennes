@@ -2611,14 +2611,21 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 0063300b28bf44b4599be9fdf91d010f, type: 3}
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: myMoreInfo
-      value: "Suite \xE0 cette affaire, Mme. Berthe Leclair n'aura connu la prison
-        que durant 05 ans, peine purg\xE9e int\xE9gralement.  Etrangement, \xE0 sa
-        sortie de prison et durant tout son proc\xE8s, l'opinion publique aura \xE9t\xE9
-        en sa faveur.  La rue de Bourbon, th\xE9\xE2tre de ce crime et lieu de passage
-        important entre R\xE9publique et le Parlement de Bretagne, aura disparu apr\xE8s
-        quelques ann\xE9es. Le F\xE9mina Bar, maison close dans lequel exer\xE7a
-        Jeanne Obitz dans notre jeu, existait r\xE9ellement \xE0 Rennes jusqu'\xE0
-        sa fermeture quelques d\xE9cennies plus tard."
+      value: "L'Ouest \xC9clair, anc\xEAtre du c\xE9l\xE8bre journal Ouest France,
+        publia un num\xE9ro sp\xE9cial autour de cette affaire qui fut un v\xE9ritable
+        succ\xE8s : 18000 exemplaires furent tir\xE9s en une journ\xE9e.  Malgr\xE9
+        sa culpabilit\xE9, l'opinion publique tourna majoritairement en faveur de
+        Berthe Leclair durant son proc\xE8s. L'histoire de cette femme de bonne famille,
+        d\xE9cidant de se venger de l'humiliation provoqu\xE9e par les tromperies
+        de son mari, lui fit gagner  la sympathie de nombreuses femmes mari\xE9es.
+        De fait, Berthe Leclair ne purgea que 5 ann\xE9es d'emprisonnement pour son
+        crime.  La Rue de Bourbon n'existe plus aujourd'hui. Mais \xE0 l'\xE9poque,
+        en plus d'\xEAtre le th\xE9\xE2tre d'un crime digne d'un roman, elle \xE9tait
+        aussi un lieu de passage important entre R\xE9publique et le Parlement de
+        Bretagne.  Le F\xE9mina Bar, lieu de travail de Jeanne Obitz, \xE9tait une
+        v\xE9ritable maison de prostitution situ\xE9e \xE0 Rennes, jusqu'\xE0 sa
+        fermeture quelques d\xE9cennies plus tard, en 1946, quand la Loi Marthe-Richard
+        fit fermer toutes les maisons de passe en France."
       objectReference: {fileID: 0}
     - target: {fileID: -3776547436897247020, guid: e63c6ead96ef6f649b7bd998f2bca6e3, type: 3}
       propertyPath: noSelected
