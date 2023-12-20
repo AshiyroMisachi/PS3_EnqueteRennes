@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Proof : MonoBehaviour
+public class Proof : MonoBehaviour, ITouchable
 {
     //Universsal Var
     public string[] myName;
@@ -20,11 +20,13 @@ public class Proof : MonoBehaviour
 
     //Data Holder
     public DataHolder dataHolder;
+    public Player player;
 
     void Start()
     {
         //Find dataholder
         dataHolder = FindObjectOfType<DataHolder>();
+        player = FindObjectOfType<Player>();
 
         //If already pick
         if (dataHolder.proofsLevel[myNumber])
@@ -34,9 +36,9 @@ public class Proof : MonoBehaviour
         }
     }
 
-    public void getPickUp(Player player)
+    public void getPickUp()
     {
-        if (canPickUp)
+        if (canPickUp && player.currentMode)
         {
             //Block Pick Up        
             player.feedBackProof.Play();
@@ -55,20 +57,20 @@ public class Proof : MonoBehaviour
             dataHolder.proofsScaleRender[myNumber] = myScaleRender;
             dataHolder.proofsRotationRender[myNumber] = myRotationRender;
 
-            ShowInspection(player);
+            ShowInspection();
 
             //Pop up Text to show you pick up
             player.popUpText.text = player.feedBackProofFound[(int)dataHolder.language] + myName[(int)dataHolder.language];
             player.popUpText.alpha = 1f;
             player.timerText = 0f;
         }
-        else
+        else if (player.currentMode)
         {
-            ShowInspection(player);
+            ShowInspection();
         }
     }
 
-    public void ShowInspection(Player player)
+    public void ShowInspection()
     {
         //Inspection Mode
         Camera.main.fieldOfView = 60;
@@ -91,4 +93,19 @@ public class Proof : MonoBehaviour
         return canPickUp;
     }
 
+    public void OnTouchedDown(Vector3 touchPosition)
+    {
+        if (MouseOverUILayerObject.IsPointerOverUIObject() == false)
+        {
+            getPickUp();
+        }
+    }
+
+    public void OnTouchedStay(Vector3 touchPosition)
+    {
+    }
+
+    public void OnTouchedUp()
+    {
+    }
 }

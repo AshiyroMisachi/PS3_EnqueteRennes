@@ -80,16 +80,13 @@ public class TouchManager : MonoBehaviour
             _collider = null;
         }
     }
-
-    public bool IsTouchUI()
+    private bool IsPointerOverUIObject()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        var touchPosition = Input.touches[0].deltaPosition;
+        var eventData = new PointerEventData(EventSystem.current) { position = touchPosition };
+        var results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, results);
+        return results.Count > 0;
     }
+
 }

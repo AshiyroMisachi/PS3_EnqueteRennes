@@ -53,9 +53,8 @@ public class Player : MonoBehaviour
     public LayerMask mask;
     public bool raycastOneTime;
 
-    public Light prefabLight;
-    [SerializeField]
-    private Light clueLight;
+    public Light clueLight;
+    public GameObject clueLigtUI;
     private bool vibrate = false;
 
     public GameObject blackImage;
@@ -111,7 +110,7 @@ public class Player : MonoBehaviour
 
         Camera myCamera = Camera.main;
 
-        clueLight = Instantiate(prefabLight, myCamera.transform.position, Quaternion.Euler(0, 0, 0));
+        //clueLight = Instantiate(prefabLight, myCamera.transform.position, Quaternion.Euler(0, 0, 0));
 
 
         if (!Application.isEditor)
@@ -149,7 +148,7 @@ public class Player : MonoBehaviour
             if (Physics.Raycast(myCamera.transform.position, myCamera.transform.forward * 500, out var infoBis, 500, mask) && !dataholder.difficulty)
             {
                 Proof proofDetected = infoBis.transform.GetComponent<Proof>();
-                if (proofDetected.GetCanPickUp())
+                if (proofDetected != null && proofDetected.GetCanPickUp())
                 {
                     if (vibrate)
                     {
@@ -157,20 +156,20 @@ public class Player : MonoBehaviour
                         Handheld.Vibrate();
                     }
                     clueLight.intensity = 1;
+                    clueLigtUI.SetActive(true);
 
                     // Light appears at mid distance between the origin of the player and the origin of the proof
                     Vector3 lightPosition = gameObject.transform.position - ((gameObject.transform.position - proofDetected.transform.position) / 2);
-
                     clueLight.transform.position = lightPosition;
                 }
             }
             else
             {
-                if (clueLight != null)
-                    clueLight.intensity = 0;
+                clueLight.intensity = 0;
+                clueLigtUI.SetActive(false);
                 vibrate = true;
             }
-
+            /*
             //Raycast when touch screen to detect object
             if (Input.touchCount > 0 && Input.touchCount != 2)
             {
@@ -183,7 +182,12 @@ public class Player : MonoBehaviour
                     {
                         if (Physics.Raycast(myCamera.transform.position, touchPosInWorld - myCamera.transform.position, out var info, 500, mask))
                         {
-                            info.transform.GetComponent<Proof>().getPickUp(this);
+                            Proof touchProof = info.transform.GetComponent<Proof>();
+                            if (touchProof != null)
+                            {
+                                touchProof.getPickUp(this);
+                            }
+
                         }
                     }
                 }
@@ -193,11 +197,12 @@ public class Player : MonoBehaviour
             {
                 raycastOneTime = false;
             }
+            */
 
             //Hide Text after pickup an object
             if (timerText > 2f)
             {
-                popUpText.alpha -= 0.005f;
+                popUpText.alpha -= 0.015f;
             }
         }
         else //Inspection Mode

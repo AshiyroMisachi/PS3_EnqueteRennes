@@ -132,12 +132,12 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         {
             inWarning = true;
             //CHECK MISTAKE
-            dataHolder.mistake = 0;
+            dataHolder.mistake = 6;
             for (int i = 0; i < textCases.Length; i++)
             {
-                if (textCases[i].correction[(int)dataHolder.language] != textCases[i].currentName)
+                if (textCases[i].correction[0] == textCases[i].currentName || textCases[i].correction[1] == textCases[i].currentName)
                 {
-                    dataHolder.mistake++;
+                    dataHolder.mistake--;
                 }
             }
             if (dataHolder.mistake == 0 || dataHolder.difficulty || dataHolder.numberTry == 0)
