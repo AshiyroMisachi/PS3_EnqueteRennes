@@ -14,6 +14,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
     public TextCase[] textCases;
     public TextCase currentSelected;
     public string wordSelected;
+    public int wordSelectedNumber;
     public GameObject pannelWord;
     public string[] wordListFrench;
     public string[] wordListEnglish;
@@ -57,6 +58,7 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         {
             GameObject newTextProof = Instantiate(textproof);
             newTextProof.gameObject.GetComponent<TextProof>().myName = currentWordList[j];
+            newTextProof.gameObject.GetComponent<TextProof>().myNumber = j;
             newTextProof.GetComponent<RectTransform>().SetParent(pannelWord.GetComponent<RectTransform>(), false);
             newTextProof.GetComponent<RectTransform>().localPosition = new Vector3(-4800f, -1.5f, 0f);
             pannelListWord.Add(newTextProof);
@@ -82,11 +84,10 @@ public class FunctionHolderNewsPaper : MonoBehaviour
         feedbackTextCase.Play();
         if (wordSelected != null)
         {
-            currentSelected.changeWord(wordSelected);
+            currentSelected.changeWord(wordSelected, wordSelectedNumber);
             wordSelected = null;
+            wordSelectedNumber = -1;
         }
-
-        UnlockValidateButton();
     }
 
     public void GoNoteBook()

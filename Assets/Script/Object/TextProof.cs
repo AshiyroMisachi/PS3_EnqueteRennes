@@ -10,6 +10,7 @@ public class TextProof : MonoBehaviour
 
     //Var Text Proof
     public string myName;
+    public int myNumber;
     public bool gotMove;
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class TextProof : MonoBehaviour
     public void selectWord()
     {
         manager.wordSelected = myName;
+        manager.wordSelectedNumber = myNumber;
         manager.ApplyWord();
     }
 }

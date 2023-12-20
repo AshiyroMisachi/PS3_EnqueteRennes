@@ -33,7 +33,7 @@ public class DataHolder : MonoBehaviour
 
     public int proofsCount;
 
-    public string[] actualAnswers;
+    public int[] actualAnswers;
     public int numberTry = 2;
     public int mistake;
 
@@ -107,7 +107,7 @@ public class DataHolder : MonoBehaviour
         //Level NewsPaper
         for (int i = 0; i < actualAnswers.Length; i++)
         {
-            actualAnswers[i] = null;
+            actualAnswers[i] = -1;
         }
         proofsCount = 0;
         mistake = 0;

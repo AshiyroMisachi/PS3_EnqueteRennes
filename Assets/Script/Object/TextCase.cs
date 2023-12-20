@@ -27,13 +27,13 @@ public class TextCase : MonoBehaviour
         manager = FindObjectOfType<FunctionHolderNewsPaper>();
 
         //Setup
-        if (dataHolder.actualAnswers[myNumber] != null)
+        if (dataHolder.actualAnswers[myNumber] != -1)
         {
-            changeWord(dataHolder.actualAnswers[myNumber]);
+            StartCoroutine(ApplyCurrentAnwser());
         }
         else
         {
-            changeWord("");
+            changeWord("", -1);
         }
 
         allAnswers = new Array[2];
@@ -75,10 +75,17 @@ public class TextCase : MonoBehaviour
         }
     }
 
-    public void changeWord(string word)
+    public void changeWord(string word, int wordNumber)
     {
-        dataHolder.actualAnswers[myNumber] = word;
+        dataHolder.actualAnswers[myNumber] = wordNumber;
         myText.text = word;
         currentName = word;
+    }
+
+    public IEnumerator ApplyCurrentAnwser()
+    {
+        yield return new WaitForEndOfFrame();
+        currentName = manager.pannelListWord[dataHolder.actualAnswers[myNumber]].GetComponent<TextProof>().myName;
+        myText.text = manager.pannelListWord[dataHolder.actualAnswers[myNumber]].GetComponent<TextProof>().myName;
     }
 }
