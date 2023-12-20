@@ -10127,12 +10127,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: policeReportDescription.Array.data[0]
-      value: "Voil\xE0 le rapport qu'on a pu me d\xE9livrer avant que le corps ne
-        soit emport\xE9."
+      value: "Voil\xE0 le rapport qu'on a pu me d\xE9livrer avant que la victime
+        ne soit mise dans l'ambulance."
       objectReference: {fileID: 0}
     - target: {fileID: 6266177638751046144, guid: 6732d56e42fa7a3488af06d7d71e8b77, type: 3}
       propertyPath: policeReportDescription.Array.data[1]
-      value: Here's the report they gave me before the corpse was taken away.
+      value: Here's the report they gave me before the victim was taken away by ambulance.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
