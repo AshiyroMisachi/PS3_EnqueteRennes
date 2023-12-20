@@ -65,11 +65,6 @@ public class FunctionScoring : MonoBehaviour
                 break;
         }
 
-        if (star.fillAmount != 1f)
-        {
-            moreInfoButton.SetActive(false);
-        }
-
         if (dataHolder.scoreArray[dataHolder.levelSelectedNumber] < star.fillAmount)
         {
             dataHolder.scoreArray[dataHolder.levelSelectedNumber] = star.fillAmount;
