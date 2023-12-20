@@ -28,7 +28,7 @@ public class TouchManager : MonoBehaviour
             ChangeITouchable(null);
             return;
         }
-        if(EventSystem.current.IsPointerOverGameObject())
+        if(MouseOverUILayerObject.IsPointerOverUIObject())
         {
             return;
         }
