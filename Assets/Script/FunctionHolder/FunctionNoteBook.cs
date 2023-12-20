@@ -61,8 +61,8 @@ public class FunctionNoteBook : MonoBehaviour
         //proofNotes[0].GetComponent<ProofNote>().ShowProof();
         if (!Application.isEditor)
         {
-            insSlideSpeed *= 8;
-            scaleSpeed *= 4;
+            insSlideSpeed *= 16;
+            scaleSpeed *= 6;
         }
 
         if (dataHolder.lastScene == dataHolder.levelCrimeScene)

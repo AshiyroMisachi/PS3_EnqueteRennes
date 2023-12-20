@@ -202,7 +202,15 @@ public class Player : MonoBehaviour
             //Hide Text after pickup an object
             if (timerText > 2f)
             {
-                popUpText.alpha -= 0.015f;
+                if (Application.isEditor)
+                {
+                    popUpText.alpha -= 0.005f;
+                }
+                else
+                {
+                    popUpText.alpha -= -0.05f;
+                }
+
             }
         }
         else //Inspection Mode
