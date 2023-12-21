@@ -22,6 +22,7 @@ public class DataHolder : MonoBehaviour
     public string levelLastNotebook;
 
     //Navigation in Level
+    public Vector3 cameraRotation;
     public bool levelStarted;
 
     public bool[] proofsLevel;
@@ -77,6 +78,7 @@ public class DataHolder : MonoBehaviour
     public void ResetLevelVAR()
     {
         //Level Crime Scene
+        cameraRotation = Vector3.zero;
         levelLastNotebook = "NoteBook";
         levelStarted = false;
         for (int i = 0; i < proofsLevel.Length; i++)

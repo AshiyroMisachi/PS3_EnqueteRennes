@@ -107,11 +107,7 @@ public class Player : MonoBehaviour
                 arrows[i].gameObject.SetActive(false);
             }
         }
-
-        Camera myCamera = Camera.main;
-
-        //clueLight = Instantiate(prefabLight, myCamera.transform.position, Quaternion.Euler(0, 0, 0));
-
+        gameObject.transform.eulerAngles = dataholder.cameraRotation;
 
         if (!Application.isEditor)
         {
@@ -261,6 +257,7 @@ public class Player : MonoBehaviour
         angleX = transform.localEulerAngles.x;
         //if()?{} : else{}
         angleX = (angleX > 180) ? angleX - 360 : angleX;
+        dataholder.cameraRotation = gameObject.transform.eulerAngles;
     }
 
     //Camera Mode 2, Move by clicking button
