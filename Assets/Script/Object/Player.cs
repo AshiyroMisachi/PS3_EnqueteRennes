@@ -111,8 +111,8 @@ public class Player : MonoBehaviour
 
         if (!Application.isEditor)
         {
-            speedArrows = 1f;
-            insSlideSpeed = insSlideSpeed * 4;
+            speedArrows = 1.5f;
+            insSlideSpeed = insSlideSpeed * 8;
         }
 
     }

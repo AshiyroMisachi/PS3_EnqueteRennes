@@ -95,7 +95,8 @@ public class Proof : MonoBehaviour, ITouchable
 
     public void OnTouchedDown(Vector3 touchPosition)
     {
-        if (MouseOverUILayerObject.IsPointerOverUIObject() == false)
+        UICheckClick checkUI = FindObjectOfType<UICheckClick>();
+        if (checkUI.CheckUIClick() == 0)
         {
             getPickUp();
         }

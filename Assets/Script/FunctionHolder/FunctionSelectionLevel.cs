@@ -42,7 +42,7 @@ public class FunctionSelectionLevel : MonoBehaviour
 
         if (!Application.isEditor)
         {
-            levelDisplayMultiplier /= 9;
+            levelDisplayMultiplier /= 15f;
         }
 
         if (dataHolder.lastScene == "MainScreen")

@@ -46,7 +46,6 @@ public class TouchManager : MonoBehaviour
         {
             if (EventSystem.current.IsPointerOverGameObject())
             {
-                print("coucou");
                 return;
             }
 

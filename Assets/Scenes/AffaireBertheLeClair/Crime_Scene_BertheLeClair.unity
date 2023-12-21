@@ -7521,6 +7521,20 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6536478716373783031, guid: 4a7a187fff81fbd46ba5e691097e458e, type: 3}
   m_PrefabInstance: {fileID: 2860214716198331766}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1929577423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903524941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b317829ddb7c448a51fbd1103f3db8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Raycaster: {fileID: 0}
+  m_EventSystem: {fileID: 0}
 --- !u!1001 &1939838238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9005,6 +9019,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 433294496}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2800941588742483038, guid: 4a7a187fff81fbd46ba5e691097e458e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1929577423}
     - targetCorrespondingSourceObject: {fileID: 7070607222492930176, guid: 4a7a187fff81fbd46ba5e691097e458e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 102397617}

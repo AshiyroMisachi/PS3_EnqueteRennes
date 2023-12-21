@@ -16,13 +16,9 @@ public static class MouseOverUILayerObject
         {
             if (results[i].gameObject.layer == 5) //5 = UI layer
             {
-                Debug.Log("DetectUI");
                 return true;
             }
         }
-
-        Debug.Log("DetectNonUI");
-
         return false;
     }
 }
