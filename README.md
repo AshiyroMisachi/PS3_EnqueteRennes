@@ -11,6 +11,9 @@ Contrôles:
 -Exploration des scènes de crime au gyroscope (Un mode utilsant des flèches directionnels est présent)
 
 
+-Récupération des preuves en cliquant dessus
+
+
 -Zoom présant lors de l'exploration des scènes de crimes et d'inspection des preuves en écartant deux doigts sur l'écran
 
 
