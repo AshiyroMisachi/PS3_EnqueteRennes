@@ -79,7 +79,6 @@ public class FunctionNoteBook : MonoBehaviour
     {
         if (!currentMode)
         {
-            Debug.Log(Vector3.Distance(gameObjectRender.transform.localScale, baseScaleRender));
             //Move Object during Inspection
             if (Input.touchCount == 1)
             {
@@ -149,7 +148,7 @@ public class FunctionNoteBook : MonoBehaviour
 
     public void InspectObject()
     {
-        if (currentMode)
+        if (currentMode && gameObjectRender != null)
         {
             //Go Inspection Mode
             currentMode = false;
@@ -159,7 +158,7 @@ public class FunctionNoteBook : MonoBehaviour
             insName.text = proofName.text;
             insDesc.text = proofDescription.text;
         }
-        else
+        else if (gameObjectRender != null)
         {
             //Go Notebook
             currentMode = true;
