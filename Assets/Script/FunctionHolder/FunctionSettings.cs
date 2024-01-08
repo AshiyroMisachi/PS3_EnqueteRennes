@@ -101,10 +101,9 @@ public class FunctionSettings : MonoBehaviour
 
     public void ChangeDiffuculty()
     {
+        clickButtonFeedback.Play();
         if (dataHolder.difficulty)
         {
-            clickButtonFeedback.Play();
-
             dataHolder.difficulty = false;
             switch (dataHolder.language)
             {
