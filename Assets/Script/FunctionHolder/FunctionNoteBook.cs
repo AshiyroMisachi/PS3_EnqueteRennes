@@ -155,8 +155,8 @@ public class FunctionNoteBook : MonoBehaviour
             noteBookCanvas.SetActive(false);
             backButton.SetActive(false);
             inspectionCanvas.SetActive(true);
-            insName.text = proofName.text;
-            insDesc.text = proofDescription.text;
+            //insName.text = proofName.text;
+            //insDesc.text = proofDescription.text;
         }
         else if (gameObjectRender != null)
         {
