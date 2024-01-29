@@ -149,7 +149,7 @@ public class Player : MonoBehaviour
                     if (vibrate)
                     {
                         vibrate = false;
-                        Handheld.Vibrate();
+                        //Handheld.Vibrate();
                     }
                     clueLight.intensity = 1;
                     clueLigtUI.SetActive(true);
