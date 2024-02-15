@@ -74,17 +74,11 @@ public class Player : MonoBehaviour
         cameraMode = dataholder.cameraMode;
 
         //Parameters Switch Scene
+        dataholder.setupArray(numberProof);
         if (!dataholder.levelStarted)
         {
-            Instantiate(musicCrimeScene, gameObject.transform.position, Quaternion.identity);
+            dataholder.proofsLevel = new bool[numberProof];
             dataholder.levelStarted = true;
-            dataholder.setupArray(numberProof);
-            dataholder.proofsLevel[0] = true;
-            dataholder.proofsName[0] = policeReportName;
-            dataholder.proofsDescription[0] = policeReportDescription;
-            dataholder.proofsGameObject[0] = policeReport;
-            dataholder.proofsScaleRender[0] = new Vector3(187.210007f, 264.768372f, 1782.95203f);
-            dataholder.proofsRotationRender[0] = new Vector3(0, 180, 0);
 
             //Setup mode inspection Police Report
             currentMode = false;
@@ -93,7 +87,16 @@ public class Player : MonoBehaviour
             insNameProof.text = policeReportName[(int)dataholder.language];
             insDescriptionProof.text = policeReportDescription[(int)dataholder.language];
             blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
+
+            FindObjectOfType<SaveManager>().SaveCurrentLevel();
+            FindObjectOfType<SaveManager>().Save();
         }
+        dataholder.proofsLevel[0] = true;
+        dataholder.proofsName[0] = policeReportName;
+        dataholder.proofsDescription[0] = policeReportDescription;
+        dataholder.proofsGameObject[0] = policeReport;
+        dataholder.proofsScaleRender[0] = new Vector3(187.210007f, 264.768372f, 1782.95203f);
+        dataholder.proofsRotationRender[0] = new Vector3(0, 180, 0);
 
 
         //Hide UI
@@ -198,7 +201,7 @@ public class Player : MonoBehaviour
             //Hide Text after pickup an object
             if (timerText > 2f)
             {
-                    popUpText.alpha -= 0.015f;
+                popUpText.alpha -= 0.015f;
             }
         }
         else //Inspection Mode

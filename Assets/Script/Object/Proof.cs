@@ -33,6 +33,7 @@ public class Proof : MonoBehaviour, ITouchable
         {
             canPickUp = false;
             Instantiate(plot, distancePlot, Quaternion.Euler(-90, 0, 0));
+            TakeInfo();
         }
     }
 
@@ -49,13 +50,8 @@ public class Proof : MonoBehaviour, ITouchable
 
             //Store proof data 
             dataHolder.proofsLevel[myNumber] = true;
-            dataHolder.proofsName[myNumber] = myName;
-            dataHolder.proofsDescription[myNumber] = description;
             dataHolder.proofsCount++;
-
-            dataHolder.proofsGameObject[myNumber] = myGameObjectRender;
-            dataHolder.proofsScaleRender[myNumber] = myScaleRender;
-            dataHolder.proofsRotationRender[myNumber] = myRotationRender;
+            TakeInfo();
 
             ShowInspection();
 
@@ -63,11 +59,24 @@ public class Proof : MonoBehaviour, ITouchable
             player.popUpText.text = player.feedBackProofFound[(int)dataHolder.language] + myName[(int)dataHolder.language];
             player.popUpText.alpha = 1f;
             player.timerText = 0f;
+
+            FindObjectOfType<SaveManager>().SaveProofInfo();
+            FindObjectOfType<SaveManager>().Save();
         }
         else if (player.currentMode)
         {
             ShowInspection();
         }
+    }
+
+    public void TakeInfo()
+    {
+        dataHolder.proofsName[myNumber] = myName;
+        dataHolder.proofsDescription[myNumber] = description;
+
+        dataHolder.proofsGameObject[myNumber] = myGameObjectRender;
+        dataHolder.proofsScaleRender[myNumber] = myScaleRender;
+        dataHolder.proofsRotationRender[myNumber] = myRotationRender;
     }
 
     public void ShowInspection()

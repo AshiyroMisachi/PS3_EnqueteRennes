@@ -31,10 +31,9 @@ public class DataHolder : MonoBehaviour
     public GameObject[] proofsGameObject;
     public Vector3[] proofsScaleRender;
     public Vector3[] proofsRotationRender;
+    public int[] actualAnswers;
 
     public int proofsCount;
-
-    public int[] actualAnswers;
     public int numberTry = 2;
     public int mistake;
 
@@ -67,7 +66,6 @@ public class DataHolder : MonoBehaviour
 
     public void setupArray(int numberElement)
     {
-        proofsLevel = new bool[numberElement];
         proofsName = new Array[numberElement];
         proofsDescription = new Array[numberElement];
         proofsGameObject = new GameObject[numberElement];
@@ -85,14 +83,14 @@ public class DataHolder : MonoBehaviour
         {
             proofsLevel[i] = false;
         }
-        /*for (int i = 0; i < proofsName.Length; i++)
-        {
-            proofsName[i] = new string[1];
-        }
-        for (int i = 0; i < proofsDescription.Length; i++)
-        {
-            proofsDescription[i] = new string[1];
-        }*/
+        //for (int i = 0; i < proofsName.Length; i++)
+        //{
+        //    proofsName[i] = new Array[1];
+        //}
+        //for (int i = 0; i < proofsDescription.Length; i++)
+        //{
+        //    proofsDescription[i] = new Array[1];
+        //}
         for (int i = 0; i < proofsGameObject.Length; i++)
         {
             proofsGameObject[i] = null;

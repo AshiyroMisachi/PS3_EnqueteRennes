@@ -75,6 +75,14 @@ public class FunctionScoring : MonoBehaviour
             dataHolder.scoreProofArray[dataHolder.levelSelectedNumber] = dataHolder.proofsCount;
         }
 
+        FindObjectOfType<SaveManager>().SaveLevelScore();
+        dataHolder.ResetLevelVAR();
+        FindObjectOfType<SaveManager>().SaveProofInfo();
+        FindObjectOfType<SaveManager>().SaveNotebookInfo();
+        dataHolder.levelName = new string[2];
+        FindObjectOfType<SaveManager>().SaveCurrentLevel();
+        FindObjectOfType<SaveManager>().Save();
+
         moreInfoImage.SetActive(false);
         blackImage.GetComponent<Animator>().SetTrigger("FadeOut");
     }

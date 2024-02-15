@@ -88,6 +88,9 @@ public class FunctionHolderNewsPaper : MonoBehaviour
             wordSelected = null;
             wordSelectedNumber = -1;
         }
+
+        FindObjectOfType<SaveManager>().SaveNotebookInfo();
+        FindObjectOfType<SaveManager>().Save();
     }
 
     public void GoNoteBook()

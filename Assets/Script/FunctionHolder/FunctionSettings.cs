@@ -78,6 +78,7 @@ public class FunctionSettings : MonoBehaviour
     //Navigation
     public void goBack()
     {
+        FindObjectOfType<SaveManager>().SaveOptions();
         SceneManager.LoadScene(dataHolder.currentScene);
     }
 

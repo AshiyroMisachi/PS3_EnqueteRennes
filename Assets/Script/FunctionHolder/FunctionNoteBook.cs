@@ -44,6 +44,7 @@ public class FunctionNoteBook : MonoBehaviour
         {
             if (dataHolder.proofsLevel[i])
             {
+                Debug.Log("New Proof");
                 GameObject newProofNote = Instantiate(proofNote);
                 newProofNote.GetComponent<RectTransform>().SetParent(proofShelf.GetComponent<RectTransform>(), false);
                 string[] nameList = (string[])dataHolder.proofsName[i];
@@ -58,7 +59,6 @@ public class FunctionNoteBook : MonoBehaviour
             }
         }
 
-        //proofNotes[0].GetComponent<ProofNote>().ShowProof();
         if (!Application.isEditor)
         {
             insSlideSpeed *= 16;

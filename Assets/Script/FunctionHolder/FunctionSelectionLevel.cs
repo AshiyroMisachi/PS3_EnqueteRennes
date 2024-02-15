@@ -31,6 +31,8 @@ public class FunctionSelectionLevel : MonoBehaviour
     public ButtonButBetter[] levels;
 
     public GameObject blackImage;
+    public GameObject musicCrimeScene;
+    public TextMeshProUGUI startButton;
 
     private void Start()
     {
@@ -38,7 +40,7 @@ public class FunctionSelectionLevel : MonoBehaviour
         dataHolder = FindObjectOfType<DataHolder>();
 
         //Reset Dataholder info
-        dataHolder.ResetLevelVAR();
+        //dataHolder.ResetLevelVAR();
 
         if (!Application.isEditor)
         {
@@ -64,6 +66,19 @@ public class FunctionSelectionLevel : MonoBehaviour
                 if (i != 0)
                 {
                     SetupLevelDisplay(i);
+                    if (FindObjectOfType<SaveManager>().currentSave.lastLevel[(int)dataHolder.language] == dataHolder.levelName[(int)dataHolder.language])
+                    {
+                        //Change Start Button to Continue
+                        switch (dataHolder.language)
+                        {
+                            case Language.Français:
+                                startButton.text = "Continuer";
+                                break;
+                            case Language.English:
+                                startButton.text = "Continue";
+                                break;
+                        }
+                    }
                 }
                 if (deselection)
                 {
@@ -117,6 +132,25 @@ public class FunctionSelectionLevel : MonoBehaviour
 
     public void launchLevel()
     {
+        if (FindObjectOfType<SaveManager>().currentSave.lastLevel[(int)dataHolder.language] != dataHolder.levelName[(int)dataHolder.language])
+        {
+            dataHolder.ResetLevelVAR();
+        }
+        else
+        {
+            //Change Start Button to Continue
+            switch (dataHolder.language)
+            {
+                case Language.Français:
+                    startButton.text = "Continuer";
+                    break;
+                case Language.English:
+                    startButton.text = "Continue";
+                    break;
+            }
+        }
+
+        dataHolder.levelLastNotebook = "NoteBook";
         StartCoroutine(LaunchScene(levelSelected));
     }
 
@@ -124,6 +158,7 @@ public class FunctionSelectionLevel : MonoBehaviour
     {
         blackImage.GetComponent<Animator>().SetTrigger("FadeIn");
         yield return new WaitUntil(() => blackImage.GetComponent<Image>().color.a == 1);
+        Instantiate(musicCrimeScene, gameObject.transform.position, Quaternion.identity);
         SceneManager.LoadScene(sceneName);
     }
 }
