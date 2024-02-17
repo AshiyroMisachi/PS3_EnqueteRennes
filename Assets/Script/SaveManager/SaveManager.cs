@@ -19,7 +19,7 @@ public class SaveManager : MonoBehaviour
     {
         var t = JsonUtility.ToJson(currentSave);
         //Save to json file
-        string saveFilePath = Application.dataPath + "/Save.txt";
+        string saveFilePath = Application.persistentDataPath + "/Save.txt";
         var Writer = File.CreateText(saveFilePath);
         Writer.Close();
         File.WriteAllText(saveFilePath, t, System.Text.Encoding.UTF8);
@@ -63,7 +63,7 @@ public class SaveManager : MonoBehaviour
     public void Load()
     {
         //Load savestate from Json File
-        string saveFilePath = Application.dataPath + "/Save.txt";
+        string saveFilePath = Application.persistentDataPath + "/Save.txt";
         if (File.Exists(saveFilePath))
         {
             var Writer = File.OpenText(saveFilePath);

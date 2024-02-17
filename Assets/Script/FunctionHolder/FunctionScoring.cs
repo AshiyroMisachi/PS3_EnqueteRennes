@@ -109,7 +109,7 @@ public class FunctionScoring : MonoBehaviour
     public void TakeScreenshot()
     {
         Debug.Log("Take Screenshot");
-        ScreenCapture.CaptureScreenshot("/storage/emulated/0/DCIM/" + "RollandDeRennes_" + dataHolder.levelName + ".png");
+        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/" + dataHolder.levelName + ".png");
     }
 
     private string GetAndroidExternalStoragePath()
