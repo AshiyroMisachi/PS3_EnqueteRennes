@@ -109,7 +109,7 @@ public class FunctionScoring : MonoBehaviour
     public void TakeScreenshot()
     {
         Debug.Log("Take Screenshot");
-        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + "/" + dataHolder.levelName + ".png");
+        ScreenCapture.CaptureScreenshot(Application.persistentDataPath + dataHolder.levelName + ".png");
     }
 
     private string GetAndroidExternalStoragePath()
